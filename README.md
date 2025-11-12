@@ -168,11 +168,4 @@ MIT License - Open source and freely usable.
 
 ## Contact
 
-- **Email**: support@cybernotepad.org
-- **Website**: https://cybernotepad.org
-
----
-
-**Built with ❤️ for the cybersecurity community**
-
 *Note: Replace `YOUR_USERNAME` and `YOUR_REPO_NAME` in clone URLs with your actual GitHub information.*
