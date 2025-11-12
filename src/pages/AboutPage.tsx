@@ -103,7 +103,7 @@ export function AboutPage() {
                 </a>
               </div>
               <p className="mt-4 text-sm text-blue-300">
-                For security-related inquiries or responsible disclosure reports, please email us directly and we'll respond within 48 hours.
+                  For feedback, suggestions, or reporting changes, please send me an email — this inbox is for receiving messages only.
               </p>
             </div>
           </div>
