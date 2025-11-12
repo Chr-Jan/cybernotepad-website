@@ -82,7 +82,7 @@ export function AboutPage() {
       </section>
 
       {/* Contact Section */}
-      {/* <section className="py-16 px-6">
+      <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-background-surface-1 rounded-xl p-8 border border-blue-500/30 bg-blue-500/5">
             <h2 className="font-display text-h2 font-semibold text-blue-400 mb-6">📧 Contact & Support</h2>
@@ -108,7 +108,7 @@ export function AboutPage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
