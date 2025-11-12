@@ -402,7 +402,7 @@ export function LearningPage() {
       </section>
 
       {/* Certification Paths */}
-      <section className="px-6 pb-24">
+      {/* <section className="px-6 pb-24">
         <div className="container mx-auto max-w-6xl">
           <div className="bg-background-surface-1 rounded-xl border border-emerald-500/20 p-8">
             <div className="flex items-center gap-4 mb-8">
@@ -428,10 +428,10 @@ export function LearningPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Learning Path */}
-      <section className="px-6 pb-24">
+      {/* <section className="px-6 pb-24">
         <div className="container mx-auto max-w-6xl">
           <div className="bg-background-surface-1 rounded-xl border border-cyan-500/20 p-8">
             <div className="flex items-center gap-4 mb-8">
@@ -479,7 +479,7 @@ export function LearningPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Learning Tips */}
       <section className="px-6 pb-24">
