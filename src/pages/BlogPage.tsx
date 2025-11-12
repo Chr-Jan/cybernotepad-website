@@ -12,72 +12,17 @@ export function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const posts = [
-    {
-      id: 1,
-      title: 'My First Black Hat Conference Experience',
-      excerpt: 'Attending Black Hat 2024 was a game-changer for my cybersecurity career. Here\'s what I learned and the connections I made.',
-      category: 'conferences',
-      date: '2024-08-15',
-      location: 'Las Vegas, NV',
-      attendees: 250,
-      rating: 5,
-      type: 'conference'
-    },
-    {
-      id: 2,
-      title: 'Local Security Meetup: Building a Strong Community',
-      excerpt: 'How we started our local cybersecurity meetup group and grew it to over 100 active members in just 6 months.',
-      category: 'meetups',
-      date: '2024-09-20',
-      location: 'San Francisco, CA',
-      attendees: 45,
-      rating: 4,
-      type: 'meetup'
-    },
-    {
-      id: 3,
-      title: 'Learning from Failure: My First Bug Bounty Experience',
-      excerpt: 'A candid look at my early bug bounty hunting attempts, the mistakes I made, and the valuable lessons learned.',
-      category: 'personal',
-      date: '2024-10-05',
-      location: 'Remote',
-      attendees: 1,
-      rating: 4,
-      type: 'personal'
-    },
-    {
-      id: 4,
-      title: 'Women in Cybersecurity Networking Event',
-      excerpt: 'Attending the WiCyS networking event and the importance of diversity in our security community.',
-      category: 'conferences',
-      date: '2024-10-22',
-      location: 'Austin, TX',
-      attendees: 180,
-      rating: 5,
-      type: 'conference'
-    },
-    {
-      id: 5,
-      title: 'Pen Testing 101: Learning from the Pros',
-      excerpt: 'Mentorship session with senior penetration testers revealed the real-world application of theoretical knowledge.',
-      category: 'meetups',
-      date: '2024-09-10',
-      location: 'Remote',
-      attendees: 28,
-      rating: 5,
-      type: 'meetup'
-    },
-    {
-      id: 6,
-      title: 'Transitioning from Developer to Security Engineer',
-      excerpt: 'My journey from software development to cybersecurity - the skills that transferred and the new ones I needed to learn.',
-      category: 'personal',
-      date: '2024-08-30',
-      location: 'Remote',
-      attendees: 1,
-      rating: 5,
-      type: 'personal'
-    }
+    // Sample blog post data{
+    //   id: 1,
+    //   title: 'My First Black Hat Conference Experience',
+    //   excerpt: 'Attending Black Hat 2024 was a game-changer for my cybersecurity career. Here\'s what I learned and the connections I made.',
+    //   category: 'conferences',
+    //   date: '2024-08-15',
+    //   location: 'Las Vegas, NV',
+    //   attendees: 250,
+    //   rating: 5,
+    //   type: 'conference'
+    // }
   ];
 
   const categories = [

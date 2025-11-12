@@ -37,13 +37,13 @@ export function AboutPage() {
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-background-surface-1 rounded-xl p-8 border border-white/10">
-            <h2 className="font-display text-h2 font-semibold text-text-primary mb-6">Our Mission</h2>
+            <h2 className="font-display text-h2 font-semibold text-text-primary mb-6">My Mission</h2>
             
             <p className="text-text-secondary text-body-lg leading-relaxed mb-4">
               CyberNotepad was created to bridge the gap between theoretical security concepts and practical implementation. We believe that security knowledge should be accessible to all developers, not just specialized security professionals.
             </p>
             <p className="text-text-secondary text-body-lg leading-relaxed mb-4">
-              Our articles focus on real-world vulnerabilities, attack vectors, and defense strategies. Each post is written with hands-on examples, code snippets, and actionable advice you can implement immediately.
+              The articles focus on real-world vulnerabilities, attack vectors, and defense strategies. Each post is written with hands-on examples, code snippets, and actionable advice you can implement immediately.
             </p>
             <p className="text-text-secondary text-body-lg leading-relaxed">
               Whether you're learning about SQL injection, building secure APIs, or hardening container deployments, we provide the technical depth you need without unnecessary complexity.
@@ -82,7 +82,7 @@ export function AboutPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-6">
+      {/* <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-background-surface-1 rounded-xl p-8 border border-blue-500/30 bg-blue-500/5">
             <h2 className="font-display text-h2 font-semibold text-blue-400 mb-6">📧 Contact & Support</h2>
@@ -108,7 +108,7 @@ export function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
