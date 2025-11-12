@@ -5,9 +5,7 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   deploy:
@@ -15,20 +13,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          
+
       - name: Install and build
         run: |
           npm install
           npm run build
-          
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
-        if: success()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
