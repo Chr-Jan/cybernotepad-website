@@ -167,7 +167,7 @@ export function BlogPage() {
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-background-near-black border-t border-white/10">
+      {/* <section className="py-16 px-6 bg-background-near-black border-t border-white/10">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="font-display text-h2 font-semibold text-text-primary mb-6">Share Your Experience</h2>
           <p className="text-text-secondary text-body-lg leading-relaxed mb-8">
@@ -183,7 +183,7 @@ export function BlogPage() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
