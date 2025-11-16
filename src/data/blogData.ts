@@ -1121,7 +1121,181 @@ Remember: **Security is not a feature, it's a requirement**.`,
     date: '2025-11-01',
     readTime: '22 min read',
     author: 'Web Security Specialist'
-  }
-];
+  },
+  {
+  id: '7',
+  slug: 'osint-find-social-media-accounts-with-sherlock',
+  title: 'OSINT Guide: Finding Social Media Accounts Using Sherlock',
+  excerpt: 'Learn how to identify social media accounts across hundreds of platforms using the Sherlock OSINT tool for Python.',
+  content: `# OSINT Guide: Finding Social Media Accounts Using Sherlock
 
+Sherlock is one of the most widely used OSINT tools for identifying social media profiles linked to a username. Whether you're working in cybersecurity, investigations, or digital research, Sherlock provides a fast and automated way to check hundreds of platforms for public accounts.
 
+## What Is Sherlock?
+
+Sherlock is an open-source Python 3 tool that scans a large list of social media platforms and websites for accounts matching a specific username. It is frequently used for:
+
+- Digital investigations  
+- Identity mapping  
+- Brand protection and monitoring  
+- Cybersecurity OSINT workflows  
+- Threat intelligence research  
+
+Sherlock uses *only publicly available information*, making it a safe and legal OSINT tool when used responsibly.
+
+---
+
+# Installation
+
+## Linux Installation
+
+The following works on Kali Linux, Ubuntu, Debian, and other distributions:
+
+\`\`\`bash
+sudo apt update
+sudo apt install git python3 python3-pip -y
+
+git clone https://github.com/sherlock-project/sherlock.git
+cd sherlock
+python3 -m pip install -r requirements.txt
+\`\`\`
+
+Sherlock is now ready for use.
+
+---
+
+## Windows (PowerShell) Installation
+
+### 1. Install Python  
+Download Python from the official website and ensure **"Add Python to PATH"** is enabled.
+
+### 2. Install Sherlock  
+Open PowerShell:
+
+\`\`\`powershell
+git clone https://github.com/sherlock-project/sherlock.git
+cd sherlock
+python -m pip install -r requirements.txt
+\`\`\`
+
+---
+
+# Usage
+
+## Basic Username Search
+
+\`\`\`bash
+python3 sherlock.py username
+\`\`\`
+
+Example:
+
+\`\`\`bash
+python3 sherlock.py johnsmith
+\`\`\`
+
+Sherlock will scan multiple platforms and list any public profiles found.
+
+---
+
+## Saving Results to a File
+
+\`\`\`bash
+python3 sherlock.py johnsmith --output johnsmith_results.txt
+\`\`\`
+
+This stores all findings in a text file for later review.
+
+---
+
+## Searching Multiple Usernames
+
+\`\`\`bash
+python3 sherlock.py user1 user2 user3
+\`\`\`
+
+---
+
+## Using a Wordlist
+
+\`\`\`bash
+python3 sherlock.py -l usernames.txt --output output.txt
+\`\`\`
+
+---
+
+# Automation Examples
+
+## Linux: Bash Script
+
+Create a file named \`find_profiles.sh\`:
+
+\`\`\`bash
+#!/bin/bash
+
+USERNAME=$1
+python3 sherlock.py "$USERNAME" --output "$USERNAME.txt"
+
+echo "Results saved to $USERNAME.txt"
+\`\`\`
+
+Run:
+
+\`\`\`bash
+chmod +x find_profiles.sh
+./find_profiles.sh username
+\`\`\`
+
+---
+
+## Windows: PowerShell Script
+
+Create \`find-profiles.ps1\`:
+
+\`\`\`powershell
+param([string]$username)
+
+python sherlock.py $username --output "$username.txt"
+Write-Host "Results saved to $username.txt"
+\`\`\`
+
+Run:
+
+\`\`\`powershell
+.\find-profiles.ps1 username
+\`\`\`
+
+---
+
+# Ethical Use
+
+Even though Sherlock uses public data, it must be applied responsibly. Always:
+
+- Respect privacy laws and platform terms  
+- Avoid targeting individuals without valid justification  
+- Use the tool for legitimate OSINT, cybersecurity, or investigative research  
+
+Remember: OSINT should support security — not violate it.
+
+---
+
+# Conclusion
+
+Sherlock is a powerful and lightweight OSINT tool for mapping social media presence based on usernames. With simple setup and broad platform support, it is a must-have in any cybersecurity or investigative toolkit.
+
+**Key points:**
+
+- Easy installation on Linux and Windows  
+- Scans hundreds of platforms automatically  
+- Supports automation through scripts  
+- Only uses publicly available data  
+- Ideal for cybersecurity, OSINT, and investigative work  
+
+Sherlock provides fast, reliable insights into digital footprints — when used ethically and responsibly.
+`,
+  category: 'OSINT',
+  tags: ['OSINT', 'Sherlock', 'Social Media Enumeration', 'Cybersecurity Tools'],
+  date: '2025-11-16',
+  readTime: '12 min read',
+  author: 'Security Specialist'
+}]
