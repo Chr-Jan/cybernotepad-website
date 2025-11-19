@@ -1,0 +1,18 @@
+# robots.txt for CyberNotepad
+# Purpose: control which parts of the site search engines may crawl and index.
+# This file is served from the web root as `/robots.txt` when placed in `public/`.
+
+# Sitemap: tell crawlers where your sitemap is located.
+# Official sitemap URL for the site
+Sitemap: https://cybernotepad.org/sitemap.xml
+# Relative path fallback accepted by many crawlers
+Sitemap: /sitemap.xml
+
+User-agent: *
+# Allow access to the site root and public pages
+Allow: /
+# Block administrative and in-progress content from crawlers
+Disallow: /admin
+Disallow: /drafts
+# Prevent indexing of a private/utility file
+Disallow: /use.txt
