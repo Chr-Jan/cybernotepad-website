@@ -235,7 +235,7 @@ export function PenetrationTestingPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-background-surface-1 rounded-xl border border-red-500/30 shadow-glow-md">
-                <Target className="w-12 h-12 text-red-500" />
+                <Shield className="w-12 h-12 text-red-500" />
               </div>
             </div>
             <h1 className="font-display text-hero font-bold text-text-primary mb-6 leading-tight">

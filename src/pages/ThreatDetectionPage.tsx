@@ -1,4 +1,4 @@
-import { Shield, Activity, Eye, Database, BarChart3, AlertTriangle } from 'lucide-react';
+import { Shield, Activity, Eye, Database, BarChart3, AlertTriangle, Target } from 'lucide-react';
 
 export function ThreatDetectionPage() {
   const tools = [
@@ -241,7 +241,7 @@ export function ThreatDetectionPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-background-surface-1 rounded-xl border border-blue-500/30 shadow-glow-md">
-                <Shield className="w-12 h-12 text-blue-500" />
+                <Target className="w-12 h-12 text-blue-500" />
               </div>
             </div>
             <h1 className="font-display text-hero font-bold text-text-primary mb-6 leading-tight">
