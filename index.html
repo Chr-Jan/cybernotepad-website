@@ -6,14 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Favicon for modern browsers: points to SVG in the `public/` folder. -->
   <!-- Browsers use this for the tab icon, bookmarks and some UI. -->
-  <link rel="icon" href="/cybernotepad-website/assets/favicon-BkSEJ_Os.png" type="image/png+xml">
+  <link rel="icon" href="/assets/favicon-BkSEJ_Os.png" type="image/png+xml">
 
   <!-- Legacy/fallback favicon (historical): kept for compatibility with older browsers/clients. -->
   <!-- You can also add PNG/ICO variants for broader support if needed. -->
   <link rel="shortcut icon" href="/favicon.png">
-  <script type="module" crossorigin src="/cybernotepad-website/assets/index-DQxUw3SL.js"></script>
-  <link rel="stylesheet" crossorigin href="/cybernotepad-website/assets/index-Bp0Digy4.css">
+  <script type="module" crossorigin src="/assets/index-DQxUw3SL.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bp0Digy4.css">
 </head>
+
+  <!-- SPA redirect handling for GitHub Pages -->
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1W1C0GDKY"></script>
