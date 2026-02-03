@@ -9,7 +9,7 @@ export default defineConfig({
   // For example, if your repo is 'https://github.com/username/my-blog'
   // Set base to '/my-blog/'
   // For custom domain or username.github.io, use base: '/'
-  base: './',
+  base: '/cybernotepad-website/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
