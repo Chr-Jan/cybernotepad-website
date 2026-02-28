@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import { blogPosts } from '../data/homeData';
+import { homePosts } from '../data/homeData';
+import { blogPosts } from '../data/blogData';
 import { Calendar, Clock, Tag, ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -7,7 +8,8 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export function BlogPostPage() {
   const { slug } = useParams();
-  const post = blogPosts.find(p => p.slug === slug);
+  const allPosts = [...homePosts, ...blogPosts];
+  const post = allPosts.find(p => p.slug === slug);
 
   if (!post) {
     return (
@@ -23,9 +25,12 @@ export function BlogPostPage() {
   }
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 relative">
+      {/* Gradient background effect */}
+      <div className="absolute top-0 left-0 right-0 h-96 bg-gradient-to-b from-accent-primary/10 to-transparent pointer-events-none"></div>
+      
       {/* Header */}
-      <article className="py-12 px-6">
+      <article className="py-12 px-6 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Link 
             to="/" 
@@ -139,7 +144,7 @@ export function BlogPostPage() {
             More from {post.category}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {blogPosts
+            {allPosts
               .filter(p => p.category === post.category && p.id !== post.id)
               .slice(0, 2)
               .map(relatedPost => (

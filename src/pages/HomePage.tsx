@@ -8,7 +8,7 @@
 // ============================================================================
 
 import { useState } from 'react';
-import { blogPosts } from '../data/homeData';
+import { homePosts } from '../data/homeData';
 import { BlogCard } from '../components/BlogCard';
 import { Search, Terminal } from 'lucide-react';
 
@@ -30,7 +30,7 @@ export function HomePage() {
   // - Post content
   // - Post tags
   // The search is case-insensitive and matches partial terms
-  const filteredPosts = blogPosts.filter(post => {
+  const filteredPosts = homePosts.filter(post => {
     const query = searchQuery.toLowerCase();
     const matchesSearch = post.title.toLowerCase().includes(query) ||
                          post.excerpt.toLowerCase().includes(query) ||
@@ -45,7 +45,7 @@ export function HomePage() {
   // featuredPost: The first post (index 0) is designated as the featured post
   // recentPosts: All filtered posts except the first one (used in the grid)
   // This ensures the featured post appears separately at the top
-  const featuredPost = blogPosts[0];
+  const featuredPost = homePosts[0];
   const recentPosts = filteredPosts.slice(1);
 
   return (

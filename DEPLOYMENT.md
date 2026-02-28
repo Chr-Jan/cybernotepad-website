@@ -96,7 +96,7 @@ npx gh-pages -d dist
 Edit `src/data/blogData.ts`:
 
 \`\`\`typescript
-export const blogPosts: BlogPost[] = [
+export const homePosts: BlogPost[] = [
   {
     id: '1',
     slug: 'my-first-post',

@@ -91,7 +91,7 @@ npm run deploy
 Edit `src/data/blogData.ts` to add new articles:
 
 ```typescript
-export const blogPosts: BlogPost[] = [
+export const homePosts: BlogPost[] = [
   {
     id: 'unique-id',
     slug: 'post-url-slug',

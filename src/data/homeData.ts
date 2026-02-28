@@ -11,7 +11,7 @@ export interface BlogPost {
   author: string;
 }
 
-export const blogPosts: BlogPost[] = [
+export const homePosts: BlogPost[] = [
   {
     id: '1',
     slug: 'kali-linux-penetration-testing',

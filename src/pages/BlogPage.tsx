@@ -6,24 +6,14 @@
  * filtering and a responsive card-based layout.
  */
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Users, Star, MessageSquare } from 'lucide-react';
+import { blogPosts } from '../data/blogData';
 
 export function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const posts = [
-    // Sample blog post data{
-    //   id: 1,
-    //   title: 'My First Black Hat Conference Experience',
-    //   excerpt: 'Attending Black Hat 2024 was a game-changer for my cybersecurity career. Here\'s what I learned and the connections I made.',
-    //   category: 'conferences',
-    //   date: '2024-08-15',
-    //   location: 'Las Vegas, NV',
-    //   attendees: 250,
-    //   rating: 5,
-    //   type: 'conference'
-    // }
-  ];
+  const posts = blogPosts;
 
   const categories = [
     { id: 'all', label: 'All Posts', count: posts.length },
@@ -107,53 +97,58 @@ export function BlogPage() {
               {filteredPosts.map((post) => {
                 const IconComponent = getTypeIcon(post.type);
                 return (
-                  <div
+                  <Link
                     key={post.id}
-                    className="bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px]"
+                    to={`/post/${post.slug}`}
+                    className="group"
                   >
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className={`p-2 rounded-lg border ${getTypeColor(post.type)}`}>
-                        <IconComponent className="w-4 h-4" />
-                      </div>
-                      <span className={`px-3 py-1 rounded-md text-sm font-medium border ${getTypeColor(post.type)}`}>
-                        {post.type.charAt(0).toUpperCase() + post.type.slice(1)}
-                      </span>
-                    </div>
-
-                    <h3 className="font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-text-secondary text-body leading-relaxed mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-
-                    <div className="space-y-2 text-text-tertiary text-sm">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                      </div>
-                      
-                      {post.location && (
-                        <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4" />
-                          <span>{post.location}</span>
+                    <div
+                      className="bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full"
+                    >
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className={`p-2 rounded-lg border ${getTypeColor(post.type)}`}>
+                          <IconComponent className="w-4 h-4" />
                         </div>
-                      )}
+                        <span className={`px-3 py-1 rounded-md text-sm font-medium border ${getTypeColor(post.type)}`}>
+                          {post.type.charAt(0).toUpperCase() + post.type.slice(1)}
+                        </span>
+                      </div>
+
+                      <h3 className="font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250">
+                        {post.title}
+                      </h3>
                       
-                      {post.attendees > 1 && (
+                      <p className="text-text-secondary text-body leading-relaxed mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+
+                      <div className="space-y-2 text-text-tertiary text-sm">
                         <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>{post.attendees} attendees</span>
+                          <Calendar className="w-4 h-4" />
+                          <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                         </div>
-                      )}
-                      
-                      <div className="flex items-center gap-2">
-                        <Star className="w-4 h-4 text-yellow-400" />
-                        <span>{post.rating}/5 rating</span>
+                        
+                        {post.location && (
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            <span>{post.location}</span>
+                          </div>
+                        )}
+                        
+                        {post.attendees > 1 && (
+                          <div className="flex items-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>{post.attendees} attendees</span>
+                          </div>
+                        )}
+                        
+                        <div className="flex items-center gap-2">
+                          <Star className="w-4 h-4 text-yellow-400" />
+                          <span>{post.rating}/5 rating</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>
