@@ -8,7 +8,7 @@
 // ============================================================================
 
 import { useState } from 'react';
-import { blogPosts } from '../data/blogData';
+import { blogPosts } from '../data/homeData';
 import { BlogCard } from '../components/BlogCard';
 import { Search, Terminal } from 'lucide-react';
 

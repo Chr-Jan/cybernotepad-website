@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BlogPost } from '../data/blogData';
+import { BlogPost } from '../data/homeData';
 import { Calendar, Clock, Tag } from 'lucide-react';
 
 interface BlogCardProps {

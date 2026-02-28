@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { blogPosts } from '../data/blogData';
+import { blogPosts } from '../data/homeData';
 import { Calendar, Clock, Tag, ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
