@@ -18,7 +18,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
-    slug: 'my-v2-security-aarhus-experience',
+    slug: 'my-v2-security-aarhus-experience-2026',
     title: 'My Experience at V2 Security Aarhus: Networking and New Threats',
     excerpt: 'I spent two days at V2 Security Aarhus surrounded by 1,000+ professionals. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.',
     content: `# My Experience at V2 Security Aarhus: Networking and New Threats
@@ -63,7 +63,7 @@ Attending V2 Security Aarhus was a fantastic experience that gave me a lot of ne
     rating: 5,
     type: 'conference',
     tags: ['V2 Security', 'Conference', 'Networking'],
-    readTime: '5 min read',
-    author: 'Chr-Jan'
+    readTime: '10 min read',
+    author: 'my-v2-security-aarhus-experience-2026'
   }
 ]
