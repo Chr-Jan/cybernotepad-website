@@ -31,7 +31,7 @@ export function BlogPostPage() {
       
       {/* Header */}
       <article className="py-12 px-6 relative z-10">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-8xl">
           <Link 
             to="/" 
             className="inline-flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors duration-250 mb-8 group"
@@ -146,7 +146,7 @@ export function BlogPostPage() {
 
       {/* Related Posts */}
       <section className="py-16 px-6 bg-background-near-black border-t border-white/10">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-8xl">
           <h2 className="font-display text-h2 font-semibold text-text-primary mb-8">
             More from {post.category}
           </h2>
