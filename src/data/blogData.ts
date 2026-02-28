@@ -55,7 +55,10 @@ If I had to summarize the entire conference in one word, it would be **Resilienc
 
 The **Crisis Management & Resilience** theme tied everything together. How do we ensure continuity when an attack inevitably occurs? Preparedness and rapid recovery are the new baseline for survival in this unstable geopolitical and digital reality.
 
-Attending V2 Security Aarhus was a fantastic experience that gave me a lot of new ideas to bring back to my own projects and this blog.`,
+Attending V2 Security Aarhus was a fantastic experience that gave me a lot of new ideas to bring back to my own projects and this blog.
+
+*Learn more about the conference at [v2security.dk](https://www.v2security.dk).*`,
+
     category: 'conferences',
     date: '2026-02-27',
     location: 'Århus, Denmark',
