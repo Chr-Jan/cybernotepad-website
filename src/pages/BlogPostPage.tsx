@@ -129,6 +129,13 @@ export function BlogPostPage() {
                 a: ({ href, children }) => (
                   <a href={href} className="text-accent-primary hover:text-accent-primary-hover underline">{children}</a>
                 ),
+                img: ({ src, alt }) => (
+                  <img 
+                    src={src} 
+                    alt={alt} 
+                    className="w-full h-auto rounded-xl border-2 border-accent-primary/50 shadow-lg my-8 pointer-events-none select-none" 
+                  />
+                ),
               }}
             >
               {post.content}
