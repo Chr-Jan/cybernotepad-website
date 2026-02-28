@@ -37,6 +37,8 @@ With 50 expert talks and 15 main speakers, I ended up spending a ton of time cha
 
 The talks gave us some really fresh looks at the newest IT security challenges. We covered a lot of ground, but these were my biggest takeaways based on the official themes:
 
+![A small presentation session at V2 Security](/images/v2-2026/v2-1.png)
+
 ### 1. How Threats Are Changing
 The whole topic of cyber threats and attacks got a lot of attention. It is super clear that digital threats are changing fast. We talked a lot about how cyber attacks, like ransomware, phishing, and attacks funded by governments, are getting much more targeted. The biggest lesson here was that we really need to focus on the human side of things along with the tech to catch and stop these attacks.
 

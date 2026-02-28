@@ -8,8 +8,18 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export function BlogPostPage() {
   const { slug } = useParams();
+  const imageModules = import.meta.glob('../assets/images/**/*', { eager: true, import: 'default' }) as Record<string, string>;
   const allPosts = [...homePosts, ...blogPosts];
   const post = allPosts.find(p => p.slug === slug);
+
+  const resolveImageSrc = (src?: string) => {
+    if (!src) return '';
+    if (src.startsWith('/images/')) {
+      const key = `../assets/images/${src.replace('/images/', '')}`;
+      return imageModules[key] || src;
+    }
+    return src;
+  };
 
   if (!post) {
     return (
@@ -130,11 +140,18 @@ export function BlogPostPage() {
                   <a href={href} className="text-accent-primary hover:text-accent-primary-hover underline">{children}</a>
                 ),
                 img: ({ src, alt }) => (
-                  <img 
-                    src={src} 
-                    alt={alt} 
-                    className="w-full h-auto rounded-xl border-2 border-accent-primary/50 shadow-lg my-8 pointer-events-none select-none" 
-                  />
+                  <figure className="my-8 mx-auto max-w-2xl">
+                    <img
+                      src={resolveImageSrc(src)}
+                      alt={alt}
+                      className="w-full h-auto rounded-lg border border-white/15 shadow-md brightness-110"
+                    />
+                    {alt ? (
+                      <figcaption className="mt-2 text-center text-sm text-text-tertiary">
+                        {alt}
+                      </figcaption>
+                    ) : null}
+                  </figure>
                 ),
               }}
             >
