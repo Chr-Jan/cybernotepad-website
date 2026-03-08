@@ -1449,13 +1449,13 @@ The whole topic of cyber threats and attacks got a lot of attention. It is super
 ### 2. The Rules and Regulations
 Following the rules and managing risk is not always the most exciting topic, but it is absolutely crucial. With new rules like NIS2 and DORA putting pressure on companies, the chats focused on how to actually use security standards like ISO 27001 in daily work to build trust everywhere.
 
-![A stage presentation about how AI can be used in spoofing attacks](/images/v2-2026/v2-3.png)
-
 ### 3. Securing Networks, Cloud, and Industrial Tech
 The talks on networks, cloud setups, and industrial security really hit close to home for me. The main focus was on zero trust designs and keeping mixed environments safe. Furthermore, since important physical infrastructure and production plants are going digital, protecting our Operational Technology from crashing is more important than ever before. IT and operational staff really need to work closely together to make this happen.
 
 ### 4. AI and Doing Things Automatically
 You really cannot have a tech event today without talking about Artificial Intelligence. The sessions on AI, automation, and brand new tech really opened my eyes. We looked at how AI is helping us build better defenses and spot threats, but also how the bad guys are using it for advanced attacks. There was also some really cool talk about the future, especially regarding quantum encryption.
+
+![A stage presentation about how AI can be used in spoofing attacks](/images/v2-2026/v2-3.png)
 
 ### 5. Global Politics and Tech Independence
 One really eye opening theme was how global politics affect our tech. Security and global power dynamics are totally mixed together now. We listened to discussions about trade conflicts, supply chains, and how Europe needs to build its own digital independence so we do not have to rely entirely on foreign suppliers.
