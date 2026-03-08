@@ -1441,8 +1441,6 @@ With 50 expert talks and 15 main speakers, I ended up spending a ton of time cha
 
 The talks gave us some really fresh looks at the newest IT security challenges. We covered a lot of ground, but these were my biggest takeaways based on the official themes:
 
-![A small presentation session about how to setup local network environments](/images/v2-2026/v2-1.png)
-
 ### 1. How Threats Are Changing
 The whole topic of cyber threats and attacks got a lot of attention. It is super clear that digital threats are changing fast. We talked a lot about how cyber attacks, like ransomware, phishing, and attacks funded by governments, are getting much more targeted. The biggest lesson here was that we really need to focus on the human side of things along with the tech to catch and stop these attacks.
 
@@ -1451,6 +1449,8 @@ Following the rules and managing risk is not always the most exciting topic, but
 
 ### 3. Securing Networks, Cloud, and Industrial Tech
 The talks on networks, cloud setups, and industrial security really hit close to home for me. The main focus was on zero trust designs and keeping mixed environments safe. Furthermore, since important physical infrastructure and production plants are going digital, protecting our Operational Technology from crashing is more important than ever before. IT and operational staff really need to work closely together to make this happen.
+
+![A small presentation session about how to setup local network environments](/images/v2-2026/v2-1.png)
 
 ### 4. AI and Doing Things Automatically
 You really cannot have a tech event today without talking about Artificial Intelligence. The sessions on AI, automation, and brand new tech really opened my eyes. We looked at how AI is helping us build better defenses and spot threats, but also how the bad guys are using it for advanced attacks. There was also some really cool talk about the future, especially regarding quantum encryption.
