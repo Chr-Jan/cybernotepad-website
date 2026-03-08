@@ -25,6 +25,8 @@ export const blogPosts: BlogPost[] = [
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
+![The entrance for the event at V2 Security](/images/v2-2026/v2-2.png)
+
 Here is my personal summary of how it went and the main things that caught my attention.
 
 ## The Vibe and Meeting People
@@ -44,6 +46,8 @@ The whole topic of cyber threats and attacks got a lot of attention. It is super
 
 ### 2. The Rules and Regulations
 Following the rules and managing risk is not always the most exciting topic, but it is absolutely crucial. With new rules like NIS2 and DORA putting pressure on companies, the chats focused on how to actually use security standards like ISO 27001 in daily work to build trust everywhere.
+
+![A stage presentation at V2 Security](/images/v2-2026/v2-3.png)
 
 ### 3. Securing Networks, Cloud, and Industrial Tech
 The talks on networks, cloud setups, and industrial security really hit close to home for me. The main focus was on zero trust designs and keeping mixed environments safe. Furthermore, since important physical infrastructure and production plants are going digital, protecting our Operational Technology from crashing is more important than ever before. IT and operational staff really need to work closely together to make this happen.
