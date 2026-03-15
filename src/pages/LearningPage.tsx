@@ -96,6 +96,71 @@ export function LearningPage() {
           website: "https://cyberdefenders.org/",
           difficulty: "Beginner to Advanced",
           color: "from-cyan-500 to-blue-500"
+        },
+        {
+          name: "PortSwigger Web Security Academy",
+          description: "A free web security training platform from the creators of Burp Suite, featuring hundreds of hands-on labs covering real-world web vulnerabilities.",
+          features: [
+            "200+ interactive web security labs",
+            "Learn SQL injection, XSS, CSRF, and other vulnerabilities",
+            "Browser-based hacking environments",
+            "Official Burp Suite training platform"
+          ],
+          website: "https://portswigger.net/web-security",
+          difficulty: "Beginner to Advanced",
+          color: "from-orange-500 to-red-500"
+        },
+        {
+          name: "picoCTF",
+          description: "Beginner-friendly cybersecurity Capture The Flag platform created by Carnegie Mellon University to teach security concepts through gamified challenges.",
+          features: [
+            "Beginner-friendly CTF challenges",
+            "Covers cryptography, web security, and binary exploitation",
+            "Educational challenge explanations",
+            "Large archive of past competitions"
+          ],
+          website: "https://picoctf.org/",
+          difficulty: "Beginner to Intermediate",
+          color: "from-purple-500 to-indigo-500"
+        },
+        {
+          name: "Root-Me",
+          description: "A challenge-based cybersecurity training platform with hundreds of exercises covering penetration testing, reverse engineering, and cryptography.",
+          features: [
+            "400+ hacking challenges",
+            "Wide range of categories including web, crypto, and forensics",
+            "Scoreboards and rankings",
+            "Active security community"
+          ],
+          website: "https://www.root-me.org/",
+          difficulty: "Beginner to Advanced",
+          color: "from-green-500 to-emerald-500"
+        },
+        {
+          name: "Blue Team Labs Online",
+          description: "A platform focused on blue-team cybersecurity skills, offering realistic incident response and log analysis challenges.",
+          features: [
+            "SOC and incident response scenarios",
+            "Log analysis and threat detection exercises",
+            "Blue-team focused learning paths",
+            "Realistic attack investigation challenges"
+          ],
+          website: "https://blueteamlabs.online/",
+          difficulty: "Beginner to Advanced",
+          color: "from-blue-500 to-cyan-500"
+        },
+        {
+          name: "PentesterLab",
+          description: "A web application penetration testing platform focused on learning real-world vulnerabilities through guided exercises.",
+          features: [
+            "Hands-on web exploitation exercises",
+            "Real vulnerability scenarios",
+            "Bug bounty focused training",
+            "Detailed explanations and walkthroughs"
+          ],
+          website: "https://pentesterlab.com/",
+          difficulty: "Intermediate to Advanced",
+          color: "from-yellow-500 to-orange-500"
         }
       ]
     },
