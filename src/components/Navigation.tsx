@@ -7,21 +7,21 @@
  */
 
 import { Link } from 'react-router-dom';
-import { Terminal, Shield, Target, Eye, BookOpen, GraduationCap } from 'lucide-react';
+import { Terminal, Home, FileText, Shield, Target, Eye, BookOpen, GraduationCap, Info } from 'lucide-react';
 import { useState } from 'react';
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { to: '/', label: 'Home', icon: null },
-    { to: '/blog', label: 'Blog', icon: null },
+    { to: '/', label: 'Home', icon: Home },
+    { to: '/blog', label: 'Blog', icon: FileText },
     { to: '/penetration-testing', label: 'Penetration Testing', icon: Shield },
     { to: '/threat-detection', label: 'Threat Detection', icon: Target },
     { to: '/threat-intelligence', label: 'Threat Intelligence', icon: Eye },
     { to: '/frameworks', label: 'Frameworks', icon: BookOpen },
     { to: '/learning', label: 'Learning', icon: GraduationCap },
-    { to: '/about', label: 'About', icon: null }
+    { to: '/about', label: 'About', icon: Info }
   ];
 
   return (
@@ -37,14 +37,14 @@ export function Navigation() {
             </span>
           </Link>
           
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-4 2xl:gap-6">
             {navItems.map((item) => {
               const IconComponent = item.icon;
               return (
                 <Link 
                   key={item.to}
                   to={item.to} 
-                  className="flex items-center gap-2 text-text-secondary hover:text-accent-primary transition-colors duration-250 font-medium text-sm"
+                  className="flex items-center gap-2 whitespace-nowrap text-text-secondary hover:text-accent-primary transition-colors duration-250 font-medium text-xs 2xl:text-sm"
                 >
                   {IconComponent && <IconComponent className="w-4 h-4" />}
                   {item.label}
@@ -54,7 +54,7 @@ export function Navigation() {
           </div>
 
           <button 
-            className="lg:hidden p-2 text-text-secondary hover:text-accent-primary transition-colors duration-250"
+            className="xl:hidden p-2 text-text-secondary hover:text-accent-primary transition-colors duration-250"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ export function Navigation() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t border-white/10">
               {navItems.map((item) => {
                 const IconComponent = item.icon;
