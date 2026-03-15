@@ -1,4 +1,4 @@
-export type PenetrationTestingIconKey = 'Shield' | 'Code' | 'Network' | 'Zap' | 'Search';
+export type PenetrationTestingIconKey = 'Shield' | 'Code' | 'Network' | 'Zap' | 'Search' | 'Key';
 
 export interface PenetrationTestingTool {
   name: string;
@@ -102,6 +102,77 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
         ],
         website: 'https://sqlmap.org/',
         color: 'from-green-500 to-blue-500',
+      },
+    ],
+  },
+  {
+    category: 'Password Security References',
+    icon: 'Key',
+    tools: [
+      {
+        name: 'SecLists',
+        description:
+          'A widely used collection of security testing lists, including credential and password dictionaries for authorized assessments.',
+        features: [
+          'Password dictionaries and curated lists',
+          'Useful for internal policy and control validation',
+          'Common source in security testing workflows',
+          'Best used only with explicit authorization',
+        ],
+        website: 'https://github.com/danielmiessler/SecLists',
+        color: 'from-indigo-500 to-blue-500',
+      },
+      {
+        name: 'Have I Been Pwned - Pwned Passwords',
+        description:
+          'A password exposure reference service for checking if credentials appear in known breach corpora.',
+        features: [
+          'Breach password exposure checks',
+          'API support for secure validation flows',
+          'Useful for account hygiene and awareness',
+          'Supports defensive credential risk reduction',
+        ],
+        website: 'https://haveibeenpwned.com/Passwords',
+        color: 'from-cyan-500 to-blue-500',
+      },
+      {
+        name: 'OWASP Authentication Cheat Sheet',
+        description:
+          'Practical implementation guidance for secure authentication, password handling, and account protection controls.',
+        features: [
+          'Authentication design best practices',
+          'Password policy and storage guidance',
+          'MFA and session management recommendations',
+          'Security checklist for development teams',
+        ],
+        website: 'https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html',
+        color: 'from-orange-500 to-red-500',
+      },
+      {
+        name: 'NIST SP 800-63B',
+        description:
+          'Authoritative digital identity guidance covering authentication, memorized secrets, and verifier requirements.',
+        features: [
+          'Modern password guidance',
+          'Identity assurance recommendations',
+          'Verifier and authenticator requirements',
+          'Reference baseline for security programs',
+        ],
+        website: 'https://pages.nist.gov/800-63-3/sp800-63b.html',
+        color: 'from-emerald-500 to-teal-500',
+      },
+      {
+        name: 'UK NCSC Password Guidance',
+        description:
+          'Public guidance and practical recommendations for stronger password policies and user-focused security practices.',
+        features: [
+          'Policy recommendations for organizations',
+          'User education and practical advice',
+          'Risk reduction for common credential issues',
+          'Government-backed security guidance',
+        ],
+        website: 'https://www.ncsc.gov.uk/collection/passwords',
+        color: 'from-violet-500 to-indigo-500',
       },
     ],
   },

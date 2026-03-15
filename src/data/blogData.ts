@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     id: '1',
     slug: 'my-v2-security-aarhus-experience-2026',
     title: 'My Experience at V2 Security Aarhus: Networking and New Threats',
-    excerpt: 'I spent two days at V2 Security Aarhus surrounded by 1,000+ professionals. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.',
+    excerpt: 'I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.',
     content: `# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
@@ -33,7 +33,7 @@ Here is my personal summary of how it went and the main things that caught my at
 
 The absolute best part of going to a real life event is the people. V2 Security wants to make cybersecurity stronger across all sectors in Denmark, and you could really feel everyone working together.
 
-With 50 expert talks and 15 main speakers, I ended up spending a ton of time chatting with other security folks. It is always super interesting to hear how different companies solve the exact same problems. We talked about everything from handling new rules to setting up better monitoring.
+With many expert talks and keynote sessions, I ended up spending a ton of time chatting with other security folks. It is always super interesting to hear how different companies solve the exact same problems. We talked about everything from handling new rules to setting up better monitoring.
 
 ## My Favorite Parts of the Talks
 

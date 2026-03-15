@@ -30,7 +30,11 @@ export function HomePage() {
   // - Post content
   // - Post tags
   // The search is case-insensitive and matches partial terms
-  const filteredPosts = homePosts.filter(post => {
+  const sortedPosts = [...homePosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+  const filteredPosts = sortedPosts.filter(post => {
     const query = searchQuery.toLowerCase();
     const matchesSearch = post.title.toLowerCase().includes(query) ||
                          post.excerpt.toLowerCase().includes(query) ||
@@ -45,8 +49,8 @@ export function HomePage() {
   // featuredPost: The first post (index 0) is designated as the featured post
   // recentPosts: All filtered posts except the first one (used in the grid)
   // This ensures the featured post appears separately at the top
-  const featuredPost = homePosts[0];
-  const recentPosts = filteredPosts.slice(1);
+  const featuredPost = !searchQuery ? filteredPosts[0] : null;
+  const recentPosts = !searchQuery ? filteredPosts.slice(1) : filteredPosts;
 
   return (
     <div className="min-h-screen pt-16">
@@ -112,7 +116,7 @@ export function HomePage() {
            Only displayed when NOT actively searching (searchQuery is empty)
            Provides a larger, more prominent display for the featured content
       */}
-      {!searchQuery && (
+      {!searchQuery && featuredPost && (
         <section className="px-6 mb-16">
           <div className="container mx-auto max-w-5xl">
             <BlogCard post={featuredPost} featured />
@@ -133,7 +137,7 @@ export function HomePage() {
         <div className="container mx-auto">
           {/* Section Title - Dynamic based on search state */}
           <h2 className="font-display text-h2 font-semibold text-text-primary mb-8">
-            {searchQuery ? `Search Results for "${searchQuery}"` : 'Latest Articles'}
+            {searchQuery ? `Search Results for "${searchQuery}"` : 'More Articles'}
           </h2>
           
           {/* Conditional rendering based on results availability */}

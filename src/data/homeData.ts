@@ -19,7 +19,7 @@ export const homePosts: BlogPost[] = [
     excerpt: 'Comprehensive guide to Kali Linux, the industry-standard penetration testing distribution. Learn installation, configuration, and essential tools for ethical hacking.',
     content: `# Kali Linux: The Ultimate Penetration Testing Distribution
 
-Kali Linux is the world's leading penetration testing distribution, used by security professionals, ethical hackers, and cybersecurity researchers worldwide. This powerful platform comes pre-installed with over 600 penetration testing tools.
+Kali Linux is a widely used penetration testing distribution, used by security professionals, ethical hackers, and cybersecurity researchers worldwide. This platform comes with a large collection of penetration testing tools.
 
 ## Why Choose Kali Linux?
 
@@ -148,6 +148,12 @@ aircrack-ng -w wordlist.cap
 - Use dedicated lab networks
 - Set up personal virtual networks for learning
 
+## Sources and Credits
+
+- Kali Linux Official Website: https://www.kali.org/
+- Kali Linux Documentation: https://www.kali.org/docs/
+- Kali Tools Reference: https://www.kali.org/tools/
+
 Kali Linux is a powerful platform that, when used ethically, can significantly enhance your cybersecurity skills and capabilities.`,
     category: 'Penetration Testing',
     tags: ['Kali Linux', 'Penetration Testing', 'Ethical Hacking', 'Security Tools'],
@@ -162,7 +168,7 @@ Kali Linux is a powerful platform that, when used ethically, can significantly e
     excerpt: 'Learn how to properly configure and secure SSH servers. Master key management, authentication methods, and hardening techniques.',
     content: `# Secure Your SSH: Essential Security Measures
 
-SSH (Secure Shell) is one of the most critical services to secure properly. With over 2.3 million SSH servers exposed to the internet, proper configuration is essential for network security.
+SSH (Secure Shell) is one of the most critical services to secure properly. With many SSH services exposed to the internet, proper configuration is essential for network security.
 
 ## Why SSH Security Matters
 
@@ -282,6 +288,12 @@ sudo systemctl restart sshd
 
 SSH security is fundamental to maintaining secure remote access. Implement these measures systematically and regularly audit your SSH configurations to ensure they remain secure against evolving threats.
 
+## Sources and Credits
+
+- OpenSSH Official Project: https://www.openssh.com/
+- OpenSSH Manual Pages: https://www.openssh.com/manual.html
+- NIST SP 800-63B (Digital Identity Guidelines): https://pages.nist.gov/800-63-3/sp800-63b.html
+
 Remember: **Security is not a one-time setup but an ongoing process**.`,
     category: 'Network Security',
     tags: ['SSH', 'Network Security', 'Authentication', 'Hardening'],
@@ -296,7 +308,7 @@ Remember: **Security is not a one-time setup but an ongoing process**.`,
     excerpt: 'Master Nmap network scanning techniques. Learn port scanning, service detection, OS fingerprinting, and advanced scanning methods for security professionals.',
     content: `# Network Scanning with Nmap: Techniques and Best Practices
 
-Nmap (Network Mapper) is the industry standard for network discovery and security auditing. Used by both security professionals and malicious actors, understanding Nmap is essential for network security.
+Nmap (Network Mapper) is a widely used tool for network discovery and security auditing. Because it is used by both defenders and attackers, understanding Nmap is essential for network security.
 
 ## Nmap Fundamentals
 
@@ -433,6 +445,12 @@ nmap --script http-security-headers target.com
 4. **Respect rate limits** and system resources
 5. **Report findings** responsibly to system owners
 
+## Sources and Credits
+
+- Nmap Official Website: https://nmap.org/
+- Nmap Reference Guide: https://nmap.org/book/man.html
+- Nmap Scripting Engine Documentation: https://nmap.org/book/nse.html
+
 **Remember**: With great power comes great responsibility. Always use Nmap ethically and legally.`,
     category: 'Penetration Testing',
     tags: ['Nmap', 'Network Scanning', 'Port Scanning', 'Security Assessment'],
@@ -447,7 +465,7 @@ nmap --script http-security-headers target.com
     excerpt: 'Comprehensive guide to Metasploit Framework. Learn exploit development, payload generation, post-exploitation techniques, and professional penetration testing methodologies.',
     content: `# Metasploit: Mastering the Metasploit Framework
 
-Metasploit Framework is the world's most widely used penetration testing framework, providing a comprehensive platform for developing, testing, and executing exploits.
+Metasploit Framework is a widely used penetration testing framework, providing a comprehensive platform for developing, testing, and executing exploits.
 
 ## Introduction to Metasploit
 
@@ -613,6 +631,12 @@ use post/windows/gather/credentials/chrome
 4. **Report vulnerabilities responsibly**
 5. **Follow agreed-upon scope**
 
+## Sources and Credits
+
+- Metasploit Official Site (Rapid7): https://www.metasploit.com/
+- Metasploit Documentation (Rapid7): https://docs.rapid7.com/metasploit/
+- Metasploit Framework Source Code: https://github.com/rapid7/metasploit-framework
+
 **Remember**: Use Metasploit responsibly and only for authorized security testing. The knowledge and tools should always be used to improve security, not compromise it.`,
     category: 'Penetration Testing',
     tags: ['Metasploit', 'Exploitation', 'Payloads', 'Penetration Testing'],
@@ -633,7 +657,7 @@ Password security is fundamental to cybersecurity. Understanding password storag
 
 ### Why Password Security Matters
 Passwords are the most common authentication method:
-- Billions of passwords compromised annually
+- Large numbers of passwords are exposed in breaches every year
 - Users reuse passwords across services
 - Weak passwords are easily guessable
 - Password attacks are automated and widespread
@@ -671,7 +695,7 @@ echo -n "password123" | sha1sum
 **Problems:**
 - Still too fast for password hashing
 - Theoretical collisions practical in 2017
-- Deprecated by NIST
+- Not recommended by modern guidance from organizations such as NIST
 
 ### Modern Password Hashing
 
@@ -833,6 +857,13 @@ Password security is a critical component of cybersecurity. Understanding both o
 - Regularly audit password security
 - Educate users about password best practices
 
+## Sources and Credits
+
+- OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+- NIST SP 800-63B (Digital Identity Guidelines): https://pages.nist.gov/800-63-3/sp800-63b.html
+- Argon2 Project Repository: https://github.com/P-H-C/phc-winner-argon2
+- Have I Been Pwned - Pwned Passwords: https://haveibeenpwned.com/Passwords
+
 Remember: **Use this knowledge responsibly** to improve security, not to compromise systems.`,
     category: 'Web Security',
     tags: ['Password Security', 'Hashing', 'Hashcat', 'John the Ripper'],
@@ -847,7 +878,7 @@ Remember: **Use this knowledge responsibly** to improve security, not to comprom
     excerpt: 'Comprehensive guide to SQL injection vulnerabilities, detection techniques, and protection methods for web applications.',
     content: `# Web Application Security: SQL Injection and Protection
 
-SQL injection remains one of the most dangerous web application vulnerabilities, affecting millions of applications worldwide. Understanding both attack and defense is crucial for web security professionals.
+SQL injection remains one of the most serious web application vulnerabilities. Understanding both attack and defense is crucial for web security professionals.
 
 ## Understanding SQL Injection
 
@@ -1115,6 +1146,12 @@ Key takeaways:
 - **Stay updated** - keep frameworks and libraries current
 - **Educate teams** - ensure all developers understand secure coding practices
 
+## Sources and Credits
+
+- OWASP SQL Injection Overview: https://owasp.org/www-community/attacks/SQL_Injection
+- OWASP SQL Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
+- SQLMap Official Website: https://sqlmap.org/
+
 Remember: **Security is not a feature, it's a requirement**.`,
     category: 'Web Security',
     tags: ['SQL Injection', 'Web Security', 'Database Security', 'Prevention'],
@@ -1126,10 +1163,10 @@ Remember: **Security is not a feature, it's a requirement**.`,
   id: '7',
   slug: 'osint-find-social-media-accounts-with-sherlock',
   title: 'OSINT Guide: Finding Social Media Accounts Using Sherlock',
-  excerpt: 'Learn how to identify social media accounts across hundreds of platforms using the Sherlock OSINT tool for Python.',
+  excerpt: 'Learn how to identify social media accounts across many platforms using the Sherlock OSINT tool for Python.',
   content: `# OSINT Guide: Finding Social Media Accounts Using Sherlock
 
-Sherlock is one of the most widely used OSINT tools for identifying social media profiles linked to a username. Whether you're working in cybersecurity, investigations, or digital research, Sherlock provides a fast and automated way to check hundreds of platforms for public accounts.
+Sherlock is a popular OSINT tool for identifying social media profiles linked to a username. Whether you're working in cybersecurity, investigations, or digital research, Sherlock provides a fast and automated way to check many platforms for public accounts.
 
 ## What Is Sherlock?
 
@@ -1291,11 +1328,108 @@ Sherlock is a powerful and lightweight OSINT tool for mapping social media prese
 - Only uses publicly available data  
 - Ideal for cybersecurity, OSINT, and investigative work  
 
+## Sources and Credits
+
+- Sherlock Official Project: https://github.com/sherlock-project/sherlock
+- Sherlock Documentation (README): https://github.com/sherlock-project/sherlock#readme
+- Python Official Website: https://www.python.org/
+
 Sherlock provides fast, reliable insights into digital footprints — when used ethically and responsibly.
 `,
   category: 'OSINT',
   tags: ['OSINT', 'Sherlock', 'Social Media Enumeration', 'Cybersecurity Tools'],
   date: '2025-11-16',
   readTime: '12 min read',
+  author: 'Christoffer'
+},
+{
+  id: '8',
+  slug: 'common-passwords-awareness-and-defensive-testing',
+  title: 'Common Passwords: Awareness, Defensive Testing, and Trusted Sources',
+  excerpt: 'Understand why common passwords are still a major risk, how defenders use password lists responsibly, and where to find original trusted sources with proper credit.',
+  content: `# Common Passwords: Awareness, Defensive Testing, and Trusted Sources
+
+Weak and reused passwords remain one of the most common reasons accounts get compromised. For defenders, understanding common password patterns helps improve policy, training, and detection.
+
+This article is focused on **defensive security**: awareness, auditing your own environment, and building stronger authentication controls.
+
+## Why Common Passwords Still Work
+
+Attackers continue to succeed because many organizations still have:
+
+- Weak password policies
+- Password reuse across systems
+- No MFA enforcement
+- Limited monitoring for credential stuffing behavior
+
+Even with modern controls, a single weak credential can become an entry point.
+
+## What Defenders Can Do
+
+### 1. Block Known Weak Passwords
+
+Use deny-lists for known weak choices like seasonal patterns, keyboard walks, and frequently leaked values.
+
+### 2. Monitor Failed Login Patterns
+
+Track spikes in failed logins, repeated attempts across many accounts, and unusual authentication geolocation changes.
+
+### 3. Enforce MFA Everywhere Possible
+
+MFA significantly reduces account takeover risk even when passwords are exposed.
+
+### 4. Run Authorized Internal Audits
+
+Security teams can use controlled and approved testing to identify risky passwords and improve policies.
+
+## Recommended Sources (Original Links)
+
+If you reference password lists or guidance in your content, always link directly to the original source.
+
+**SecLists**  
+  Source: [github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)  
+  Why it matters: A widely used collection of security testing lists, including password-related dictionaries.
+
+**Have I Been Pwned - Pwned Passwords**  
+  Source: [haveibeenpwned.com/Passwords](https://haveibeenpwned.com/Passwords)  
+  Why it matters: Large dataset and API model for checking whether passwords appear in known breach corpora.
+
+**OWASP Authentication Cheat Sheet**  
+  Source: [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)  
+  Why it matters: Practical implementation guidance for secure authentication and password handling.
+
+**NIST Digital Identity Guidelines (SP 800-63B)**  
+  Source: [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html)  
+  Why it matters: Authoritative recommendations for modern password and identity controls.
+
+**UK NCSC Password Guidance**  
+  Source: [NCSC Passwords Collection](https://www.ncsc.gov.uk/collection/passwords)  
+  Why it matters: Government-backed guidance and educational material for password security.
+
+## Credit and Attribution Template
+
+You can reuse this structure in your own post:
+
+- Data and list references: SecLists by Daniel Miessler
+- Breach password validation methodology: Have I Been Pwned by Troy Hunt
+- Security best-practice guidance: OWASP and NIST
+- Public policy guidance: UK NCSC
+
+## Important Legal and Ethical Note
+
+- Only perform password testing where you have explicit written authorization.
+- Keep testing in agreed scope and log all activity.
+- Use findings to reduce risk, not to exploit users or systems.
+
+## Conclusion
+
+Common-password awareness is one of the highest-impact and lowest-cost improvements in security. Combine deny-lists, MFA, monitoring, and user education to reduce account takeover risk significantly.
+
+If you publish about this topic, direct attribution and original links are essential for both credibility and transparency.
+`,
+  category: 'Penetration Testing',
+  tags: ['Password Security', 'SecLists', 'Authentication', 'Defensive Security'],
+  date: '2026-03-15',
+  readTime: '10 min read',
   author: 'Christoffer'
 }]

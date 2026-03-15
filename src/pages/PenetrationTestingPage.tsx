@@ -1,4 +1,4 @@
-import { Shield, Network, Search, Code, Zap } from 'lucide-react';
+import { Shield, Network, Search, Code, Zap, Key } from 'lucide-react';
 import { penetrationTestingTools } from '../data/penetrationTestingData';
 
 const iconMap = {
@@ -7,6 +7,7 @@ const iconMap = {
   Network,
   Zap,
   Search,
+  Key,
 } as const;
 
 export function PenetrationTestingPage() {
