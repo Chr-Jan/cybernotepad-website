@@ -1,3 +1,15 @@
+/**
+ * Reusable card component for rendering blog post previews in list and featured layouts.
+ *
+ * Purpose:
+ * - Present key post information in a scannable, clickable summary card.
+ * - Support both standard and highlighted (featured) presentation modes.
+ *
+ * Functionality:
+ * - Accepts a blog post object and optional `featured` flag.
+ * - Routes users to the full post detail page via slug-based links.
+ * - Displays post metadata such as category, date, read time, and tags.
+ */
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../data/homeData';
 import { Calendar, Clock, Tag } from 'lucide-react';

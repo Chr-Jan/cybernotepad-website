@@ -1,3 +1,15 @@
+/**
+ * Renders a single blog post page using the `slug` route parameter.
+ *
+ * Purpose:
+ * - Load and display one post from combined home and blog data sources.
+ * - Present metadata, tags, markdown content, and related posts.
+ *
+ * Functionality:
+ * - Resolves markdown image paths to bundled local assets when possible.
+ * - Customizes markdown rendering for headings, code blocks, links, and images.
+ * - Shows a fallback view when no post matches the current slug.
+ */
 import { useParams, Link } from 'react-router-dom';
 import { homePosts } from '../data/homeData';
 import { blogPosts } from '../data/blogData';
