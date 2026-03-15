@@ -57,6 +57,45 @@ export function LearningPage() {
           website: "https://github.com/clong/DetectionLab",
           difficulty: "Intermediate to Advanced",
           color: "from-purple-500 to-pink-500"
+        },
+        {
+          name: "OverTheWire",
+          description: "Wargame-style cybersecurity challenges designed to teach Linux, networking, and security fundamentals through hands-on problem solving.",
+          features: [
+            "Classic wargame challenges like Bandit, Natas, and Leviathan",
+            "Focus on Linux command line and privilege escalation",
+            "Progressive difficulty levels",
+            "Great for beginners learning offensive security"
+          ],
+          website: "https://overthewire.org/",
+          difficulty: "Beginner to Intermediate",
+          color: "from-teal-500 to-green-500"
+        },
+        {
+          name: "VulnHub",
+          description: "A platform providing intentionally vulnerable virtual machines for practicing penetration testing and vulnerability exploitation.",
+          features: [
+            "Downloadable vulnerable VM images",
+            "Realistic penetration testing scenarios",
+            "Practice privilege escalation and exploitation",
+            "Widely used by OSCP learners"
+          ],
+          website: "https://www.vulnhub.com/",
+          difficulty: "Intermediate to Advanced",
+          color: "from-red-500 to-orange-500"
+        },
+        {
+          name: "CyberDefenders",
+          description: "Blue-team focused training platform offering realistic cyber defense scenarios and DFIR challenges.",
+          features: [
+            "Digital forensics and incident response challenges",
+            "Threat hunting scenarios",
+            "Real-world attack investigation labs",
+            "Blue-team skill development"
+          ],
+          website: "https://cyberdefenders.org/",
+          difficulty: "Beginner to Advanced",
+          color: "from-cyan-500 to-blue-500"
         }
       ]
     },
