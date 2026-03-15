@@ -106,6 +106,77 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
     ],
   },
   {
+    category: 'Phishing Simulation & Social Engineering',
+    icon: 'Search',
+    tools: [
+      {
+        name: 'GoPhish',
+        description:
+          'An open-source phishing simulation framework for running authorized security awareness campaigns and training exercises.',
+        features: [
+          'Campaign and landing page management',
+          'Email template and tracking support',
+          'Role-based reporting for awareness metrics',
+          'Integration-friendly API for internal workflows',
+        ],
+        website: 'https://getgophish.com/',
+        color: 'from-cyan-500 to-blue-500',
+      },
+      {
+        name: 'Evilginx2',
+        description:
+          'A red team framework for advanced adversary simulation in controlled environments with explicit authorization.',
+        features: [
+          'Realistic account takeover simulation',
+          'Operator-controlled phishing flow testing',
+          'Infrastructure and domain testing support',
+          'Useful for validating MFA-resistant controls',
+        ],
+        website: 'https://github.com/kgretzky/evilginx2',
+        color: 'from-red-500 to-orange-500',
+      },
+      {
+        name: 'Zphisher',
+        description:
+          'A social engineering toolkit often referenced in labs for understanding phishing mechanics and defensive detection patterns.',
+        features: [
+          'Prebuilt simulation templates for testing',
+          'Awareness training scenario support',
+          'Defensive telemetry validation in lab setups',
+          'Useful for incident response tabletop exercises',
+        ],
+        website: 'https://github.com/htr-tech/zphisher',
+        color: 'from-purple-500 to-pink-500',
+      },
+      {
+        name: 'King Phisher',
+        description:
+          'A phishing campaign toolkit used to evaluate user awareness and security controls in sanctioned assessments.',
+        features: [
+          'Campaign lifecycle management',
+          'Credential handling simulation workflows',
+          'Rich operator dashboard and campaign metrics',
+          'Supports repeatable security awareness programs',
+        ],
+        website: 'https://github.com/rsmusllp/king-phisher',
+        color: 'from-yellow-500 to-orange-500',
+      },
+      {
+        name: 'Social-Engineer Toolkit (SET)',
+        description:
+          'A long-standing framework for social engineering testing in approved penetration tests and internal awareness exercises.',
+        features: [
+          'Multiple social engineering test vectors',
+          'Campaign automation for controlled testing',
+          'Payload and delivery workflow simulation',
+          'Training-focused red team scenario support',
+        ],
+        website: 'https://github.com/trustedsec/social-engineer-toolkit',
+        color: 'from-green-500 to-teal-500',
+      },
+    ],
+  },
+  {
     category: 'Network Discovery & Scanning',
     icon: 'Network',
     tools: [
