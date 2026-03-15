@@ -76,6 +76,6 @@ Going to V2 Security in Aarhus was a fantastic experience that gave me a bunch o
     type: 'conference',
     tags: ['V2 Security', 'Conference', 'Networking'],
     readTime: '10 min read',
-    author: 'V2 security aarhus experience 2026'
+    author: 'Christoffer'
   }
 ]

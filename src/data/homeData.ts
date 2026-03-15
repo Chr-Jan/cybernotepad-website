@@ -153,7 +153,7 @@ Kali Linux is a powerful platform that, when used ethically, can significantly e
     tags: ['Kali Linux', 'Penetration Testing', 'Ethical Hacking', 'Security Tools'],
     date: '2025-11-12',
     readTime: '12 min read',
-    author: 'Penetration Tester'
+    author: 'Christoffer'
   },
   {
     id: '2',
@@ -287,7 +287,7 @@ Remember: **Security is not a one-time setup but an ongoing process**.`,
     tags: ['SSH', 'Network Security', 'Authentication', 'Hardening'],
     date: '2025-11-10',
     readTime: '15 min read',
-    author: 'Network Security Engineer'
+    author: 'Christoffer'
   },
   {
     id: '3',
@@ -438,7 +438,7 @@ nmap --script http-security-headers target.com
     tags: ['Nmap', 'Network Scanning', 'Port Scanning', 'Security Assessment'],
     date: '2025-11-08',
     readTime: '18 min read',
-    author: 'Network Security Specialist'
+    author: 'Christoffer'
   },
   {
     id: '4',
@@ -618,7 +618,7 @@ use post/windows/gather/credentials/chrome
     tags: ['Metasploit', 'Exploitation', 'Payloads', 'Penetration Testing'],
     date: '2025-11-06',
     readTime: '20 min read',
-    author: 'Exploitation Specialist'
+    author: 'Christoffer'
   },
   {
     id: '5',
@@ -838,7 +838,7 @@ Remember: **Use this knowledge responsibly** to improve security, not to comprom
     tags: ['Password Security', 'Hashing', 'Hashcat', 'John the Ripper'],
     date: '2025-11-04',
     readTime: '16 min read',
-    author: 'Security Specialist'
+    author: 'Christoffer'
   },
   {
     id: '6',
@@ -1120,7 +1120,7 @@ Remember: **Security is not a feature, it's a requirement**.`,
     tags: ['SQL Injection', 'Web Security', 'Database Security', 'Prevention'],
     date: '2025-11-01',
     readTime: '22 min read',
-    author: 'Web Security Specialist'
+    author: 'Christoffer'
   },
   {
   id: '7',
@@ -1297,5 +1297,5 @@ Sherlock provides fast, reliable insights into digital footprints — when used 
   tags: ['OSINT', 'Sherlock', 'Social Media Enumeration', 'Cybersecurity Tools'],
   date: '2025-11-16',
   readTime: '12 min read',
-  author: 'Security Specialist'
+  author: 'Christoffer'
 }]
