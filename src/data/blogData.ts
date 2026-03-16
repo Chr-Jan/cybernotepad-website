@@ -42,6 +42,8 @@ The talks gave us some really fresh looks at the newest IT security challenges. 
 ### 1. How Threats Are Changing
 The whole topic of cyber threats and attacks got a lot of attention. It is super clear that digital threats are changing fast. We talked a lot about how cyber attacks, like ransomware, phishing, and attacks funded by governments, are getting much more targeted. The biggest lesson here was that we really need to focus on the human side of things along with the tech to catch and stop these attacks.
 
+![A presentation about the changing landscape of cyber threats](/images/v2-2026/v2-5.png)
+
 ### 2. The Rules and Regulations
 Following the rules and managing risk is not always the most exciting topic, but it is absolutely crucial. With new rules like NIS2 and DORA putting pressure on companies, the chats focused on how to actually use security standards like ISO 27001 in daily work to build trust everywhere.
 
@@ -57,6 +59,8 @@ You really cannot have a tech event today without talking about Artificial Intel
 
 ### 5. Global Politics and Tech Independence
 One really eye opening theme was how global politics affect our tech. Security and global power dynamics are totally mixed together now. We listened to discussions about trade conflicts, supply chains, and how Europe needs to build its own digital independence so we do not have to rely entirely on foreign suppliers.
+
+![The company Bestseller tells about their cybersecurity journey](/images/v2-2026/v2-4.png)
 
 ## Final Thoughts: Bouncing Back is Key
 
