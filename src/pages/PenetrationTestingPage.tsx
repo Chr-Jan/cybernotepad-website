@@ -59,14 +59,26 @@ export function PenetrationTestingPage() {
                         <h3 className="font-display text-xl font-semibold text-text-primary group-hover:text-red-500 transition-colors duration-250">
                           {tool.name}
                         </h3>
-                        <a 
-                          href={tool.website} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-red-500 hover:text-red-400 transition-colors duration-250 text-sm font-medium"
-                        >
-                          Official Site →
-                        </a>
+                        <div className="flex flex-col items-end gap-1">
+                          <a 
+                            href={tool.website} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-red-500 hover:text-red-400 transition-colors duration-250 text-sm font-medium"
+                          >
+                            {(tool.websiteLabel ?? 'Official Site') + ' ->'}
+                          </a>
+                          {tool.secondaryWebsite && (
+                            <a
+                              href={tool.secondaryWebsite}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-red-400 hover:text-red-300 transition-colors duration-250 text-xs font-medium"
+                            >
+                              {(tool.secondaryWebsiteLabel ?? 'Documentation') + ' ->'}
+                            </a>
+                          )}
+                        </div>
                       </div>
                       
                       <p className="text-text-secondary mb-6 leading-relaxed">

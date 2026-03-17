@@ -5,6 +5,9 @@ export interface PenetrationTestingTool {
   description: string;
   features: string[];
   website: string;
+  websiteLabel?: string;
+  secondaryWebsite?: string;
+  secondaryWebsiteLabel?: string;
   color: string;
 }
 
@@ -415,7 +418,7 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
     {
       name: 'pdfinfo',
       description:
-        'A command-line tool used to extract metadata and information from PDF files.',
+        'A command-line tool used to extract metadata and information from PDF files. It is part of the Poppler project (poppler-utils).',
       features: [
         'Displays document metadata',
         'Shows creation and modification dates',
@@ -423,6 +426,9 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
         'Useful for document analysis',
       ],
       website: 'https://poppler.freedesktop.org/',
+      websiteLabel: 'Poppler Project',
+      secondaryWebsite: 'https://manpages.debian.org/poppler-utils/pdfinfo.1.en.html',
+      secondaryWebsiteLabel: 'pdfinfo Manual',
       color: 'from-gray-500 to-slate-500',
     },
     {
@@ -467,7 +473,7 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
         'Simple and powerful',
         'Widely used in pentesting',
       ],
-      website: 'https://nmap.org/ncat/',
+      website: 'https://netcat.sourceforge.net/',
       color: 'from-red-500 to-pink-500',
     },
     {
