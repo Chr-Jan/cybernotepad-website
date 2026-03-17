@@ -403,6 +403,32 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
   icon: 'Search',
   tools: [
     {
+      name: 'FTK Imager',
+      description:
+        'A forensic imaging tool used to preview evidence and create forensic disk images for investigations.',
+      features: [
+        'Create forensic disk images',
+        'Preview files and artifacts before full acquisition',
+        'Supports common forensic image formats',
+        'Useful for incident response and DFIR workflows',
+      ],
+      website: 'https://www.exterro.com/ftk-imager',
+      color: 'from-sky-500 to-blue-500',
+    },
+    {
+      name: 'DumpIt',
+      description:
+        'A memory acquisition utility used to capture RAM from live Windows systems for forensic analysis.',
+      features: [
+        'One-click memory capture workflow',
+        'Collects volatile evidence from live systems',
+        'Useful for malware and incident investigations',
+        'Designed for rapid triage and response',
+      ],
+      website: 'https://www.comae.com/dumpit/',
+      color: 'from-slate-500 to-gray-500',
+    },
+    {
       name: 'ExifTool',
       description:
         'A powerful utility for reading and analyzing metadata in files such as images and documents.',

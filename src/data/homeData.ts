@@ -1564,16 +1564,16 @@ Memory should always be captured first because:
 
 ## Common Tools
 
-### FTK Imager
+### [FTK Imager](https://www.exterro.com/ftk-imager)
 Used for creating disk images and basic analysis.
 
-### Autopsy
+### [Autopsy](https://www.autopsy.com/)
 An open-source platform for analyzing disk images, recovering files, and searching data.
 
-### DumpIt
+### [DumpIt](https://www.comae.com/dumpit/)
 A simple tool used to capture memory images.
 
-### Volatility
+### [Volatility](https://volatilityfoundation.org/)
 A powerful framework for analyzing memory images using plugins.
 
 ## Typical Forensic Workflow
@@ -1697,6 +1697,8 @@ Metadata is often overlooked but can reveal critical information. Understanding 
 
 - ExifTool Official Documentation: [ExifTool Official Documentation](https://exiftool.org/)
 - PDF Reference (ISO 32000 Family Overview): [ISO 32000 PDF Reference](https://www.pdfa.org/resource/iso-32000-pdf/)
+- Poppler Project (pdfinfo via poppler-utils): [Poppler Project](https://poppler.freedesktop.org/)
+- pdfinfo Manual Page (Debian): [pdfinfo Manual](https://manpages.debian.org/poppler-utils/pdfinfo.1.en.html)
 `,
   category: 'Digital Forensics',
   tags: ['Metadata', 'EXIF', 'OSINT', 'Forensics'],
