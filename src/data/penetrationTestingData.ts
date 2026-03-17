@@ -395,4 +395,120 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
       },
     ],
   },
+  {
+  category: 'Digital Forensics',
+  icon: 'Search',
+  tools: [
+    {
+      name: 'ExifTool',
+      description:
+        'A powerful utility for reading and analyzing metadata in files such as images and documents.',
+      features: [
+        'Extract EXIF metadata',
+        'Supports multiple file formats',
+        'Useful for OSINT and investigations',
+        'Can reveal GPS coordinates',
+      ],
+      website: 'https://exiftool.org/',
+      color: 'from-green-500 to-emerald-500',
+    },
+    {
+      name: 'pdfinfo',
+      description:
+        'A command-line tool used to extract metadata and information from PDF files.',
+      features: [
+        'Displays document metadata',
+        'Shows creation and modification dates',
+        'Lightweight and fast',
+        'Useful for document analysis',
+      ],
+      website: 'https://poppler.freedesktop.org/',
+      color: 'from-gray-500 to-slate-500',
+    },
+    {
+      name: 'Autopsy',
+      description:
+        'An open-source digital forensics platform used to analyze disk images and recover data.',
+      features: [
+        'File recovery and analysis',
+        'Keyword search',
+        'Timeline analysis',
+        'Plugin support',
+      ],
+      website: 'https://www.autopsy.com/',
+      color: 'from-purple-500 to-indigo-500',
+    },
+    {
+      name: 'Volatility',
+      description:
+        'An advanced memory forensics framework for analyzing RAM dumps.',
+      features: [
+        'Analyze memory images',
+        'Detect malware artifacts',
+        'Plugin-based architecture',
+        'Supports multiple OS',
+      ],
+      website: 'https://www.volatilityfoundation.org/',
+      color: 'from-yellow-500 to-orange-500',
+    },
+  ],
+},
+{
+  category: 'Shells & Post Exploitation',
+  icon: 'Code',
+  tools: [
+    {
+      name: 'Netcat',
+      description:
+        'A versatile networking tool used for creating reverse and bind shells.',
+      features: [
+        'Port listening and connections',
+        'Reverse shell support',
+        'Simple and powerful',
+        'Widely used in pentesting',
+      ],
+      website: 'https://nmap.org/ncat/',
+      color: 'from-red-500 to-pink-500',
+    },
+    {
+      name: 'Ncat',
+      description:
+        'An improved version of Netcat from the Nmap project with additional features like SSL.',
+      features: [
+        'Encrypted connections (SSL)',
+        'Advanced networking capabilities',
+        'Improved shell handling',
+        'Part of Nmap suite',
+      ],
+      website: 'https://nmap.org/ncat/',
+      color: 'from-blue-500 to-indigo-500',
+    },
+    {
+      name: 'Socat',
+      description:
+        'A powerful networking tool for creating bidirectional data streams.',
+      features: [
+        'Advanced socket handling',
+        'Encrypted communication support',
+        'Flexible configurations',
+        'Useful for shell management',
+      ],
+      website: 'http://www.dest-unreach.org/socat/',
+      color: 'from-orange-500 to-yellow-500',
+    },
+    {
+      name: 'rlwrap',
+      description:
+        'A utility that improves shell usability by adding history and editing support.',
+      features: [
+        'Command history',
+        'Arrow key navigation',
+        'Enhances Netcat shells',
+        'Lightweight tool',
+      ],
+      website: 'https://github.com/hanslub42/rlwrap',
+      color: 'from-gray-500 to-zinc-500',
+    },
+  ],
+},
 ];

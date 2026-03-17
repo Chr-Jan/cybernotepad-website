@@ -150,9 +150,9 @@ aircrack-ng -w wordlist.cap
 
 ## Sources and Credits
 
-- Kali Linux Official Website: https://www.kali.org/
-- Kali Linux Documentation: https://www.kali.org/docs/
-- Kali Tools Reference: https://www.kali.org/tools/
+- Kali Linux Official Website: [Kali Linux Official Website](https://www.kali.org/)
+- Kali Linux Documentation: [Kali Linux Documentation](https://www.kali.org/docs/)
+- Kali Tools Reference: [Kali Tools Reference](https://www.kali.org/tools/)
 
 Kali Linux is a powerful platform that, when used ethically, can significantly enhance your cybersecurity skills and capabilities.`,
     category: 'Penetration Testing',
@@ -290,9 +290,9 @@ SSH security is fundamental to maintaining secure remote access. Implement these
 
 ## Sources and Credits
 
-- OpenSSH Official Project: https://www.openssh.com/
-- OpenSSH Manual Pages: https://www.openssh.com/manual.html
-- NIST SP 800-63B (Digital Identity Guidelines): https://pages.nist.gov/800-63-3/sp800-63b.html
+- OpenSSH Official Project: [OpenSSH Official Project](https://www.openssh.com/)
+- OpenSSH Manual Pages: [OpenSSH Manual Pages](https://www.openssh.com/manual.html)
+- NIST SP 800-63B (Digital Identity Guidelines): [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html)
 
 Remember: **Security is not a one-time setup but an ongoing process**.`,
     category: 'Network Security',
@@ -447,9 +447,9 @@ nmap --script http-security-headers target.com
 
 ## Sources and Credits
 
-- Nmap Official Website: https://nmap.org/
-- Nmap Reference Guide: https://nmap.org/book/man.html
-- Nmap Scripting Engine Documentation: https://nmap.org/book/nse.html
+- Nmap Official Website: [Nmap Official Website](https://nmap.org/)
+- Nmap Reference Guide: [Nmap Reference Guide](https://nmap.org/book/man.html)
+- Nmap Scripting Engine Documentation: [Nmap Scripting Engine Documentation](https://nmap.org/book/nse.html)
 
 **Remember**: With great power comes great responsibility. Always use Nmap ethically and legally.`,
     category: 'Penetration Testing',
@@ -633,9 +633,9 @@ use post/windows/gather/credentials/chrome
 
 ## Sources and Credits
 
-- Metasploit Official Site (Rapid7): https://www.metasploit.com/
-- Metasploit Documentation (Rapid7): https://docs.rapid7.com/metasploit/
-- Metasploit Framework Source Code: https://github.com/rapid7/metasploit-framework
+- Metasploit Official Site (Rapid7): [Metasploit Official Site](https://www.metasploit.com/)
+- Metasploit Documentation (Rapid7): [Metasploit Documentation](https://docs.rapid7.com/metasploit/)
+- Metasploit Framework Source Code: [Metasploit Framework Source Code](https://github.com/rapid7/metasploit-framework)
 
 **Remember**: Use Metasploit responsibly and only for authorized security testing. The knowledge and tools should always be used to improve security, not compromise it.`,
     category: 'Penetration Testing',
@@ -859,10 +859,10 @@ Password security is a critical component of cybersecurity. Understanding both o
 
 ## Sources and Credits
 
-- OWASP Authentication Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
-- NIST SP 800-63B (Digital Identity Guidelines): https://pages.nist.gov/800-63-3/sp800-63b.html
-- Argon2 Project Repository: https://github.com/P-H-C/phc-winner-argon2
-- Have I Been Pwned - Pwned Passwords: https://haveibeenpwned.com/Passwords
+- OWASP Authentication Cheat Sheet: [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- NIST SP 800-63B (Digital Identity Guidelines): [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html)
+- Argon2 Project Repository: [Argon2 Project Repository](https://github.com/P-H-C/phc-winner-argon2)
+- Have I Been Pwned - Pwned Passwords: [Have I Been Pwned: Pwned Passwords](https://haveibeenpwned.com/Passwords)
 
 Remember: **Use this knowledge responsibly** to improve security, not to compromise systems.`,
     category: 'Web Security',
@@ -1148,9 +1148,9 @@ Key takeaways:
 
 ## Sources and Credits
 
-- OWASP SQL Injection Overview: https://owasp.org/www-community/attacks/SQL_Injection
-- OWASP SQL Injection Prevention Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
-- SQLMap Official Website: https://sqlmap.org/
+- OWASP SQL Injection Overview: [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- OWASP SQL Injection Prevention Cheat Sheet: [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+- SQLMap Official Website: [SQLMap Official Website](https://sqlmap.org/)
 
 Remember: **Security is not a feature, it's a requirement**.`,
     category: 'Web Security',
@@ -1330,9 +1330,8 @@ Sherlock is a powerful and lightweight OSINT tool for mapping social media prese
 
 ## Sources and Credits
 
-- Sherlock Official Project: https://github.com/sherlock-project/sherlock
-- Sherlock Documentation (README): https://github.com/sherlock-project/sherlock#readme
-- Python Official Website: https://www.python.org/
+- Sherlock Official Project: [Sherlock Official Project](https://github.com/sherlock-project/sherlock)
+- Python Official Website: [Python Official Website](https://www.python.org/)
 
 Sherlock provides fast, reliable insights into digital footprints — when used ethically and responsibly.
 `,
@@ -1431,5 +1430,277 @@ If you publish about this topic, direct attribution and original links are essen
   tags: ['Password Security', 'SecLists', 'Authentication', 'Defensive Security'],
   date: '2026-03-15',
   readTime: '10 min read',
+  author: 'Christoffer'
+},
+{
+  id: '9',
+  slug: 'understanding-shells-reverse-bind-web',
+  title: 'Understanding Shells: Reverse, Bind, and Web Shells Explained',
+  excerpt: 'Learn how shells work in cybersecurity, including reverse shells, bind shells, and web shells, and why they are essential in both attacks and defense.',
+  content: `# Understanding Shells: Reverse, Bind, and Web Shells Explained
+
+Shells are a fundamental concept in cybersecurity, especially in penetration testing and system exploitation. They allow an attacker or administrator to interact with a system through commands.
+
+This article explains different types of shells and how they are used in real-world scenarios.
+
+## What is a Shell?
+
+A shell is a command-line interface (CLI) that allows users to interact with an operating system.
+
+Instead of clicking buttons (GUI), you execute commands to control the system.
+
+## Why Shells Matter in Cybersecurity
+
+Shells are commonly used for:
+
+- Remote system control
+- Privilege escalation
+- Data exfiltration
+- Persistence
+- Lateral movement
+
+## Reverse Shell
+
+A reverse shell is when the target machine connects back to the attacker.
+
+Instead of the attacker initiating the connection, the compromised system opens a connection to the attacker's machine.
+
+This is often used to bypass firewalls.
+
+## Bind Shell
+
+A bind shell opens a port on the target machine.
+
+The attacker connects directly to that port to gain access.
+
+Bind shells are easier to detect because they expose a listening service.
+
+## Reverse vs Bind Shell
+
+- Reverse shell: Target → Attacker (stealthier)
+- Bind shell: Attacker → Target (more detectable)
+
+## Web Shell
+
+A web shell is a script uploaded to a web server that allows remote command execution via a browser.
+
+Example:
+shell.php?cmd=whoami
+
+Web shells are commonly used after exploiting file upload vulnerabilities.
+
+## Detection and Defense
+
+Defenders can detect shells by:
+
+- Monitoring unusual outbound connections
+- Checking for unknown listening ports
+- Analyzing web server logs
+- Detecting suspicious file uploads
+
+## Conclusion
+
+Understanding shells is essential for both attackers and defenders. While attackers use them to gain control, defenders must detect and prevent their usage.
+
+Learning how shells work provides a strong foundation for further cybersecurity topics such as privilege escalation and post-exploitation.
+
+## Further Reading
+
+- MITRE ATT&CK - Command and Scripting Interpreter (T1059): [MITRE ATT&CK T1059](https://attack.mitre.org/techniques/T1059/)
+- MITRE ATT&CK - Web Shell (T1505.003): [MITRE ATT&CK T1505.003](https://attack.mitre.org/techniques/T1505/003/)
+`,
+  category: 'Penetration Testing',
+  tags: ['Shells', 'Reverse Shell', 'Bind Shell', 'Web Security'],
+  date: '2026-03-16',
+  readTime: '8 min read',
+  author: 'Christoffer'
+},
+{
+  id: '10',
+  slug: 'windows-digital-forensics-disk-memory-analysis',
+  title: 'Windows Digital Forensics: Disk and Memory Analysis Explained',
+  excerpt: 'Learn how investigators collect and analyze disk and memory images in Windows systems using common forensic tools and techniques.',
+  content: `# Windows Digital Forensics: Disk and Memory Analysis Explained
+
+Digital forensics is the process of collecting and analyzing data from systems to investigate incidents and uncover evidence.
+
+Windows systems are among the most commonly analyzed environments in real-world investigations.
+
+## What is a Forensic Image?
+
+A forensic image is a bit-by-bit copy of a system, allowing investigators to analyze data without modifying the original evidence.
+
+## Disk Image
+
+A disk image contains all data stored on a system’s storage device (HDD or SSD).
+
+This includes:
+
+- Files and documents
+- Browser history
+- Logs and system data
+
+Disk data is non-volatile, meaning it persists after shutdown.
+
+## Memory Image
+
+A memory image captures the contents of RAM.
+
+This includes:
+
+- Running processes
+- Network connections
+- Open files
+
+Memory is volatile, meaning data is lost when the system is powered off.
+
+## Why Memory Comes First
+
+Memory should always be captured first because:
+
+- It contains live system activity
+- Malware may only exist in memory
+- Valuable evidence disappears after shutdown
+
+## Common Tools
+
+### FTK Imager
+Used for creating disk images and basic analysis.
+
+### Autopsy
+An open-source platform for analyzing disk images, recovering files, and searching data.
+
+### DumpIt
+A simple tool used to capture memory images.
+
+### Volatility
+A powerful framework for analyzing memory images using plugins.
+
+## Typical Forensic Workflow
+
+1. Secure the system
+2. Capture memory
+3. Acquire disk image
+4. Analyze disk data
+5. Analyze memory data
+
+## Key Takeaways
+
+- Disk = long-term storage evidence
+- Memory = live activity evidence
+- Both are essential in investigations
+- Proper order of acquisition is critical
+
+## Conclusion
+
+Understanding disk and memory forensics is a core skill in cybersecurity. It enables investigators to reconstruct events, detect malware, and analyze compromised systems effectively.
+
+## Further Reading
+
+- NIST SP 800-86 (Guide to Integrating Forensic Techniques into Incident Response): [NIST SP 800-86](https://csrc.nist.gov/pubs/sp/800/86/final)
+- Volatility Foundation Documentation: [Volatility Foundation Documentation](https://volatilityfoundation.org/)
+- Autopsy (open-source platform for forensic case management and artifact analysis): [Autopsy Official Website](https://www.autopsy.com/)
+`,
+  category: 'Digital Forensics',
+  tags: ['DFIR', 'Memory Analysis', 'Disk Forensics', 'Windows'],
+  date: '2026-03-16',
+  readTime: '9 min read',
+  author: 'Christoffer'
+},
+{
+  id: '11',
+  slug: 'metadata-and-exif-analysis-forensics',
+  title: 'Metadata and EXIF Analysis: Hidden Data in Files',
+  excerpt: 'Discover how metadata in documents and images can reveal hidden information such as authorship, timestamps, and even GPS locations.',
+  content: `# Metadata and EXIF Analysis: Hidden Data in Files
+
+Every digital file contains hidden information known as metadata. This data can reveal important details during forensic investigations.
+
+## What is Metadata?
+
+Metadata is data about data.
+
+Examples include:
+
+- Author name
+- Creation date
+- Software used
+- File modification history
+
+## PDF Metadata Analysis
+
+PDF files often retain metadata from the original document.
+
+Tools can reveal:
+
+- Creator software
+- Creation and modification dates
+- File structure information
+
+Even when converting files, metadata is often preserved.
+
+## Image Metadata (EXIF)
+
+Images contain EXIF data (Exchangeable Image File Format).
+
+This can include:
+
+- Camera or smartphone model
+- Date and time of capture
+- Camera settings
+- GPS coordinates
+
+## Why EXIF Data Matters
+
+EXIF data can reveal:
+
+- Where a photo was taken
+- When it was taken
+- What device was used
+
+This makes it extremely valuable in investigations.
+
+## GPS Data and Location Tracking
+
+Many smartphones embed GPS coordinates in images.
+
+These coordinates can be entered into mapping tools to identify the exact location.
+
+## Tools for Metadata Analysis
+
+Common tools include:
+
+- pdfinfo for PDF metadata
+- exiftool for image metadata
+
+These tools allow investigators to extract hidden information quickly.
+
+## Security Risks
+
+Metadata can unintentionally expose:
+
+- Personal identity
+- Location data
+- Internal system details
+
+## How to Protect Yourself
+
+- Remove metadata before sharing files
+- Use tools to strip EXIF data
+- Be cautious when uploading images online
+
+## Conclusion
+
+Metadata is often overlooked but can reveal critical information. Understanding how to analyze and protect metadata is an important skill in both cybersecurity and digital forensics.
+
+## Further Reading
+
+- ExifTool Official Documentation: [ExifTool Official Documentation](https://exiftool.org/)
+- PDF Reference (ISO 32000 Family Overview): [ISO 32000 PDF Reference](https://www.pdfa.org/resource/iso-32000-pdf/)
+`,
+  category: 'Digital Forensics',
+  tags: ['Metadata', 'EXIF', 'OSINT', 'Forensics'],
+  date: '2026-03-17',
+  readTime: '7 min read',
   author: 'Christoffer'
 }]
