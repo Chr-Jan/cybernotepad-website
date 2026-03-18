@@ -157,7 +157,7 @@ aircrack-ng -w wordlist.cap
 Kali Linux is a powerful platform that, when used ethically, can significantly enhance your cybersecurity skills and capabilities.`,
     category: 'Penetration Testing',
     tags: ['Kali Linux', 'Penetration Testing', 'Ethical Hacking', 'Security Tools'],
-    date: '2025-11-12',
+    date: '2026-01-12',
     readTime: '12 min read',
     author: 'Christoffer'
   },
@@ -297,7 +297,7 @@ SSH security is fundamental to maintaining secure remote access. Implement these
 Remember: **Security is not a one-time setup but an ongoing process**.`,
     category: 'Network Security',
     tags: ['SSH', 'Network Security', 'Authentication', 'Hardening'],
-    date: '2025-11-10',
+    date: '2026-03-18',
     readTime: '15 min read',
     author: 'Christoffer'
   },
@@ -454,7 +454,7 @@ nmap --script http-security-headers target.com
 **Remember**: With great power comes great responsibility. Always use Nmap ethically and legally.`,
     category: 'Penetration Testing',
     tags: ['Nmap', 'Network Scanning', 'Port Scanning', 'Security Assessment'],
-    date: '2025-11-08',
+    date: '2026-03-08',
     readTime: '18 min read',
     author: 'Christoffer'
   },
@@ -640,7 +640,7 @@ use post/windows/gather/credentials/chrome
 **Remember**: Use Metasploit responsibly and only for authorized security testing. The knowledge and tools should always be used to improve security, not compromise it.`,
     category: 'Penetration Testing',
     tags: ['Metasploit', 'Exploitation', 'Payloads', 'Penetration Testing'],
-    date: '2025-11-06',
+    date: '2026-02-06',
     readTime: '20 min read',
     author: 'Christoffer'
   },
@@ -867,7 +867,7 @@ Password security is a critical component of cybersecurity. Understanding both o
 Remember: **Use this knowledge responsibly** to improve security, not to compromise systems.`,
     category: 'Web Security',
     tags: ['Password Security', 'Hashing', 'Hashcat', 'John the Ripper'],
-    date: '2025-11-04',
+    date: '2026-02-04',
     readTime: '16 min read',
     author: 'Christoffer'
   },
@@ -1155,7 +1155,7 @@ Key takeaways:
 Remember: **Security is not a feature, it's a requirement**.`,
     category: 'Web Security',
     tags: ['SQL Injection', 'Web Security', 'Database Security', 'Prevention'],
-    date: '2025-11-01',
+    date: '2026-02-01',
     readTime: '22 min read',
     author: 'Christoffer'
   },
@@ -1337,7 +1337,7 @@ Sherlock provides fast, reliable insights into digital footprints — when used 
 `,
   category: 'OSINT',
   tags: ['OSINT', 'Sherlock', 'Social Media Enumeration', 'Cybersecurity Tools'],
-  date: '2025-11-16',
+  date: '2026-02-16',
   readTime: '12 min read',
   author: 'Christoffer'
 },
@@ -1911,7 +1911,7 @@ Remember: A firewall is only as effective as its configuration.`,
   author: 'Christoffer'
 },
 {
-  id: '8',
+  id: '13',
   slug: 'incident-response-techniques',
   title: 'Incident Response Techniques: Tools, Playbooks, and Runbooks',
   excerpt: 'Explore key tools, techniques, and procedural frameworks for detecting, analyzing, and responding to security incidents effectively.',
@@ -1995,7 +1995,113 @@ Incident response is more than just detection. Using the right tools, along with
 - Continuous review improves future incident response efficiency.`,
   category: 'Cybersecurity Operations',
   tags: ['Incident Response', 'SIEM', 'EDR', 'AV', 'Playbooks', 'Runbooks'],
-  date: '2025-11-10',
+  date: '2026-03-18',
   readTime: '12 min read',
+  author: 'Christoffer'
+},
+{
+  id: '14',
+  slug: 'intrusion-detection-ids-snort',
+  title: 'Intrusion Detection Systems and Snort: Monitoring Your Network',
+  excerpt: 'Learn about IDS types, detection methods, and how to use Snort to monitor network traffic for suspicious activity.',
+  content: `# Intrusion Detection Systems (IDS) and Snort: Monitoring Your Network
+
+Firewalls protect your network boundary, but what if a malicious actor bypasses the firewall? IDS solutions detect and alert on suspicious activity inside the network, much like surveillance cameras inside a building.
+
+## IDS Overview
+
+### Types of IDS by Deployment
+1. **Host-based IDS (HIDS)**: Installed on individual systems, monitoring that host’s activity.
+2. **Network-based IDS (NIDS)**: Monitors traffic across the entire network, providing centralized visibility.
+
+### Types of IDS by Detection Method
+1. **Signature-based IDS**
+   - Detects known attacks using predefined patterns (signatures).
+   - Fast detection for known threats but cannot detect zero-day attacks.
+2. **Anomaly-based IDS**
+   - Learns normal behavior (baseline) and alerts on deviations.
+   - Can detect zero-day attacks but prone to false positives.
+3. **Hybrid IDS**
+   - Combines signature-based and anomaly-based techniques.
+   - Balances quick detection and zero-day identification.
+
+## Snort IDS
+
+Snort is a widely used open-source IDS, supporting both signature-based and anomaly-based detections.
+
+### Snort Deployment Modes
+| Mode | Description | Use Case |
+|------|-------------|----------|
+| Packet Sniffer | Reads and displays packets without analysis | Network troubleshooting |
+| Packet Logging | Logs traffic to PCAP files for later analysis | Forensic investigations |
+| NIDS Mode | Monitors traffic in real-time, applies rules, generates alerts | Primary IDS use case |
+
+### Snort Rules
+Snort rules define what traffic to detect. Example rule to detect ICMP pings:
+
+\`\`\`text
+alert icmp any any -> 127.0.0.1 any (msg:"Loopback Ping Detected"; sid:10003; rev:1;)
+\`\`\`
+
+**Explanation of the rule components:**
+- **alert**: action to take when the rule matches — here it sends an alert.  
+- **icmp**: protocol being monitored (ICMP is used by ping).  
+- **any any**: source IP and port — here it matches all sources.  
+- **->**: direction of traffic from source to destination.  
+- **127.0.0.1 any**: destination IP and port — here the localhost on any port.  
+- **(msg:"Loopback Ping Detected"; sid:10003; rev:1;)**: metadata  
+  - **msg** = message displayed when triggered  
+  - **sid** = unique signature ID for the rule  
+  - **rev** = revision number of the rule  
+
+Rules can be added to **local.rules** to create custom detections.
+
+### Running Snort
+
+- Real-time detection:
+\`\`\`bash
+sudo snort -q -l /var/log/snort -i lo -A console -c /etc/snort/snort.conf
+\`\`\`
+
+**Explanation:**
+- **sudo** = runs the command with admin privileges  
+- **-q** = quiet mode (reduces verbose logging)  
+- **-l /var/log/snort** = directory to save logs  
+- **-i lo** = network interface (lo = loopback)  
+- **-A console** = display alerts in the console  
+- **-c /etc/snort/snort.conf** = configuration file controlling rules and settings
+
+- Analyze historical PCAP files:
+\`\`\`bash
+sudo snort -q -l /var/log/snort -r Task.pcap -A console -c /etc/snort/snort.conf
+\`\`\`
+
+**Explanation:**
+- **-r Task.pcap** = read and analyze an existing packet capture file  
+- The rest of the parameters are the same as real-time mode  
+
+### Best Practices
+- Enable only relevant rules to reduce noise.
+- Regularly update rule sets for new threats.
+- Run Snort in promiscuous mode to monitor the full network.
+- Integrate alerts with SIEM for centralized logging and analysis.
+
+## Learn More
+- Snort Official Website: [Snort](https://www.snort.org/)
+- Introduction to IDS/IDPS: [Microsoft Learn - Azure Firewall Premium IDPS](https://learn.microsoft.com/en-us/azure/firewall/premium-features#idps)
+- Signature vs Anomaly-based Detection: [IBM - What is an IDS?](https://www.ibm.com/think/topics/intrusion-detection-system)
+
+## Conclusion
+An IDS complements firewalls by detecting malicious activity inside the network. Snort, with its flexible rules and multiple modes, is a practical tool for monitoring, logging, and alerting on suspicious network traffic.
+
+**Key Takeaways:**
+- Use IDS for internal threat detection.
+- Choose between HIDS, NIDS, or Hybrid based on your network.
+- Snort rules can be customized to fit your environment.
+- Integrate IDS alerts into your broader incident response strategy.`,
+  category: 'Network Security',
+  tags: ['IDS', 'Snort', 'NIDS', 'HIDS', 'Network Monitoring', 'Intrusion Detection'],
+  date: '2026-03-18',
+  readTime: '16 min read',
   author: 'Christoffer'
 }]
