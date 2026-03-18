@@ -377,7 +377,7 @@ aircrack-ng -w wordlist.cap
 - Kali Linux Documentation: [Kali Linux Documentation](https://www.kali.org/docs/)
 - Kali Tools Reference: [Kali Tools Reference](https://www.kali.org/tools/)
 
-Kali Linux is a powerful platform that, when used ethically, can significantly enhance your cybersecurity skills and capabilities.`,category:"Penetration Testing",tags:["Kali Linux","Penetration Testing","Ethical Hacking","Security Tools"],date:"2025-11-12",readTime:"12 min read",author:"Christoffer"},{id:"2",slug:"ssh-security-hardening",title:"Secure Your SSH: Essential Security Measures",excerpt:"Learn how to properly configure and secure SSH servers. Master key management, authentication methods, and hardening techniques.",content:`# Secure Your SSH: Essential Security Measures
+Kali Linux is a powerful platform that, when used ethically, can significantly enhance your cybersecurity skills and capabilities.`,category:"Penetration Testing",tags:["Kali Linux","Penetration Testing","Ethical Hacking","Security Tools"],date:"2026-01-12",readTime:"12 min read",author:"Christoffer"},{id:"2",slug:"ssh-security-hardening",title:"Secure Your SSH: Essential Security Measures",excerpt:"Learn how to properly configure and secure SSH servers. Master key management, authentication methods, and hardening techniques.",content:`# Secure Your SSH: Essential Security Measures
 
 SSH (Secure Shell) is one of the most critical services to secure properly. With many SSH services exposed to the internet, proper configuration is essential for network security.
 
@@ -505,7 +505,7 @@ SSH security is fundamental to maintaining secure remote access. Implement these
 - OpenSSH Manual Pages: [OpenSSH Manual Pages](https://www.openssh.com/manual.html)
 - NIST SP 800-63B (Digital Identity Guidelines): [NIST SP 800-63B](https://pages.nist.gov/800-63-3/sp800-63b.html)
 
-Remember: **Security is not a one-time setup but an ongoing process**.`,category:"Network Security",tags:["SSH","Network Security","Authentication","Hardening"],date:"2025-11-10",readTime:"15 min read",author:"Christoffer"},{id:"3",slug:"nmap-network-scanning-mastery",title:"Network Scanning with Nmap: Techniques and Best Practices",excerpt:"Master Nmap network scanning techniques. Learn port scanning, service detection, OS fingerprinting, and advanced scanning methods for security professionals.",content:`# Network Scanning with Nmap: Techniques and Best Practices
+Remember: **Security is not a one-time setup but an ongoing process**.`,category:"Network Security",tags:["SSH","Network Security","Authentication","Hardening"],date:"2026-03-18",readTime:"15 min read",author:"Christoffer"},{id:"3",slug:"nmap-network-scanning-mastery",title:"Network Scanning with Nmap: Techniques and Best Practices",excerpt:"Master Nmap network scanning techniques. Learn port scanning, service detection, OS fingerprinting, and advanced scanning methods for security professionals.",content:`# Network Scanning with Nmap: Techniques and Best Practices
 
 Nmap (Network Mapper) is a widely used tool for network discovery and security auditing. Because it is used by both defenders and attackers, understanding Nmap is essential for network security.
 
@@ -650,7 +650,7 @@ nmap --script http-security-headers target.com
 - Nmap Reference Guide: [Nmap Reference Guide](https://nmap.org/book/man.html)
 - Nmap Scripting Engine Documentation: [Nmap Scripting Engine Documentation](https://nmap.org/book/nse.html)
 
-**Remember**: With great power comes great responsibility. Always use Nmap ethically and legally.`,category:"Penetration Testing",tags:["Nmap","Network Scanning","Port Scanning","Security Assessment"],date:"2025-11-08",readTime:"18 min read",author:"Christoffer"},{id:"4",slug:"metasploit-framework-mastery",title:"Metasploit: Mastering the Metasploit Framework",excerpt:"Comprehensive guide to Metasploit Framework. Learn exploit development, payload generation, post-exploitation techniques, and professional penetration testing methodologies.",content:`# Metasploit: Mastering the Metasploit Framework
+**Remember**: With great power comes great responsibility. Always use Nmap ethically and legally.`,category:"Penetration Testing",tags:["Nmap","Network Scanning","Port Scanning","Security Assessment"],date:"2026-03-08",readTime:"18 min read",author:"Christoffer"},{id:"4",slug:"metasploit-framework-mastery",title:"Metasploit: Mastering the Metasploit Framework",excerpt:"Comprehensive guide to Metasploit Framework. Learn exploit development, payload generation, post-exploitation techniques, and professional penetration testing methodologies.",content:`# Metasploit: Mastering the Metasploit Framework
 
 Metasploit Framework is a widely used penetration testing framework, providing a comprehensive platform for developing, testing, and executing exploits.
 
@@ -824,7 +824,7 @@ use post/windows/gather/credentials/chrome
 - Metasploit Documentation (Rapid7): [Metasploit Documentation](https://docs.rapid7.com/metasploit/)
 - Metasploit Framework Source Code: [Metasploit Framework Source Code](https://github.com/rapid7/metasploit-framework)
 
-**Remember**: Use Metasploit responsibly and only for authorized security testing. The knowledge and tools should always be used to improve security, not compromise it.`,category:"Penetration Testing",tags:["Metasploit","Exploitation","Payloads","Penetration Testing"],date:"2025-11-06",readTime:"20 min read",author:"Christoffer"},{id:"5",slug:"password-security-hash-cracking",title:"Password Security: Best Practices and Hash Cracking",excerpt:"Learn password security fundamentals, hashing algorithms, and ethical password cracking techniques for security assessments.",content:`# Password Security: Best Practices and Hash Cracking
+**Remember**: Use Metasploit responsibly and only for authorized security testing. The knowledge and tools should always be used to improve security, not compromise it.`,category:"Penetration Testing",tags:["Metasploit","Exploitation","Payloads","Penetration Testing"],date:"2026-02-06",readTime:"20 min read",author:"Christoffer"},{id:"5",slug:"password-security-hash-cracking",title:"Password Security: Best Practices and Hash Cracking",excerpt:"Learn password security fundamentals, hashing algorithms, and ethical password cracking techniques for security assessments.",content:`# Password Security: Best Practices and Hash Cracking
 
 Password security is fundamental to cybersecurity. Understanding password storage, hashing algorithms, and cracking techniques is essential for security professionals.
 
@@ -1039,7 +1039,7 @@ Password security is a critical component of cybersecurity. Understanding both o
 - Argon2 Project Repository: [Argon2 Project Repository](https://github.com/P-H-C/phc-winner-argon2)
 - Have I Been Pwned - Pwned Passwords: [Have I Been Pwned: Pwned Passwords](https://haveibeenpwned.com/Passwords)
 
-Remember: **Use this knowledge responsibly** to improve security, not to compromise systems.`,category:"Web Security",tags:["Password Security","Hashing","Hashcat","John the Ripper"],date:"2025-11-04",readTime:"16 min read",author:"Christoffer"},{id:"6",slug:"web-application-security-sql-injection",title:"Web Application Security: SQL Injection and Protection",excerpt:"Comprehensive guide to SQL injection vulnerabilities, detection techniques, and protection methods for web applications.",content:`# Web Application Security: SQL Injection and Protection
+Remember: **Use this knowledge responsibly** to improve security, not to compromise systems.`,category:"Web Security",tags:["Password Security","Hashing","Hashcat","John the Ripper"],date:"2026-02-04",readTime:"16 min read",author:"Christoffer"},{id:"6",slug:"web-application-security-sql-injection",title:"Web Application Security: SQL Injection and Protection",excerpt:"Comprehensive guide to SQL injection vulnerabilities, detection techniques, and protection methods for web applications.",content:`# Web Application Security: SQL Injection and Protection
 
 SQL injection remains one of the most serious web application vulnerabilities. Understanding both attack and defense is crucial for web security professionals.
 
@@ -1315,7 +1315,7 @@ Key takeaways:
 - OWASP SQL Injection Prevention Cheat Sheet: [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
 - SQLMap Official Website: [SQLMap Official Website](https://sqlmap.org/)
 
-Remember: **Security is not a feature, it's a requirement**.`,category:"Web Security",tags:["SQL Injection","Web Security","Database Security","Prevention"],date:"2025-11-01",readTime:"22 min read",author:"Christoffer"},{id:"7",slug:"osint-find-social-media-accounts-with-sherlock",title:"OSINT Guide: Finding Social Media Accounts Using Sherlock",excerpt:"Learn how to identify social media accounts across many platforms using the Sherlock OSINT tool for Python.",content:`# OSINT Guide: Finding Social Media Accounts Using Sherlock
+Remember: **Security is not a feature, it's a requirement**.`,category:"Web Security",tags:["SQL Injection","Web Security","Database Security","Prevention"],date:"2026-02-01",readTime:"22 min read",author:"Christoffer"},{id:"7",slug:"osint-find-social-media-accounts-with-sherlock",title:"OSINT Guide: Finding Social Media Accounts Using Sherlock",excerpt:"Learn how to identify social media accounts across many platforms using the Sherlock OSINT tool for Python.",content:`# OSINT Guide: Finding Social Media Accounts Using Sherlock
 
 Sherlock is a popular OSINT tool for identifying social media profiles linked to a username. Whether you're working in cybersecurity, investigations, or digital research, Sherlock provides a fast and automated way to check many platforms for public accounts.
 
@@ -1485,7 +1485,7 @@ Sherlock is a powerful and lightweight OSINT tool for mapping social media prese
 - Python Official Website: [Python Official Website](https://www.python.org/)
 
 Sherlock provides fast, reliable insights into digital footprints — when used ethically and responsibly.
-`,category:"OSINT",tags:["OSINT","Sherlock","Social Media Enumeration","Cybersecurity Tools"],date:"2025-11-16",readTime:"12 min read",author:"Christoffer"},{id:"8",slug:"common-passwords-awareness-and-defensive-testing",title:"Common Passwords: Awareness, Defensive Testing, and Trusted Sources",excerpt:"Understand why common passwords are still a major risk, how defenders use password lists responsibly, and where to find original trusted sources with proper credit.",content:`# Common Passwords: Awareness, Defensive Testing, and Trusted Sources
+`,category:"OSINT",tags:["OSINT","Sherlock","Social Media Enumeration","Cybersecurity Tools"],date:"2026-02-16",readTime:"12 min read",author:"Christoffer"},{id:"8",slug:"common-passwords-awareness-and-defensive-testing",title:"Common Passwords: Awareness, Defensive Testing, and Trusted Sources",excerpt:"Understand why common passwords are still a major risk, how defenders use password lists responsibly, and where to find original trusted sources with proper credit.",content:`# Common Passwords: Awareness, Defensive Testing, and Trusted Sources
 
 Weak and reused passwords remain one of the most common reasons accounts get compromised. For defenders, understanding common password patterns helps improve policy, training, and detection.
 
@@ -1994,7 +1994,7 @@ Firewalls are a fundamental part of cybersecurity. Understanding both how they w
 
 As you continue learning, combining theory with hands-on practice will help you build strong security skills.
 
-Remember: A firewall is only as effective as its configuration.`,category:"Network Security",tags:["Firewalls","Linux","Windows","Networking"],date:"2025-11-06",readTime:"12 min read",author:"Christoffer"},{id:"8",slug:"incident-response-techniques",title:"Incident Response Techniques: Tools, Playbooks, and Runbooks",excerpt:"Explore key tools, techniques, and procedural frameworks for detecting, analyzing, and responding to security incidents effectively.",content:`# Incident Response Techniques: Tools, Playbooks, and Runbooks
+Remember: A firewall is only as effective as its configuration.`,category:"Network Security",tags:["Firewalls","Linux","Windows","Networking"],date:"2025-11-06",readTime:"12 min read",author:"Christoffer"},{id:"13",slug:"incident-response-techniques",title:"Incident Response Techniques: Tools, Playbooks, and Runbooks",excerpt:"Explore key tools, techniques, and procedural frameworks for detecting, analyzing, and responding to security incidents effectively.",content:`# Incident Response Techniques: Tools, Playbooks, and Runbooks
 
 Once an incident has been detected, responding quickly and effectively is critical. Automation and structured processes help organizations reduce damage and recover faster.
 
@@ -2071,7 +2071,101 @@ Incident response is more than just detection. Using the right tools, along with
 - SIEM, AV, and EDR are complementary tools for detection and response.
 - Playbooks define the “what” of incident handling.
 - Runbooks define the “how” for execution.
-- Continuous review improves future incident response efficiency.`,category:"Cybersecurity Operations",tags:["Incident Response","SIEM","EDR","AV","Playbooks","Runbooks"],date:"2025-11-10",readTime:"12 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?g.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:g.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[g.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[g.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),g.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),g.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),g.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),g.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[g.jsxs("div",{className:"flex items-center gap-2",children:[g.jsx(ei,{className:"w-4 h-4"}),g.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),g.jsxs("div",{className:"flex items-center gap-2",children:[g.jsx(Su,{className:"w-4 h-4"}),g.jsx("span",{children:e.readTime})]}),g.jsxs("div",{className:"flex items-center gap-2",children:[g.jsx(AE,{className:"w-4 h-4"}),g.jsx("span",{children:e.tags[0]})]})]})]})}):g.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:g.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[g.jsx("div",{className:"mb-3",children:g.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),g.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),g.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),g.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[g.jsxs("div",{className:"flex items-center gap-1.5",children:[g.jsx(ei,{className:"w-3.5 h-3.5"}),g.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),g.jsxs("div",{className:"flex items-center gap-1.5",children:[g.jsx(Su,{className:"w-3.5 h-3.5"}),g.jsx("span",{children:e.readTime})]})]})]})})}function vk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[..._E].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return g.jsxs("div",{className:"min-h-screen pt-16",children:[g.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[g.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),g.jsx("div",{className:"container mx-auto relative",children:g.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[g.jsx("div",{className:"flex justify-center mb-6",children:g.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:g.jsx(NE,{className:"w-12 h-12 text-accent-primary"})})}),g.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",g.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),g.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),g.jsx("div",{className:"max-w-2xl mx-auto",children:g.jsxs("div",{className:"relative",children:[g.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),g.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&g.jsx("section",{className:"px-6 mb-16",children:g.jsx("div",{className:"container mx-auto max-w-5xl",children:g.jsx(ly,{post:u,featured:!0})})}),g.jsx("section",{className:"px-6 pb-24",children:g.jsxs("div",{className:"container mx-auto",children:[g.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?g.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>g.jsx(ly,{post:p},p.id))}):l?g.jsxs("div",{className:"text-center py-12",children:[g.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),g.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),g.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const RE=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
+- Continuous review improves future incident response efficiency.`,category:"Cybersecurity Operations",tags:["Incident Response","SIEM","EDR","AV","Playbooks","Runbooks"],date:"2026-03-18",readTime:"12 min read",author:"Christoffer"},{id:"14",slug:"intrusion-detection-ids-snort",title:"Intrusion Detection Systems and Snort: Monitoring Your Network",excerpt:"Learn about IDS types, detection methods, and how to use Snort to monitor network traffic for suspicious activity.",content:`# Intrusion Detection Systems (IDS) and Snort: Monitoring Your Network
+
+Firewalls protect your network boundary, but what if a malicious actor bypasses the firewall? IDS solutions detect and alert on suspicious activity inside the network, much like surveillance cameras inside a building.
+
+## IDS Overview
+
+### Types of IDS by Deployment
+1. **Host-based IDS (HIDS)**: Installed on individual systems, monitoring that host’s activity.
+2. **Network-based IDS (NIDS)**: Monitors traffic across the entire network, providing centralized visibility.
+
+### Types of IDS by Detection Method
+1. **Signature-based IDS**
+   - Detects known attacks using predefined patterns (signatures).
+   - Fast detection for known threats but cannot detect zero-day attacks.
+2. **Anomaly-based IDS**
+   - Learns normal behavior (baseline) and alerts on deviations.
+   - Can detect zero-day attacks but prone to false positives.
+3. **Hybrid IDS**
+   - Combines signature-based and anomaly-based techniques.
+   - Balances quick detection and zero-day identification.
+
+## Snort IDS
+
+Snort is a widely used open-source IDS, supporting both signature-based and anomaly-based detections.
+
+### Snort Deployment Modes
+| Mode | Description | Use Case |
+|------|-------------|----------|
+| Packet Sniffer | Reads and displays packets without analysis | Network troubleshooting |
+| Packet Logging | Logs traffic to PCAP files for later analysis | Forensic investigations |
+| NIDS Mode | Monitors traffic in real-time, applies rules, generates alerts | Primary IDS use case |
+
+### Snort Rules
+Snort rules define what traffic to detect. Example rule to detect ICMP pings:
+
+\`\`\`text
+alert icmp any any -> 127.0.0.1 any (msg:"Loopback Ping Detected"; sid:10003; rev:1;)
+\`\`\`
+
+**Explanation of the rule components:**
+- **alert**: action to take when the rule matches — here it sends an alert.  
+- **icmp**: protocol being monitored (ICMP is used by ping).  
+- **any any**: source IP and port — here it matches all sources.  
+- **->**: direction of traffic from source to destination.  
+- **127.0.0.1 any**: destination IP and port — here the localhost on any port.  
+- **(msg:"Loopback Ping Detected"; sid:10003; rev:1;)**: metadata  
+  - **msg** = message displayed when triggered  
+  - **sid** = unique signature ID for the rule  
+  - **rev** = revision number of the rule  
+
+Rules can be added to **local.rules** to create custom detections.
+
+### Running Snort
+
+- Real-time detection:
+\`\`\`bash
+sudo snort -q -l /var/log/snort -i lo -A console -c /etc/snort/snort.conf
+\`\`\`
+
+**Explanation:**
+- **sudo** = runs the command with admin privileges  
+- **-q** = quiet mode (reduces verbose logging)  
+- **-l /var/log/snort** = directory to save logs  
+- **-i lo** = network interface (lo = loopback)  
+- **-A console** = display alerts in the console  
+- **-c /etc/snort/snort.conf** = configuration file controlling rules and settings
+
+- Analyze historical PCAP files:
+\`\`\`bash
+sudo snort -q -l /var/log/snort -r Task.pcap -A console -c /etc/snort/snort.conf
+\`\`\`
+
+**Explanation:**
+- **-r Task.pcap** = read and analyze an existing packet capture file  
+- The rest of the parameters are the same as real-time mode  
+
+### Best Practices
+- Enable only relevant rules to reduce noise.
+- Regularly update rule sets for new threats.
+- Run Snort in promiscuous mode to monitor the full network.
+- Integrate alerts with SIEM for centralized logging and analysis.
+
+## Learn More
+- Snort Official Website: [Snort](https://www.snort.org/)
+- Introduction to IDS/IDPS: [Microsoft Learn - Azure Firewall Premium IDPS](https://learn.microsoft.com/en-us/azure/firewall/premium-features#idps)
+- Signature vs Anomaly-based Detection: [IBM - What is an IDS?](https://www.ibm.com/think/topics/intrusion-detection-system)
+
+## Conclusion
+An IDS complements firewalls by detecting malicious activity inside the network. Snort, with its flexible rules and multiple modes, is a practical tool for monitoring, logging, and alerting on suspicious network traffic.
+
+**Key Takeaways:**
+- Use IDS for internal threat detection.
+- Choose between HIDS, NIDS, or Hybrid based on your network.
+- Snort rules can be customized to fit your environment.
+- Integrate IDS alerts into your broader incident response strategy.`,category:"Network Security",tags:["IDS","Snort","NIDS","HIDS","Network Monitoring","Intrusion Detection"],date:"2026-03-18",readTime:"16 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?g.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:g.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[g.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[g.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),g.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),g.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),g.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),g.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[g.jsxs("div",{className:"flex items-center gap-2",children:[g.jsx(ei,{className:"w-4 h-4"}),g.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),g.jsxs("div",{className:"flex items-center gap-2",children:[g.jsx(Su,{className:"w-4 h-4"}),g.jsx("span",{children:e.readTime})]}),g.jsxs("div",{className:"flex items-center gap-2",children:[g.jsx(AE,{className:"w-4 h-4"}),g.jsx("span",{children:e.tags[0]})]})]})]})}):g.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:g.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[g.jsx("div",{className:"mb-3",children:g.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),g.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),g.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),g.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[g.jsxs("div",{className:"flex items-center gap-1.5",children:[g.jsx(ei,{className:"w-3.5 h-3.5"}),g.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),g.jsxs("div",{className:"flex items-center gap-1.5",children:[g.jsx(Su,{className:"w-3.5 h-3.5"}),g.jsx("span",{children:e.readTime})]})]})]})})}function vk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[..._E].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return g.jsxs("div",{className:"min-h-screen pt-16",children:[g.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[g.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),g.jsx("div",{className:"container mx-auto relative",children:g.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[g.jsx("div",{className:"flex justify-center mb-6",children:g.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:g.jsx(NE,{className:"w-12 h-12 text-accent-primary"})})}),g.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",g.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),g.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),g.jsx("div",{className:"max-w-2xl mx-auto",children:g.jsxs("div",{className:"relative",children:[g.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),g.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&g.jsx("section",{className:"px-6 mb-16",children:g.jsx("div",{className:"container mx-auto max-w-5xl",children:g.jsx(ly,{post:u,featured:!0})})}),g.jsx("section",{className:"px-6 pb-24",children:g.jsxs("div",{className:"container mx-auto",children:[g.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?g.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>g.jsx(ly,{post:p},p.id))}):l?g.jsxs("div",{className:"text-center py-12",children:[g.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),g.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),g.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const RE=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
