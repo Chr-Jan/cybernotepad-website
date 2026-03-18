@@ -2109,4 +2109,139 @@ An IDS complements firewalls by detecting malicious activity inside the network.
   date: '2026-03-18',
   readTime: '16 min read',
   author: 'Christoffer'
+},
+{
+  id: '11',
+  slug: 'cyberchef-tool-everyone-should-know',
+  title: 'CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)',
+  excerpt: 'A simple but powerful tool for decoding, encoding, and understanding data — directly in your browser.',
+  content: `# CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)
+
+Have you ever come across a weird string of text and thought… what is this?
+
+Something like this:
+SGVsbG8gd29ybGQ=
+
+Or maybe you’ve seen encoded data in logs, URLs, or apps and had no idea how to read it.
+
+That’s where CyberChef comes in.
+
+## What is CyberChef?
+
+CyberChef is a free, web-based tool that lets you analyze, decode, encode, and transform data — all directly in your browser.
+
+It was developed by GCHQ (the UK’s intelligence agency), and it’s often called:
+
+> “The Cyber Swiss Army Knife”
+
+And honestly… that name fits perfectly.
+
+## Why it’s so useful
+
+What makes CyberChef special is how simple it is to use:
+
+- No installation required  
+- Drag-and-drop interface  
+- Tons of built-in operations  
+- Works instantly in your browser  
+
+You don’t need to be a hacker or a developer to use it. If you’re just curious about how data works, it’s already useful.
+
+## A simple example
+
+Let’s say you see this:
+
+\`\`\`
+SGVsbG8gZnJvbSBDeWJlckNoZWY=
+\`\`\`
+
+Drop it into CyberChef and apply the operation:
+
+**From Base64**
+
+And you get:
+
+\`\`\`
+Hello from CyberChef
+\`\`\`
+
+### What just happened?
+
+That string was encoded using Base64 — a common way to represent data in text format (used in emails, APIs, and more).
+
+CyberChef decoded it instantly.
+
+## The “Magic” feature (this is where it gets fun)
+
+One of the coolest features is the **Magic Wand** 🪄
+
+Instead of guessing how something is encoded, CyberChef can try to figure it out for you.
+
+Just click “Magic”, and it will suggest possible decoding steps automatically.
+
+It’s not always perfect — but when it works, it feels like cheating 😄
+
+## Real-world use cases
+
+Even outside cybersecurity, CyberChef is surprisingly useful:
+
+### 🔍 Understanding weird data
+- Decode strings from logs or APIs  
+- Analyze strange outputs from programs  
+
+### 🔐 Learning how data works
+- Try hashing (SHA256, MD5)  
+- See how encoding changes data  
+
+### 🧩 Just experimenting
+- Chain multiple operations together  
+- Break and rebuild data formats  
+
+## Layered data (quick demo)
+
+Sometimes data is encoded multiple times.
+
+Example workflow:
+- Base64 → Hex → Text  
+
+CyberChef lets you stack operations like this using “recipes”.
+
+This is super common in things like:
+- CTF challenges  
+- malware analysis  
+- obfuscated data  
+
+## Why I like it
+
+What I personally like about CyberChef is how easy it makes things that normally feel complicated.
+
+Instead of writing scripts or using multiple tools, you can just:
+- paste your data  
+- click a few buttons  
+- instantly see the result  
+
+It makes learning way more interactive.
+
+## Try it yourself
+
+If you’re even a little bit curious about how data works, I highly recommend trying it:
+
+https://gchq.github.io/CyberChef
+
+Play around with it, break things, decode random strings — that’s honestly the best way to learn.
+
+## Final thoughts
+
+CyberChef is one of those tools that:
+- starts simple  
+- but becomes incredibly powerful over time  
+
+Whether you’re into tech, cybersecurity, or just like figuring things out, it’s definitely worth bookmarking.
+
+You’ll probably end up using it more than you expect.`,
+  category: 'Tools',
+  tags: ['CyberChef', 'Tools', 'Data', 'Encoding', 'Beginner Friendly'],
+  date: '2026-03-18',
+  readTime: '6 min read',
+  author: 'Christoffer'
 }]
