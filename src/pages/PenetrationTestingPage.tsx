@@ -10,6 +10,9 @@ const iconMap = {
   Key,
 } as const;
 
+const categoryToId = (category: string) =>
+  `category-${category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+
 export function PenetrationTestingPage() {
   const tools = penetrationTestingTools;
 
@@ -32,6 +35,21 @@ export function PenetrationTestingPage() {
             <p className="text-body-lg text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
               Comprehensive collection of offensive security tools and frameworks for ethical hacking, penetration testing, and vulnerability assessment. Master the tools used by security professionals worldwide.
             </p>
+
+            <div className="mt-10">
+              <p className="text-sm font-medium tracking-wide uppercase text-text-tertiary mb-4">Jump to category</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {tools.map((category) => (
+                  <a
+                    key={category.category}
+                    href={`#${categoryToId(category.category)}`}
+                    className="px-3 py-1.5 rounded-md border border-white/10 bg-background-surface-1 text-text-secondary text-sm hover:text-red-400 hover:border-red-500/40 transition-all duration-250"
+                  >
+                    {category.category}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -42,7 +60,7 @@ export function PenetrationTestingPage() {
           {tools.map((category, categoryIndex) => {
             const IconComponent = iconMap[category.icon];
             return (
-              <div key={categoryIndex} className="mb-16">
+              <div id={categoryToId(category.category)} key={categoryIndex} className="mb-16 scroll-mt-24">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="p-3 bg-background-surface-1 rounded-lg border border-white/10">
                     <IconComponent className="w-8 h-8 text-red-500" />
