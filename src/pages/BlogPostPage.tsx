@@ -15,6 +15,7 @@ import { homePosts } from '../data/homeData';
 import { blogPosts } from '../data/blogData';
 import { Calendar, Clock, Tag, ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -101,6 +102,7 @@ export function BlogPostPage() {
           {/* Content */}
           <div className="prose prose-invert prose-lg max-w-none">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 code({ inline, className, children, ...props }: any) {
                   const match = /language-(\w+)/.exec(className || '');
@@ -144,6 +146,26 @@ export function BlogPostPage() {
                 ),
                 ol: ({ children }) => (
                   <ol className="list-decimal list-inside text-text-secondary text-body-lg leading-relaxed mb-6 space-y-2">{children}</ol>
+                ),
+                table: ({ children }) => (
+                  <div className="my-8 overflow-x-auto rounded-lg border border-white/10">
+                    <table className="w-full border-collapse text-left text-sm md:text-base">{children}</table>
+                  </div>
+                ),
+                thead: ({ children }) => (
+                  <thead className="bg-background-surface-1">{children}</thead>
+                ),
+                tbody: ({ children }) => (
+                  <tbody className="bg-background-near-black">{children}</tbody>
+                ),
+                tr: ({ children }) => (
+                  <tr className="border-b border-white/10">{children}</tr>
+                ),
+                th: ({ children }) => (
+                  <th className="px-4 py-3 font-semibold text-text-primary">{children}</th>
+                ),
+                td: ({ children }) => (
+                  <td className="px-4 py-3 text-text-secondary">{children}</td>
                 ),
                 strong: ({ children }) => (
                   <strong className="text-accent-primary font-semibold">{children}</strong>

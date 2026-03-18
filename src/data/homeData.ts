@@ -1705,4 +1705,208 @@ Metadata is often overlooked but can reveal critical information. Understanding 
   date: '2026-03-17',
   readTime: '7 min read',
   author: 'Christoffer'
-}]
+},
+{
+  id: '12',
+  slug: 'firewalls-linux-windows-explained',
+  title: 'Firewalls Explained: Types, Linux & Windows Practical Guide',
+  excerpt: 'Learn how firewalls work, the differences between stateless, stateful and modern firewalls, and how they are implemented in Linux and Windows systems.',
+  content: `# Firewalls Explained: Types, Linux & Windows Practical Guide
+
+Firewalls are one of the most important components of network security. They act as a barrier between trusted and untrusted networks, filtering traffic based on predefined rules.
+
+Understanding both firewall theory and how they are implemented in real systems like Linux and Windows is essential for any cybersecurity professional.
+
+## What is a Firewall?
+
+A firewall is a system that monitors and controls incoming and outgoing network traffic based on security rules.
+
+Firewalls help:
+- Block malicious traffic
+- Control access to services
+- Protect internal systems
+- Monitor network activity
+
+## Firewall Types Overview
+
+Firewalls operate at different layers of the OSI model and offer different levels of security.
+
+### Stateless Firewall
+
+Stateless firewalls operate at Layer 3 and 4 of the OSI model.
+
+They:
+- Inspect each packet individually
+- Do not track previous connections
+- Are fast but less secure
+
+**Example:**
+A stateless firewall will treat every packet as new, even if it is part of an existing connection.
+
+### Stateful Firewall
+
+Stateful firewalls improve on stateless filtering by tracking connections.
+
+They:
+- Maintain a state table
+- Remember active connections
+- Allow related packets automatically
+
+**Advantages:**
+- More secure than stateless firewalls
+- Better at handling real-world traffic
+
+### Proxy Firewall
+
+Proxy firewalls operate at Layer 7 (application layer).
+
+They:
+- Act as an intermediary between user and internet
+- Inspect packet contents
+- Hide internal IP addresses
+
+**Use cases:**
+- Web filtering
+- Application control
+- Content inspection
+
+### Next-Generation Firewall (NGFW)
+
+NGFWs are modern firewalls that combine multiple security features.
+
+They:
+- Operate from Layer 3 to Layer 7
+- Perform Deep Packet Inspection (DPI)
+- Include Intrusion Prevention Systems (IPS)
+- Analyze traffic patterns
+
+**Key features:**
+- SSL/TLS inspection
+- Threat intelligence integration
+- Real-time attack detection
+
+## Firewalls in Linux
+
+Linux systems provide powerful firewall tools that allow full control over network traffic.
+
+### iptables
+
+iptables is a traditional Linux firewall utility.
+
+\`\`\`bash
+# Allow SSH traffic
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Drop all other traffic
+sudo iptables -A INPUT -j DROP
+\`\`\`
+
+**Quick explanation of iptables flags:**
+- **-A**: Add a rule to a chain (here: INPUT)
+- **-p**: Protocol (here: tcp)
+- **--dport**: Destination port (here: 22)
+- **-j**: Action/target, e.g., ACCEPT or DROP
+
+**Characteristics:**
+- Very flexible
+- Command-line based
+- Steep learning curve
+
+### UFW (Uncomplicated Firewall)
+
+UFW is a simplified interface for managing firewall rules.
+
+\`\`\`bash
+# Allow SSH
+sudo ufw allow 22
+
+# Enable firewall
+sudo ufw enable
+
+# Check status
+sudo ufw status
+\`\`\`
+
+**Advantages:**
+- Beginner-friendly
+- Easier than iptables
+- Default on many distributions like Ubuntu
+
+### nftables
+
+nftables is the modern replacement for iptables.
+
+**Features:**
+- Improved performance
+- Cleaner syntax
+- More flexible rule management
+
+## Firewalls in Windows
+
+### Windows Defender Firewall
+
+Windows systems include a built-in firewall.
+
+It is integrated into the operating system and enabled by default.
+
+**Features:**
+- Filters inbound and outbound traffic
+- Stateful inspection
+- GUI and advanced configuration options
+- Integration with system security policies
+
+**Use cases:**
+- Home users
+- Enterprise environments
+- Default protection layer
+
+## Practical Example
+
+Firewalls play a key role in stopping attacks.
+
+For example:
+- A reverse shell may try to connect to an external server
+- A properly configured firewall can:
+  - Block the connection
+  - Log suspicious activity
+  - Alert administrators
+
+## Comparison
+
+| Type | Layers | Security Level | Complexity |
+|------|--------|---------------|-----------|
+| Stateless | 3-4 | Basic | Low |
+| Stateful | 3-4 | Medium | Medium |
+| Proxy | 7 | High | Medium |
+| NGFW | 3-7 | Advanced | High |
+
+## Key Takeaways
+
+- Firewalls filter and control network traffic
+- Stateful firewalls are more secure than stateless
+- Linux provides powerful tools like iptables and UFW
+- Windows Defender Firewall is a strong default solution
+- Modern networks use NGFW for advanced protection
+
+## Learn More
+
+If you want to explore further:
+
+- iptables documentation: https://linux.die.net/man/8/iptables
+- UFW guide: https://help.ubuntu.com/community/UFW
+- Windows Defender Firewall: https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/
+- OWASP Network Security: https://owasp.org/www-project-top-ten/
+
+## Conclusion
+
+Firewalls are a fundamental part of cybersecurity. Understanding both how they work and how they are implemented in real systems like Linux and Windows is essential.
+
+As you continue learning, combining theory with hands-on practice will help you build strong security skills.
+
+Remember: A firewall is only as effective as its configuration.`,
+  category: 'Network Security',
+  tags: ['Firewalls', 'Linux', 'Windows', 'Networking'],
+  date: '2025-11-06',
+  readTime: '12 min read',
+  author: 'Christoffer'
+},]
