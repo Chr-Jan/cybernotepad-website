@@ -1909,4 +1909,93 @@ Remember: A firewall is only as effective as its configuration.`,
   date: '2025-11-06',
   readTime: '12 min read',
   author: 'Christoffer'
-},]
+},
+{
+  id: '8',
+  slug: 'incident-response-techniques',
+  title: 'Incident Response Techniques: Tools, Playbooks, and Runbooks',
+  excerpt: 'Explore key tools, techniques, and procedural frameworks for detecting, analyzing, and responding to security incidents effectively.',
+  content: `# Incident Response Techniques: Tools, Playbooks, and Runbooks
+
+Once an incident has been detected, responding quickly and effectively is critical. Automation and structured processes help organizations reduce damage and recover faster.
+
+## Key Tools for Incident Detection and Response
+
+Several security solutions assist in detecting, analyzing, and responding to incidents:
+
+### SIEM (Security Information and Event Management)
+- Collects logs from multiple sources in a centralized location.
+- Correlates events to detect suspicious activity.
+- Example tools: Splunk, ELK Stack, IBM QRadar.
+- Learn more: [SIEM Overview](https://www.ibm.com/think/topics/siem)
+
+### Antivirus (AV)
+- Detects known malware on endpoints.
+- Regularly scans systems to prevent infections.
+- Example tools: Windows Defender, Bitdefender, Kaspersky.
+
+### EDR (Endpoint Detection and Response)
+- Deployed on individual systems to detect advanced threats.
+- Capable of automated containment and eradication.
+- Provides detailed forensic data from compromised endpoints.
+- Example tools: CrowdStrike Falcon, Microsoft Defender for Endpoint, SentinelOne.
+
+## Playbooks and Runbooks
+
+Structured procedures save time during incidents:
+
+### Playbooks
+- High-level guidelines for handling specific incident types.
+
+Example: **Phishing Email Incident**
+  1. Notify stakeholders of the phishing email.
+  2. Analyze email header and body for malicious indicators.
+  3. Check attachments and analyze them.
+  4. Identify users who may have opened attachments.
+  5. Isolate affected systems from the network.
+  6. Block the sender at mail servers.
+  
+Playbooks help teams know **what actions to take** for different incident categories.
+
+### Runbooks
+- Detailed, step-by-step instructions for executing tasks in Playbooks.
+- Include specifics like command lines, tools to use, and order of execution.
+- Example: Extracting logs via SIEM, scanning endpoints with EDR, blocking IPs via firewall commands.
+
+## Integration with IR Frameworks
+- Playbooks and Runbooks map to SANS or NIST phases.
+
+For example:
+- **Detection/Identification**: SIEM correlates events -> alerts.
+- **Containment**: Runbook isolates compromised host using EDR.
+- **Eradication/Recovery**: AV or EDR cleans malware -> restore from backup.
+- **Lessons Learned**: Post-incident review updates Playbooks and procedures.
+
+## Best Practices
+
+- Maintain up-to-date Playbooks for common incidents.
+- Automate repetitive steps using Runbooks to reduce human error.
+- Regularly test Playbooks with simulations (tabletop exercises).
+- Integrate SIEM, AV, and EDR to reduce detection gaps.
+- Document every incident for post-incident analysis and learning.
+
+## Learn More
+
+- NIST Incident Response Recommendations and Considerations: [NIST SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+- EDR Overview: [EDR Explained](https://www.microsoft.com/en-us/security/business/security-101/what-is-edr-endpoint-detection-response)
+
+## Conclusion
+
+Incident response is more than just detection. Using the right tools, along with structured Playbooks and Runbooks, ensures faster containment, eradication, and recovery. Well-prepared teams and automated procedures make the difference between a minor security event and a major breach.
+
+**Key Takeaways:**
+- SIEM, AV, and EDR are complementary tools for detection and response.
+- Playbooks define the “what” of incident handling.
+- Runbooks define the “how” for execution.
+- Continuous review improves future incident response efficiency.`,
+  category: 'Cybersecurity Operations',
+  tags: ['Incident Response', 'SIEM', 'EDR', 'AV', 'Playbooks', 'Runbooks'],
+  date: '2025-11-10',
+  readTime: '12 min read',
+  author: 'Christoffer'
+}]
