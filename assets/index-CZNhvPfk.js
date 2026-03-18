@@ -2170,7 +2170,130 @@ An IDS complements firewalls by detecting malicious activity inside the network.
 - Use IDS for internal threat detection.
 - Choose between HIDS, NIDS, or Hybrid based on your network.
 - Snort rules can be customized to fit your environment.
-- Integrate IDS alerts into your broader incident response strategy.`,category:"Network Security",tags:["IDS","Snort","NIDS","HIDS","Network Monitoring","Intrusion Detection"],date:"2026-03-18",readTime:"16 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
+- Integrate IDS alerts into your broader incident response strategy.`,category:"Network Security",tags:["IDS","Snort","NIDS","HIDS","Network Monitoring","Intrusion Detection"],date:"2026-03-18",readTime:"16 min read",author:"Christoffer"},{id:"11",slug:"cyberchef-tool-everyone-should-know",title:"CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)",excerpt:"A simple but powerful tool for decoding, encoding, and understanding data — directly in your browser.",content:`# CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)
+
+Have you ever come across a weird string of text and thought… what is this?
+
+Something like this:
+SGVsbG8gd29ybGQ=
+
+Or maybe you’ve seen encoded data in logs, URLs, or apps and had no idea how to read it.
+
+That’s where CyberChef comes in.
+
+## What is CyberChef?
+
+CyberChef is a free, web-based tool that lets you analyze, decode, encode, and transform data — all directly in your browser.
+
+It was developed by GCHQ (the UK’s intelligence agency), and it’s often called:
+
+> “The Cyber Swiss Army Knife”
+
+And honestly… that name fits perfectly.
+
+## Why it’s so useful
+
+What makes CyberChef special is how simple it is to use:
+
+- No installation required  
+- Drag-and-drop interface  
+- Tons of built-in operations  
+- Works instantly in your browser  
+
+You don’t need to be a hacker or a developer to use it. If you’re just curious about how data works, it’s already useful.
+
+## A simple example
+
+Let’s say you see this:
+
+\`\`\`
+SGVsbG8gZnJvbSBDeWJlckNoZWY=
+\`\`\`
+
+Drop it into CyberChef and apply the operation:
+
+**From Base64**
+
+And you get:
+
+\`\`\`
+Hello from CyberChef
+\`\`\`
+
+### What just happened?
+
+That string was encoded using Base64 — a common way to represent data in text format (used in emails, APIs, and more).
+
+CyberChef decoded it instantly.
+
+## The “Magic” feature (this is where it gets fun)
+
+One of the coolest features is the **Magic Wand** 🪄
+
+Instead of guessing how something is encoded, CyberChef can try to figure it out for you.
+
+Just click “Magic”, and it will suggest possible decoding steps automatically.
+
+It’s not always perfect — but when it works, it feels like cheating 😄
+
+## Real-world use cases
+
+Even outside cybersecurity, CyberChef is surprisingly useful:
+
+### 🔍 Understanding weird data
+- Decode strings from logs or APIs  
+- Analyze strange outputs from programs  
+
+### 🔐 Learning how data works
+- Try hashing (SHA256, MD5)  
+- See how encoding changes data  
+
+### 🧩 Just experimenting
+- Chain multiple operations together  
+- Break and rebuild data formats  
+
+## Layered data (quick demo)
+
+Sometimes data is encoded multiple times.
+
+Example workflow:
+- Base64 → Hex → Text  
+
+CyberChef lets you stack operations like this using “recipes”.
+
+This is super common in things like:
+- CTF challenges  
+- malware analysis  
+- obfuscated data  
+
+## Why I like it
+
+What I personally like about CyberChef is how easy it makes things that normally feel complicated.
+
+Instead of writing scripts or using multiple tools, you can just:
+- paste your data  
+- click a few buttons  
+- instantly see the result  
+
+It makes learning way more interactive.
+
+## Try it yourself
+
+If you’re even a little bit curious about how data works, I highly recommend trying it:
+
+https://gchq.github.io/CyberChef
+
+Play around with it, break things, decode random strings — that’s honestly the best way to learn.
+
+## Final thoughts
+
+CyberChef is one of those tools that:
+- starts simple  
+- but becomes incredibly powerful over time  
+
+Whether you’re into tech, cybersecurity, or just like figuring things out, it’s definitely worth bookmarking.
+
+You’ll probably end up using it more than you expect.`,category:"Tools",tags:["CyberChef","Tools","Data","Encoding","Beginner Friendly"],date:"2026-03-18",readTime:"6 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
