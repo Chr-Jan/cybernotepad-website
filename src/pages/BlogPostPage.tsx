@@ -142,10 +142,13 @@ export function BlogPostPage() {
                   <p className="text-text-secondary text-body-lg leading-relaxed mb-6">{children}</p>
                 ),
                 ul: ({ children }) => (
-                  <ul className="list-disc list-inside text-text-secondary text-body-lg leading-relaxed mb-6 space-y-2">{children}</ul>
+                  <ul className="list-disc list-outside pl-6 text-text-secondary text-body-lg leading-relaxed mb-6 space-y-2">{children}</ul>
                 ),
                 ol: ({ children }) => (
-                  <ol className="list-decimal list-inside text-text-secondary text-body-lg leading-relaxed mb-6 space-y-2">{children}</ol>
+                  <ol className="list-decimal list-outside pl-6 text-text-secondary text-body-lg leading-relaxed mb-6 space-y-2">{children}</ol>
+                ),
+                li: ({ children }) => (
+                  <li className="[&>p]:mb-0 [&>p]:inline [&>ul]:mt-2 [&>ol]:mt-2">{children}</li>
                 ),
                 table: ({ children }) => (
                   <div className="my-8 overflow-x-auto rounded-lg border border-white/10">

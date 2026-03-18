@@ -2044,15 +2044,20 @@ alert icmp any any -> 127.0.0.1 any (msg:"Loopback Ping Detected"; sid:10003; re
 \`\`\`
 
 **Explanation of the rule components:**
-- **alert**: action to take when the rule matches — here it sends an alert.  
-- **icmp**: protocol being monitored (ICMP is used by ping).  
-- **any any**: source IP and port — here it matches all sources.  
-- **->**: direction of traffic from source to destination.  
-- **127.0.0.1 any**: destination IP and port — here the localhost on any port.  
-- **(msg:"Loopback Ping Detected"; sid:10003; rev:1;)**: metadata  
-  - **msg** = message displayed when triggered  
-  - **sid** = unique signature ID for the rule  
-  - **rev** = revision number of the rule  
+
+| Component | Meaning |
+|---|---|
+| \`alert\` | Action to take when the rule matches (send an alert). |
+| \`icmp\` | Protocol being monitored (ICMP, used by ping). |
+| \`any any\` | Source IP and source port (matches all sources). |
+| \`->\` | Direction of traffic from source to destination. |
+| \`127.0.0.1 any\` | Destination IP and destination port (localhost on any port). |
+| \`(msg:"Loopback Ping Detected"; sid:10003; rev:1;)\` | Rule metadata block. |
+
+Metadata fields:
+- \`msg\`: Message displayed when the rule is triggered.
+- \`sid\`: Unique signature ID for the rule.
+- \`rev\`: Revision number of the rule.
 
 Rules can be added to **local.rules** to create custom detections.
 
