@@ -341,6 +341,67 @@ export const penetrationTestingTools: PenetrationTestingCategory[] = [
     ],
   },
   {
+    category: 'Vulnerability Management',
+    icon: 'Shield',
+    tools: [
+      {
+        name: 'OpenVAS (Open Vulnerability Assessment System)',
+        description:
+          'An open-source vulnerability scanner used to identify known weaknesses across hosts and services.',
+        features: [
+          'Network vulnerability scanning',
+          'Authenticated and unauthenticated checks',
+          'Community-driven feed support',
+          'Detailed reporting for remediation workflows',
+        ],
+        website: 'https://www.greenbone.net/en/community-edition/',
+        websiteLabel: 'Greenbone Community Edition',
+        color: 'from-emerald-500 to-teal-500',
+      },
+      {
+        name: 'Nexpose (Rapid7)',
+        description:
+          'Rapid7\'s vulnerability management platform, known historically as Nexpose, used for discovery, assessment, and prioritization.',
+        features: [
+          'Asset discovery and risk-based prioritization',
+          'Continuous vulnerability assessment',
+          'Remediation tracking and reporting',
+          'Integration with broader security operations',
+        ],
+        website: 'https://www.rapid7.com/products/insightvm/',
+        websiteLabel: 'Rapid7 InsightVM',
+        color: 'from-orange-500 to-red-500',
+      },
+      {
+        name: 'Qualys',
+        description:
+          'A cloud-based platform for vulnerability management, continuous monitoring, and compliance-focused security assessment.',
+        features: [
+          'Cloud vulnerability assessment',
+          'Asset inventory and prioritization',
+          'Policy compliance and reporting',
+          'Continuous monitoring workflows',
+        ],
+        website: 'https://www.qualys.com/apps/vulnerability-management-detection-response/',
+        websiteLabel: 'Qualys VMDR',
+        color: 'from-sky-500 to-blue-500',
+      },
+      {
+        name: 'Nessus',
+        description:
+          'A widely used vulnerability scanner for identifying misconfigurations, missing patches, and known CVEs in environments.',
+        features: [
+          'Comprehensive vulnerability scanning',
+          'Plugin-based detection updates',
+          'Configuration and compliance checks',
+          'Prioritized findings and remediation guidance',
+        ],
+        website: 'https://www.tenable.com/products/nessus',
+        color: 'from-violet-500 to-indigo-500',
+      },
+    ],
+  },
+  {
     category: 'Reconnaissance & Intelligence',
     icon: 'Search',
     tools: [
