@@ -2170,7 +2170,7 @@ An IDS complements firewalls by detecting malicious activity inside the network.
 - Use IDS for internal threat detection.
 - Choose between HIDS, NIDS, or Hybrid based on your network.
 - Snort rules can be customized to fit your environment.
-- Integrate IDS alerts into your broader incident response strategy.`,category:"Network Security",tags:["IDS","Snort","NIDS","HIDS","Network Monitoring","Intrusion Detection"],date:"2026-03-18",readTime:"16 min read",author:"Christoffer"},{id:"11",slug:"cyberchef-tool-everyone-should-know",title:"CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)",excerpt:"A simple but powerful tool for decoding, encoding, and understanding data — directly in your browser.",content:`# CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)
+- Integrate IDS alerts into your broader incident response strategy.`,category:"Network Security",tags:["IDS","Snort","NIDS","HIDS","Network Monitoring","Intrusion Detection"],date:"2026-03-18",readTime:"16 min read",author:"Christoffer"},{id:"15",slug:"cyberchef-tool-everyone-should-know",title:"CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)",excerpt:"A simple but powerful tool for decoding, encoding, and understanding data — directly in your browser.",content:`# CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)
 
 Have you ever come across a weird string of text and thought… what is this?
 
@@ -2293,7 +2293,255 @@ CyberChef is one of those tools that:
 
 Whether you’re into tech, cybersecurity, or just like figuring things out, it’s definitely worth bookmarking.
 
-You’ll probably end up using it more than you expect.`,category:"Tools",tags:["CyberChef","Tools","Data","Encoding","Beginner Friendly"],date:"2026-03-18",readTime:"6 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
+You’ll probably end up using it more than you expect.`,category:"Tools",tags:["CyberChef","Tools","Data","Encoding","Beginner Friendly"],date:"2026-03-18",readTime:"6 min read",author:"Christoffer"},{id:"16",slug:"reverse-engineering-malware-analysis-tools",title:"Reverse Engineering & Malware Analysis: Tools and Techniques",excerpt:"Learn reverse engineering, debugging, and malware analysis using industry-standard tools and techniques.",content:`# Reverse Engineering & Malware Analysis: Tools and Techniques
+
+Reverse engineering and malware analysis are essential skills in cybersecurity. They allow analysts to understand how software works, identify vulnerabilities, and analyze malicious code safely.
+
+## What is Reverse Engineering?
+
+Reverse engineering is the process of analyzing a compiled program to understand its structure and behavior without access to the source code.
+
+### Why it matters:
+- Malware analysis
+- Vulnerability research
+- Software auditing
+- Capture-the-Flag (CTF) challenges
+
+## Debugging vs Reverse Engineering
+
+- **Debugging**: Finding and fixing bugs in code
+- **Reverse Engineering**: Understanding how compiled software works
+
+---
+
+## Reverse Engineering & Debugging Tools
+
+### Ghidra (NSA Tool)
+A powerful open-source reverse engineering suite.
+
+**Features:**
+- Decompilation (assembly → pseudo C code)
+- Cross-platform support
+- GUI-based analysis
+
+---
+
+### x64dbg
+A modern debugger for Windows binaries.
+
+**Features:**
+- Step-by-step execution
+- Breakpoints
+- Memory inspection
+
+---
+
+### OllyDbg
+Classic debugger for 32-bit applications.
+
+**Features:**
+- Assembly-level debugging
+- Lightweight and fast
+
+---
+
+### Radare2
+Advanced command-line reverse engineering framework.
+
+**Example:**
+\`\`\`bash
+r2 -A binary_file
+\`\`\`
+
+**Explanation:**
+- \`r2\` → Launches Radare2
+- \`-A\` → Runs automatic analysis (functions, symbols, etc.)
+- \`binary_file\` → Target file
+
+---
+
+### Binary Ninja
+Commercial tool with powerful analysis features.
+
+---
+
+## Disassemblers & Decompilers
+
+These tools convert machine code into human-readable formats.
+
+### CFF Explorer
+- PE file editor
+- Useful for malware inspection
+
+### Hopper Disassembler
+- Disassembler + debugger combo
+
+### RetDec
+- Open-source decompiler
+
+---
+
+## Static vs Dynamic Analysis
+
+### Static Analysis
+Analyzing code **without running it**
+
+**Benefits:**
+- Safe
+- No execution risk
+
+---
+
+### Dynamic Analysis
+Running malware in a controlled environment
+
+**Benefits:**
+- Observe real behavior
+- Network activity, file changes
+
+---
+
+## Analysis Tools
+
+### Process Hacker
+Monitor processes and memory.
+
+### Dependency Walker
+Shows DLL dependencies.
+
+### DIE (Detect It Easy)
+Identifies packers and compilers.
+
+---
+
+## Forensics & Incident Response Tools
+
+### Volatility
+Memory forensics framework.
+
+**Example:**
+\`\`\`bash
+volatility -f memory.img pslist
+\`\`\`
+
+**Explanation:**
+- \`-f memory.img\` → Memory dump file
+- \`pslist\` → Lists running processes
+
+---
+
+### FTK Imager
+Used for disk image acquisition.
+
+---
+
+### Rekall
+Alternative to Volatility.
+
+---
+
+## Network Analysis Tools
+
+### Wireshark
+Packet capture and analysis tool.
+
+### Nmap
+Network scanning and enumeration.
+
+**Example:**
+\`\`\`bash
+nmap -sV 192.168.1.1
+\`\`\`
+
+**Explanation:**
+- \`-sV\` → Service version detection
+- \`192.168.1.1\` → Target IP
+
+---
+
+### Netcat
+Network debugging tool.
+
+**Example:**
+\`\`\`bash
+nc -lvnp 4444
+\`\`\`
+
+**Explanation:**
+- \`-l\` → Listen mode
+- \`-v\` → Verbose output
+- \`-n\` → No DNS resolution
+- \`-p 4444\` → Port
+
+---
+
+## File Analysis Tools
+
+### HxD
+Hex editor for binary files.
+
+### Hex Fiend
+Fast hex editor for macOS.
+
+### FileInsight
+Binary file analyzer.
+
+---
+
+## Scripting & Automation
+
+### Python
+Used for:
+- Automation
+- Malware analysis scripts
+- Exploit development
+
+---
+
+### PowerShell Empire
+Post-exploitation framework.
+
+---
+
+## Sysinternals Suite (Windows Internals)
+
+### Autoruns
+Shows startup programs.
+
+### Process Explorer
+Advanced task manager.
+
+### Process Monitor
+
+Real-time system activity monitoring.
+
+---
+
+## Key Takeaways
+
+- Reverse engineering helps understand unknown binaries
+- Static and dynamic analysis complement each other
+- Tools like Ghidra and Wireshark are industry standards
+- Automation (Python, PowerShell) is essential for efficiency
+
+---
+
+## Learning Path Suggestion
+
+1. Start with **basic assembly and debugging**
+2. Learn **Ghidra or x64dbg**
+3. Practice with **CTF challenges**
+4. Move into **malware analysis labs**
+5. Combine with **forensics and incident response**
+
+---
+
+## Conclusion
+
+Reverse engineering and malware analysis are advanced but highly valuable cybersecurity skills. With the right tools and consistent practice, you can analyze complex threats and understand how modern attacks work.
+
+Remember: **Always practice in legal and controlled environments only.**
+`,category:"Malware Analysis",tags:["Reverse Engineering","Malware Analysis","Ghidra","Wireshark","Debugging"],date:"2025-11-05",readTime:"12 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
