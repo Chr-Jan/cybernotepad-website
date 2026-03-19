@@ -2111,7 +2111,7 @@ An IDS complements firewalls by detecting malicious activity inside the network.
   author: 'Christoffer'
 },
 {
-  id: '11',
+  id: '15',
   slug: 'cyberchef-tool-everyone-should-know',
   title: 'CyberChef: The Tool Everyone Should Know (Even Outside Cybersecurity)',
   excerpt: 'A simple but powerful tool for decoding, encoding, and understanding data — directly in your browser.',
@@ -2243,5 +2243,265 @@ You’ll probably end up using it more than you expect.`,
   tags: ['CyberChef', 'Tools', 'Data', 'Encoding', 'Beginner Friendly'],
   date: '2026-03-18',
   readTime: '6 min read',
+  author: 'Christoffer'
+},
+{
+  id: '16',
+  slug: 'reverse-engineering-malware-analysis-tools',
+  title: 'Reverse Engineering & Malware Analysis: Tools and Techniques',
+  excerpt: 'Learn reverse engineering, debugging, and malware analysis using industry-standard tools and techniques.',
+  content: `# Reverse Engineering & Malware Analysis: Tools and Techniques
+
+Reverse engineering and malware analysis are essential skills in cybersecurity. They allow analysts to understand how software works, identify vulnerabilities, and analyze malicious code safely.
+
+## What is Reverse Engineering?
+
+Reverse engineering is the process of analyzing a compiled program to understand its structure and behavior without access to the source code.
+
+### Why it matters:
+- Malware analysis
+- Vulnerability research
+- Software auditing
+- Capture-the-Flag (CTF) challenges
+
+## Debugging vs Reverse Engineering
+
+- **Debugging**: Finding and fixing bugs in code
+- **Reverse Engineering**: Understanding how compiled software works
+
+---
+
+## Reverse Engineering & Debugging Tools
+
+### Ghidra (NSA Tool)
+A powerful open-source reverse engineering suite.
+
+**Features:**
+- Decompilation (assembly → pseudo C code)
+- Cross-platform support
+- GUI-based analysis
+
+---
+
+### x64dbg
+A modern debugger for Windows binaries.
+
+**Features:**
+- Step-by-step execution
+- Breakpoints
+- Memory inspection
+
+---
+
+### OllyDbg
+Classic debugger for 32-bit applications.
+
+**Features:**
+- Assembly-level debugging
+- Lightweight and fast
+
+---
+
+### Radare2
+Advanced command-line reverse engineering framework.
+
+**Example:**
+\`\`\`bash
+r2 -A binary_file
+\`\`\`
+
+**Explanation:**
+- \`r2\` → Launches Radare2
+- \`-A\` → Runs automatic analysis (functions, symbols, etc.)
+- \`binary_file\` → Target file
+
+---
+
+### Binary Ninja
+Commercial tool with powerful analysis features.
+
+---
+
+## Disassemblers & Decompilers
+
+These tools convert machine code into human-readable formats.
+
+### CFF Explorer
+- PE file editor
+- Useful for malware inspection
+
+### Hopper Disassembler
+- Disassembler + debugger combo
+
+### RetDec
+- Open-source decompiler
+
+---
+
+## Static vs Dynamic Analysis
+
+### Static Analysis
+Analyzing code **without running it**
+
+**Benefits:**
+- Safe
+- No execution risk
+
+---
+
+### Dynamic Analysis
+Running malware in a controlled environment
+
+**Benefits:**
+- Observe real behavior
+- Network activity, file changes
+
+---
+
+## Analysis Tools
+
+### Process Hacker
+Monitor processes and memory.
+
+### Dependency Walker
+Shows DLL dependencies.
+
+### DIE (Detect It Easy)
+Identifies packers and compilers.
+
+---
+
+## Forensics & Incident Response Tools
+
+### Volatility
+Memory forensics framework.
+
+**Example:**
+\`\`\`bash
+volatility -f memory.img pslist
+\`\`\`
+
+**Explanation:**
+- \`-f memory.img\` → Memory dump file
+- \`pslist\` → Lists running processes
+
+---
+
+### FTK Imager
+Used for disk image acquisition.
+
+---
+
+### Rekall
+Alternative to Volatility.
+
+---
+
+## Network Analysis Tools
+
+### Wireshark
+Packet capture and analysis tool.
+
+### Nmap
+Network scanning and enumeration.
+
+**Example:**
+\`\`\`bash
+nmap -sV 192.168.1.1
+\`\`\`
+
+**Explanation:**
+- \`-sV\` → Service version detection
+- \`192.168.1.1\` → Target IP
+
+---
+
+### Netcat
+Network debugging tool.
+
+**Example:**
+\`\`\`bash
+nc -lvnp 4444
+\`\`\`
+
+**Explanation:**
+- \`-l\` → Listen mode
+- \`-v\` → Verbose output
+- \`-n\` → No DNS resolution
+- \`-p 4444\` → Port
+
+---
+
+## File Analysis Tools
+
+### HxD
+Hex editor for binary files.
+
+### Hex Fiend
+Fast hex editor for macOS.
+
+### FileInsight
+Binary file analyzer.
+
+---
+
+## Scripting & Automation
+
+### Python
+Used for:
+- Automation
+- Malware analysis scripts
+- Exploit development
+
+---
+
+### PowerShell Empire
+Post-exploitation framework.
+
+---
+
+## Sysinternals Suite (Windows Internals)
+
+### Autoruns
+Shows startup programs.
+
+### Process Explorer
+Advanced task manager.
+
+### Process Monitor
+
+Real-time system activity monitoring.
+
+---
+
+## Key Takeaways
+
+- Reverse engineering helps understand unknown binaries
+- Static and dynamic analysis complement each other
+- Tools like Ghidra and Wireshark are industry standards
+- Automation (Python, PowerShell) is essential for efficiency
+
+---
+
+## Learning Path Suggestion
+
+1. Start with **basic assembly and debugging**
+2. Learn **Ghidra or x64dbg**
+3. Practice with **CTF challenges**
+4. Move into **malware analysis labs**
+5. Combine with **forensics and incident response**
+
+---
+
+## Conclusion
+
+Reverse engineering and malware analysis are advanced but highly valuable cybersecurity skills. With the right tools and consistent practice, you can analyze complex threats and understand how modern attacks work.
+
+Remember: **Always practice in legal and controlled environments only.**
+`,
+  category: 'Malware Analysis',
+  tags: ['Reverse Engineering', 'Malware Analysis', 'Ghidra', 'Wireshark', 'Debugging'],
+  date: '2025-11-05',
+  readTime: '12 min read',
   author: 'Christoffer'
 }]
