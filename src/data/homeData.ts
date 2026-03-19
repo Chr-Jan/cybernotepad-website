@@ -2501,7 +2501,7 @@ Remember: **Always practice in legal and controlled environments only.**
 `,
   category: 'Malware Analysis',
   tags: ['Reverse Engineering', 'Malware Analysis', 'Ghidra', 'Wireshark', 'Debugging'],
-  date: '2025-11-05',
+  date: '2026-03-19',
   readTime: '12 min read',
   author: 'Christoffer'
 }]
