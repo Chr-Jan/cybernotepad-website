@@ -2528,13 +2528,16 @@ Because of this, security is not one-size-fits-all. Instead, organizations build
 A typical cyber security hierarchy is divided into multiple levels:
 
 ### 1. Executives (Top Level)
-- CEO / CFO / Company Owner
+- CEO (Chief Executive Officer) - overall business leader
+- CFO (Chief Financial Officer) - responsible for finance and budgeting
+- Company Owner
 - Focus on overall business goals
 - Do not handle technical security directly
 
 ### 2. Security Leadership
 - CISO (Chief Information Security Officer)
-- CIO / CTO (in some organizations)
+- CIO (Chief Information Officer) - responsible for IT strategy and operations
+- CTO (Chief Technology Officer) - responsible for technology direction and engineering
 
 **Responsibilities:**
 - Define security strategy
@@ -2555,7 +2558,7 @@ A typical cyber security hierarchy is divided into multiple levels:
 - SOC Analysts (L1 / L2)
 - Security Engineers
 - Penetration Testers
-- GRC Specialists
+- GRC (Governance, Risk, and Compliance) Specialists
 
 **Responsibilities:**
 - Perform hands-on security tasks
@@ -2582,6 +2585,8 @@ Blue Teams often consist of multiple sub-teams, with the most important being:
 
 The SOC is the **first line of defense** in an organization.
 
+SOC stands for **Security Operations Center**.
+
 ### Key Characteristics:
 - Operates 24/7 in many organizations
 - Monitors logs and alerts
@@ -2602,7 +2607,7 @@ The SOC is the **first line of defense** in an organization.
 
 #### SOC Engineer
 - Builds and maintains detection systems
-- Works with SIEM and EDR tools
+- Works with SIEM (Security Information and Event Management) and EDR (Endpoint Detection and Response) tools
 - Creates detection rules
 
 #### SOC Manager
@@ -2656,7 +2661,7 @@ Think of them as **cyber firefighters**.
 In addition to SOC and CIRT, several specialized roles support the Blue Team by strengthening security across different areas:
 
 ### DevSecOps Engineer
-- Integrates security into the development lifecycle (CI/CD)
+- Integrates security into the development lifecycle (CI/CD: Continuous Integration and Continuous Delivery)
 - Automates security testing and deployments
 - Ensures secure infrastructure and code practices
 
