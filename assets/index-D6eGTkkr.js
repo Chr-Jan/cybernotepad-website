@@ -2541,7 +2541,208 @@ Real-time system activity monitoring.
 Reverse engineering and malware analysis are advanced but highly valuable cybersecurity skills. With the right tools and consistent practice, you can analyze complex threats and understand how modern attacks work.
 
 Remember: **Always practice in legal and controlled environments only.**
-`,category:"Malware Analysis",tags:["Reverse Engineering","Malware Analysis","Ghidra","Wireshark","Debugging"],date:"2026-03-19",readTime:"12 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
+`,category:"Malware Analysis",tags:["Reverse Engineering","Malware Analysis","Ghidra","Wireshark","Debugging"],date:"2026-03-19",readTime:"12 min read",author:"Christoffer"},{id:"17",slug:"cyber-security-hierarchy-blue-team-structure",title:"Cyber Security Hierarchy: Understanding Blue Team, SOC, and CIRT",excerpt:"Learn how cyber security teams are structured, from executives to technical roles, including SOC and incident response teams.",content:`# Cyber Security Hierarchy: Understanding Blue Team, SOC, and CIRT
+
+Cyber security in modern organizations is not just about tools and technologies, it is also about structure, roles, and responsibilities. Different companies prioritize different aspects of security depending on their industry, which leads to unique team structures and hierarchies.
+
+## Why Security Structure Matters
+
+Every organization has different priorities:
+- Law firms focus on confidentiality
+- Factories focus on availability
+- Hospitals focus on safety
+
+Because of this, security is not one-size-fits-all. Instead, organizations build structured teams to handle specific responsibilities effectively.
+
+## Security Hierarchy Overview
+
+A typical cyber security hierarchy is divided into multiple levels:
+
+### 1. Executives (Top Level)
+- CEO / CFO / Company Owner
+- Focus on overall business goals
+- Do not handle technical security directly
+
+### 2. Security Leadership
+- CISO (Chief Information Security Officer)
+- CIO / CTO (in some organizations)
+
+**Responsibilities:**
+- Define security strategy
+- Align security with business needs
+- Oversee all security teams
+
+### 3. Security Managers
+- SOC Manager
+- Red Team Lead
+- Team Leads
+
+**Responsibilities:**
+- Manage individual teams
+- Ensure operational efficiency
+- Report to leadership
+
+### 4. Technical Roles (Operational Level)
+- SOC Analysts (L1 / L2)
+- Security Engineers
+- Penetration Testers
+- GRC Specialists
+
+**Responsibilities:**
+- Perform hands-on security tasks
+- Monitor systems
+- Detect and respond to threats
+
+---
+
+## Blue Team: Defensive Security
+
+The **Blue Team** is responsible for defending the organization against cyber threats.
+
+### Core Responsibilities:
+- Monitor systems and networks
+- Detect suspicious activity
+- Respond to incidents
+- Improve defensive capabilities
+
+Blue Teams often consist of multiple sub-teams, with the most important being:
+
+---
+
+## Security Operations Center (SOC)
+
+The SOC is the **first line of defense** in an organization.
+
+### Key Characteristics:
+- Operates 24/7 in many organizations
+- Monitors logs and alerts
+- Investigates suspicious activity
+- Works closely with IT teams
+
+### SOC Roles:
+
+#### L1 Analyst (Tier 1)
+- First responders to alerts
+- Perform initial triage
+- Escalate complex cases
+
+#### L2 Analyst (Tier 2)
+- Handle deeper investigations
+- Analyze advanced threats
+- Support L1 analysts
+
+#### SOC Engineer
+- Builds and maintains detection systems
+- Works with SIEM and EDR tools
+- Creates detection rules
+
+#### SOC Manager
+- Oversees SOC operations
+- Manages team performance
+- Handles reporting and coordination
+
+---
+
+## CIRT / CSIRT / CERT: Incident Response Teams
+
+When incidents become critical, specialized teams step in.
+
+These teams are often referred to as:
+- CIRT (Cyber Incident Response Team)
+- CSIRT (Computer Security Incident Response Team)
+- CERT (Computer Emergency Response Team)
+
+### Role in Security:
+
+Think of them as **cyber firefighters**.
+
+### Responsibilities:
+- Handle major security incidents
+- Perform deep forensic investigations
+- Identify root causes
+- Recover compromised systems
+
+### Key Roles in CIRT:
+- Incident Response Manager
+- Digital Forensics Analyst
+- Threat Intelligence Analyst
+- Threat Hunter
+- Malware Analyst
+
+---
+
+## SOC vs CIRT: Key Differences
+
+| SOC | CIRT |
+|-----|------|
+| Monitors daily activity | Handles critical incidents |
+| Works continuously | Often activated on demand |
+| Focuses on alerts | Focuses on deep investigations |
+| First line of defense | Escalation and response experts |
+
+---
+
+## Roles Supporting Blue Team
+
+In addition to SOC and CIRT, several specialized roles support the Blue Team by strengthening security across different areas:
+
+### DevSecOps Engineer
+- Integrates security into the development lifecycle (CI/CD)
+- Automates security testing and deployments
+- Ensures secure infrastructure and code practices
+
+### Penetration Tester (Ethical Hacker)
+- Simulates real-world attacks
+- Identifies vulnerabilities before attackers do
+- Works closely with Blue Team to improve defenses
+
+### GRC Auditor (Governance, Risk, Compliance)
+- Ensures compliance with standards (e.g., ISO 27001, PCI DSS)
+- Manages policies and risk assessments
+- Bridges business and technical security
+
+### Application Security (AppSec) Engineer
+- Focuses on securing applications
+- Performs code reviews and security testing
+- Implements secure coding practices
+
+### Threat Analyst
+- Studies emerging threats and attack patterns
+- Provides intelligence to improve detection
+- Supports SOC and CIRT with context
+
+### AI Security Researcher
+- Explores threats related to AI and machine learning
+- Develops advanced detection models
+- Works on future-focused security challenges
+
+---
+
+## Conclusion
+
+Cyber security is not just about tools — it is about **people, structure, and coordination**.
+
+**Key Takeaways:**
+- Security is structured in layers, from executives to technical staff
+- Blue Team focuses on defense
+- SOC is the first line of defense
+- CIRT handles critical incidents and deep investigations
+- Specialized roles support the overall security strategy
+
+Understanding this hierarchy is essential for anyone entering cyber security, as it shows how different roles work together to protect an organization.
+
+## Sources and Further Reading
+
+- Introduction to SIEM: [What is SIEM?](https://www.microsoft.com/en-us/security/business/security-101/what-is-siem)
+- Incident response defined: [What is incident response?](https://www.microsoft.com/en-us/security/business/security-101/what-is-incident-response)
+- What is a security operations center (SOC)?: [IBM SOC Overview](https://www.ibm.com/think/topics/security-operations-center)
+- What is a SOC?: [Microsoft SOC Overview](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-security-operations-center-soc)
+- Computer incident response team (CIRT): [NIST CIRT Glossary](https://csrc.nist.gov/glossary/term/computer_incident_response_team)
+- What is blue team?: [IBM Blue Team Overview](https://www.ibm.com/think/topics/blue-team)
+- What is red team?: [IBM Red Team Overview](https://www.ibm.com/think/topics/red-teaming)
+- What is penetration testing?: [IBM Penetration Testing Overview](https://www.ibm.com/think/topics/penetration-testing#257779835)
+
+`,category:"Blue Team",tags:["SOC","Blue Team","CIRT","Cyber Security","Security Roles"],date:"2026-03-20",readTime:"10 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
