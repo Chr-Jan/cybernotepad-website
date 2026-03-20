@@ -2776,7 +2776,7 @@ For beginners, MSSPs can be a great way to quickly gain hands-on experience, whi
 
 ## Conclusion
 
-Cyber security is not just about tools — it is about **people, structure, and coordination**.
+Cyber security is not just about tools, it is about **people, structure, and coordination**.
 
 **Key Takeaways:**
 - Security is structured in layers, from executives to technical staff
