@@ -2504,4 +2504,217 @@ Remember: **Always practice in legal and controlled environments only.**
   date: '2026-03-19',
   readTime: '12 min read',
   author: 'Christoffer'
+},
+{
+  id: '17',
+  slug: 'cyber-security-hierarchy-blue-team-structure',
+  title: 'Cyber Security Hierarchy: Understanding Blue Team, SOC, and CIRT',
+  excerpt: 'Learn how cyber security teams are structured, from executives to technical roles, including SOC and incident response teams.',
+  content: `# Cyber Security Hierarchy: Understanding Blue Team, SOC, and CIRT
+
+Cyber security in modern organizations is not just about tools and technologies, it is also about structure, roles, and responsibilities. Different companies prioritize different aspects of security depending on their industry, which leads to unique team structures and hierarchies.
+
+## Why Security Structure Matters
+
+Every organization has different priorities:
+- Law firms focus on confidentiality
+- Factories focus on availability
+- Hospitals focus on safety
+
+Because of this, security is not one-size-fits-all. Instead, organizations build structured teams to handle specific responsibilities effectively.
+
+## Security Hierarchy Overview
+
+A typical cyber security hierarchy is divided into multiple levels:
+
+### 1. Executives (Top Level)
+- CEO / CFO / Company Owner
+- Focus on overall business goals
+- Do not handle technical security directly
+
+### 2. Security Leadership
+- CISO (Chief Information Security Officer)
+- CIO / CTO (in some organizations)
+
+**Responsibilities:**
+- Define security strategy
+- Align security with business needs
+- Oversee all security teams
+
+### 3. Security Managers
+- SOC Manager
+- Red Team Lead
+- Team Leads
+
+**Responsibilities:**
+- Manage individual teams
+- Ensure operational efficiency
+- Report to leadership
+
+### 4. Technical Roles (Operational Level)
+- SOC Analysts (L1 / L2)
+- Security Engineers
+- Penetration Testers
+- GRC Specialists
+
+**Responsibilities:**
+- Perform hands-on security tasks
+- Monitor systems
+- Detect and respond to threats
+
+---
+
+## Blue Team: Defensive Security
+
+The **Blue Team** is responsible for defending the organization against cyber threats.
+
+### Core Responsibilities:
+- Monitor systems and networks
+- Detect suspicious activity
+- Respond to incidents
+- Improve defensive capabilities
+
+Blue Teams often consist of multiple sub-teams, with the most important being:
+
+---
+
+## Security Operations Center (SOC)
+
+The SOC is the **first line of defense** in an organization.
+
+### Key Characteristics:
+- Operates 24/7 in many organizations
+- Monitors logs and alerts
+- Investigates suspicious activity
+- Works closely with IT teams
+
+### SOC Roles:
+
+#### L1 Analyst (Tier 1)
+- First responders to alerts
+- Perform initial triage
+- Escalate complex cases
+
+#### L2 Analyst (Tier 2)
+- Handle deeper investigations
+- Analyze advanced threats
+- Support L1 analysts
+
+#### SOC Engineer
+- Builds and maintains detection systems
+- Works with SIEM and EDR tools
+- Creates detection rules
+
+#### SOC Manager
+- Oversees SOC operations
+- Manages team performance
+- Handles reporting and coordination
+
+---
+
+## CIRT / CSIRT / CERT: Incident Response Teams
+
+When incidents become critical, specialized teams step in.
+
+These teams are often referred to as:
+- CIRT (Cyber Incident Response Team)
+- CSIRT (Computer Security Incident Response Team)
+- CERT (Computer Emergency Response Team)
+
+### Role in Security:
+
+Think of them as **cyber firefighters**.
+
+### Responsibilities:
+- Handle major security incidents
+- Perform deep forensic investigations
+- Identify root causes
+- Recover compromised systems
+
+### Key Roles in CIRT:
+- Incident Response Manager
+- Digital Forensics Analyst
+- Threat Intelligence Analyst
+- Threat Hunter
+- Malware Analyst
+
+---
+
+## SOC vs CIRT: Key Differences
+
+| SOC | CIRT |
+|-----|------|
+| Monitors daily activity | Handles critical incidents |
+| Works continuously | Often activated on demand |
+| Focuses on alerts | Focuses on deep investigations |
+| First line of defense | Escalation and response experts |
+
+---
+
+## Roles Supporting Blue Team
+
+In addition to SOC and CIRT, several specialized roles support the Blue Team by strengthening security across different areas:
+
+### DevSecOps Engineer
+- Integrates security into the development lifecycle (CI/CD)
+- Automates security testing and deployments
+- Ensures secure infrastructure and code practices
+
+### Penetration Tester (Ethical Hacker)
+- Simulates real-world attacks
+- Identifies vulnerabilities before attackers do
+- Works closely with Blue Team to improve defenses
+
+### GRC Auditor (Governance, Risk, Compliance)
+- Ensures compliance with standards (e.g., ISO 27001, PCI DSS)
+- Manages policies and risk assessments
+- Bridges business and technical security
+
+### Application Security (AppSec) Engineer
+- Focuses on securing applications
+- Performs code reviews and security testing
+- Implements secure coding practices
+
+### Threat Analyst
+- Studies emerging threats and attack patterns
+- Provides intelligence to improve detection
+- Supports SOC and CIRT with context
+
+### AI Security Researcher
+- Explores threats related to AI and machine learning
+- Develops advanced detection models
+- Works on future-focused security challenges
+
+---
+
+## Conclusion
+
+Cyber security is not just about tools — it is about **people, structure, and coordination**.
+
+**Key Takeaways:**
+- Security is structured in layers, from executives to technical staff
+- Blue Team focuses on defense
+- SOC is the first line of defense
+- CIRT handles critical incidents and deep investigations
+- Specialized roles support the overall security strategy
+
+Understanding this hierarchy is essential for anyone entering cyber security, as it shows how different roles work together to protect an organization.
+
+## Sources and Further Reading
+
+- Introduction to SIEM: [What is SIEM?](https://www.microsoft.com/en-us/security/business/security-101/what-is-siem)
+- Incident response defined: [What is incident response?](https://www.microsoft.com/en-us/security/business/security-101/what-is-incident-response)
+- What is a security operations center (SOC)?: [IBM SOC Overview](https://www.ibm.com/think/topics/security-operations-center)
+- What is a SOC?: [Microsoft SOC Overview](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-security-operations-center-soc)
+- Computer incident response team (CIRT): [NIST CIRT Glossary](https://csrc.nist.gov/glossary/term/computer_incident_response_team)
+- What is blue team?: [IBM Blue Team Overview](https://www.ibm.com/think/topics/blue-team)
+- What is red team?: [IBM Red Team Overview](https://www.ibm.com/think/topics/red-teaming)
+- What is penetration testing?: [IBM Penetration Testing Overview](https://www.ibm.com/think/topics/penetration-testing#257779835)
+
+`,
+  category: 'Blue Team',
+  tags: ['SOC', 'Blue Team', 'CIRT', 'Cyber Security', 'Security Roles'],
+  date: '2026-03-20',
+  readTime: '10 min read',
+  author: 'Christoffer'
 }]
