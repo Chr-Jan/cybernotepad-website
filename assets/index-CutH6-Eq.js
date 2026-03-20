@@ -2561,12 +2561,15 @@ A typical cyber security hierarchy is divided into multiple levels:
 ### 1. Executives (Top Level)
 - CEO (Chief Executive Officer) - overall business leader
 - CFO (Chief Financial Officer) - responsible for finance and budgeting
-- Company Owner
+- Company Owner - owns the business and sets overall direction
+
+**Executive-level focus:**
+- Set company direction, priorities, and risk tolerance
 - Focus on overall business goals
-- Do not handle technical security directly
+- Typically do not handle day-to-day technical security operations
 
 ### 2. Security Leadership
-- CISO (Chief Information Security Officer)
+- CISO (Chief Information Security Officer) - owns the organization's cyber security program, policies, and risk management
 - CIO (Chief Information Officer) - responsible for IT strategy and operations
 - CTO (Chief Technology Officer) - responsible for technology direction and engineering
 
@@ -2576,9 +2579,9 @@ A typical cyber security hierarchy is divided into multiple levels:
 - Oversee all security teams
 
 ### 3. Security Managers
-- SOC Manager
-- Red Team Lead
-- Team Leads
+- SOC Manager - manages the Security Operations Center team and daily operations
+- Red Team Lead - leads penetration testing and simulated attack teams
+- Team Leads - manage individual security teams, report to leadership
 
 **Responsibilities:**
 - Manage individual teams
@@ -2586,10 +2589,10 @@ A typical cyber security hierarchy is divided into multiple levels:
 - Report to leadership
 
 ### 4. Technical Roles (Operational Level)
-- SOC Analysts (L1 / L2)
-- Security Engineers
-- Penetration Testers
-- GRC (Governance, Risk, and Compliance) Specialists
+- SOC Analysts (L1 / L2) - monitor alerts, investigate suspicious activity, and respond to incidents
+- Security Engineers - design and implement security solutions
+- Penetration Testers - perform authorized security testing and identify vulnerabilities
+- GRC (Governance, Risk, and Compliance) Specialists - ensure compliance with standards and manage risk assessments
 
 **Responsibilities:**
 - Perform hands-on security tasks
@@ -2720,6 +2723,54 @@ In addition to SOC and CIRT, several specialized roles support the Blue Team by 
 - Explores threats related to AI and machine learning
 - Develops advanced detection models
 - Works on future-focused security challenges
+
+---
+
+## Internal SOC vs MSSP
+
+Not every organization has the resources or expertise to operate its own Security Operations Center (SOC). In such cases, companies rely on a Managed Security Services Provider (MSSP), which delivers outsourced security services to multiple clients.
+
+Understanding the difference between an internal SOC and an MSSP is important, especially for beginners entering the cyber security field.
+
+### Key Differences
+
+| Topic | Internal SOC | MSSP |
+|------|-------------|------|
+| Scenario | You work in a SOC team within a single organization (e.g., a bank) | You work for a company providing SOC services to multiple clients |
+| Working Pace | Typically more stable and predictable shifts | Often fast-paced with many incoming alerts |
+| Security Tools | Focus on a smaller set of tools in depth | Work with many different tools across clients |
+| Incident Exposure | Fewer incidents, but deeper understanding of the environment | Frequent exposure to diverse real-world attacks |
+
+### Pros and Cons
+
+#### Internal SOC
+**Pros:**
+- Deep understanding of one environment
+- Less stressful workload (in many cases)
+- More predictable routines
+
+**Cons:**
+- Fewer incidents to learn from
+- Slower exposure to different attack types
+
+#### MSSP
+**Pros:**
+- High exposure to real-world attacks
+- Fast learning environment
+- Experience with many tools and systems
+
+**Cons:**
+- High pressure and workload
+- Less context about each individual environment
+
+### Which One Should You Choose?
+
+Both paths are valuable:
+
+- **Internal SOC** is great for stability and deep expertise  
+- **MSSP** is ideal for fast learning and broad exposure  
+
+For beginners, MSSPs can be a great way to quickly gain hands-on experience, while internal SOC roles can offer long-term growth and specialization.
 
 ---
 
