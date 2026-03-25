@@ -2798,7 +2798,235 @@ Understanding this hierarchy is essential for anyone entering cyber security, as
 - What is red team?: [IBM Red Team Overview](https://www.ibm.com/think/topics/red-teaming)
 - What is penetration testing?: [IBM Penetration Testing Overview](https://www.ibm.com/think/topics/penetration-testing#257779835)
 
-`,category:"Blue Team",tags:["SOC","Blue Team","CIRT","Cyber Security","Security Roles"],date:"2026-03-20",readTime:"10 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
+`,category:"Blue Team",tags:["SOC","Blue Team","CIRT","Cyber Security","Security Roles"],date:"2026-03-20",readTime:"10 min read",author:"Christoffer"},{id:"18",slug:"cyber-kill-chain-explained-tools-and-defense",title:"Cyber Kill Chain: Understanding Attack Phases and Defensive Strategies",excerpt:"Learn the Cyber Kill Chain framework, its attack phases, and the tools attackers use – plus how defenders can stop them.",content:`# Cyber Kill Chain: Understanding Attack Phases and Defensive Strategies
+
+The Cyber Kill Chain is a widely used framework that helps security professionals understand how cyber attacks unfold step by step. By understanding each phase, defenders can detect and stop attacks before they reach their objective.
+
+The framework was developed by Lockheed Martin in 2011 and is based on a military concept of identifying and stopping attacks in stages.
+
+---
+
+## Why the Cyber Kill Chain Matters
+
+Understanding the Cyber Kill Chain helps organizations:
+
+- Detect attacks earlier
+- Identify weak points in security
+- Improve defensive strategies
+- Understand attacker behavior
+- Prevent data breaches and ransomware
+
+Each phase represents an opportunity to **break the attack before damage occurs**.
+
+---
+
+## The 7 Phases of the Cyber Kill Chain
+
+### 1. Reconnaissance
+
+This is the information-gathering phase.
+
+Attackers collect data about:
+- Employees
+- Systems and infrastructure
+- Technologies used
+- Public-facing assets
+
+#### Common Techniques:
+- OSINT (Open Source Intelligence)
+- Email harvesting
+- Social media analysis
+- WHOIS lookups
+
+#### Tools:
+- OSINT Framework: [Visit OSINT Framework](https://osintframework.com)
+- theHarvester: [GitHub Repository for theHarvester](https://github.com/laramies/theHarvester)
+
+Attackers use this information to craft targeted and believable attacks.
+
+---
+
+### 2. Weaponization
+
+In this phase, attackers create their malicious payload.
+
+#### Key Concepts:
+- Malware (malicious software)
+- Exploits (code targeting vulnerabilities)
+- Payload (the actual malicious code executed)
+
+#### Examples:
+- Malicious Office documents with macros
+- Backdoors
+- Custom malware
+
+Attackers may:
+- Build their own tools
+- Buy malware from underground markets
+
+---
+
+### 3. Delivery
+
+This phase is about delivering the payload to the victim.
+
+#### Common Delivery Methods:
+- Phishing emails
+- Malicious attachments
+- USB drops
+- Watering hole attacks
+
+#### Example:
+A phishing email with a malicious attachment disguised as an invoice.
+
+---
+
+### 4. Exploitation
+
+This is where the attack is executed.
+
+The attacker exploits:
+- Software vulnerabilities (CVEs)
+- Misconfigurations
+- Zero-day vulnerabilities
+
+#### Indicators of Exploitation:
+- New processes starting unexpectedly
+- Suspicious commands
+- Registry changes
+
+---
+
+### 5. Installation
+
+The attacker installs persistence mechanisms to maintain access.
+
+#### Common Techniques:
+- Backdoors
+- Web shells
+- Startup scripts
+- Registry modifications
+
+#### Example Tool:
+- Meterpreter (Metasploit payload):
+  [Metasploit Meterpreter Guide](https://www.offsec.com/metasploit-unleashed/meterpreter-backdoor/)
+
+This allows attackers to regain access even after reboot or patching.
+
+---
+
+### 6. Command & Control (C2)
+
+The attacker establishes communication with the compromised system.
+
+#### Common C2 Channels:
+- HTTP / HTTPS (blends with normal traffic)
+- DNS tunneling
+- Encrypted channels
+
+The infected system continuously communicates with the attacker's server (beaconing).
+
+---
+
+### 7. Actions on Objectives
+
+This is the final goal of the attack.
+
+#### Common Objectives:
+- Data exfiltration
+- Credential theft
+- Lateral movement
+- Privilege escalation
+- System destruction
+
+At this stage, the attacker has achieved their mission.
+
+---
+
+## Breaking the Kill Chain (Defense Strategy)
+
+The key idea is simple:
+
+**You don’t need to stop every phase — just one.**
+
+### Defensive Examples:
+
+| Phase | Defense |
+|------|--------|
+| Reconnaissance | Limit public exposure (OSINT) |
+| Delivery | Email filtering, user awareness |
+| Exploitation | Patch management |
+| Installation | Endpoint protection (EDR) |
+| C2 | Network monitoring, IDS |
+| Actions | Data loss prevention (DLP) |
+
+---
+
+## Common Tools Used Across the Kill Chain
+
+### Reconnaissance
+- OSINT Framework
+- theHarvester
+
+### Exploitation & Post-Exploitation
+- Metasploit
+- Meterpreter
+
+### Detection & Defense
+- SIEM (log correlation)
+- EDR (endpoint monitoring)
+- IDS (network detection)
+
+---
+
+## Real-World Relevance
+
+The Cyber Kill Chain is especially useful for:
+
+- SOC Analysts
+- Threat Hunters
+- Incident Responders
+- Security Engineers
+
+It helps translate alerts into **attack stages**, making investigations more structured.
+
+---
+
+## Limitations of the Cyber Kill Chain
+
+While useful, the framework has limitations:
+
+- Focuses mainly on perimeter-based attacks
+- Less effective for modern cloud-native threats
+- Does not fully represent insider threats
+
+Modern frameworks like MITRE ATT&CK complement the Kill Chain.
+
+---
+
+## Conclusion
+
+The Cyber Kill Chain provides a powerful way to understand how cyber attacks happen.
+
+**Key Takeaways:**
+- Attacks follow structured phases
+- Each phase can be detected or stopped
+- Understanding attacker behavior improves defense
+- Breaking just one phase can stop the entire attack
+
+By combining this knowledge with tools like OSINT Framework, theHarvester, and Metasploit, security professionals can both simulate and defend against real-world attacks.
+
+---
+
+## Sources and Further Reading
+
+- [Cyber Kill Chain Overview](https://www.microsoft.com/en-us/security/business/security-101/what-is-cyber-kill-chain) - Microsoft Security 101
+- [OSINT Framework](https://osintframework.com) - Open Source Intelligence Tools
+- [theHarvester](https://github.com/laramies/theHarvester) - GitHub Repository
+- [Metasploit Meterpreter Guide](https://www.offsec.com/metasploit-unleashed/meterpreter-backdoor/) - OffSec Training
+- [MITRE ATT&CK Framework](https://attack.mitre.org) - Known Adversary Tactics & Techniques
+
+`,category:"Threat Detection",tags:["Cyber Kill Chain","Threat Detection","Blue Team","SOC","Security Frameworks"],date:"2026-03-25",readTime:"9 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
