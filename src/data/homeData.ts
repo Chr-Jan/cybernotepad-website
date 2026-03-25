@@ -2773,4 +2773,243 @@ Understanding this hierarchy is essential for anyone entering cyber security, as
   date: '2026-03-20',
   readTime: '10 min read',
   author: 'Christoffer'
+},{
+  id: '18',
+  slug: 'cyber-kill-chain-explained-tools-and-defense',
+  title: 'Cyber Kill Chain: Understanding Attack Phases and Defensive Strategies',
+  excerpt: 'Learn the Cyber Kill Chain framework, its attack phases, and the tools attackers use – plus how defenders can stop them.',
+  content: `# Cyber Kill Chain: Understanding Attack Phases and Defensive Strategies
+
+The Cyber Kill Chain is a widely used framework that helps security professionals understand how cyber attacks unfold step by step. By understanding each phase, defenders can detect and stop attacks before they reach their objective.
+
+The framework was developed by Lockheed Martin in 2011 and is based on a military concept of identifying and stopping attacks in stages.
+
+---
+
+## Why the Cyber Kill Chain Matters
+
+Understanding the Cyber Kill Chain helps organizations:
+
+- Detect attacks earlier
+- Identify weak points in security
+- Improve defensive strategies
+- Understand attacker behavior
+- Prevent data breaches and ransomware
+
+Each phase represents an opportunity to **break the attack before damage occurs**.
+
+---
+
+## The 7 Phases of the Cyber Kill Chain
+
+### 1. Reconnaissance
+
+This is the information-gathering phase.
+
+Attackers collect data about:
+- Employees
+- Systems and infrastructure
+- Technologies used
+- Public-facing assets
+
+#### Common Techniques:
+- OSINT (Open Source Intelligence)
+- Email harvesting
+- Social media analysis
+- WHOIS lookups
+
+#### Tools:
+- OSINT Framework: [Visit OSINT Framework](https://osintframework.com)
+- theHarvester: [GitHub Repository for theHarvester](https://github.com/laramies/theHarvester)
+
+Attackers use this information to craft targeted and believable attacks.
+
+---
+
+### 2. Weaponization
+
+In this phase, attackers create their malicious payload.
+
+#### Key Concepts:
+- Malware (malicious software)
+- Exploits (code targeting vulnerabilities)
+- Payload (the actual malicious code executed)
+
+#### Examples:
+- Malicious Office documents with macros
+- Backdoors
+- Custom malware
+
+Attackers may:
+- Build their own tools
+- Buy malware from underground markets
+
+---
+
+### 3. Delivery
+
+This phase is about delivering the payload to the victim.
+
+#### Common Delivery Methods:
+- Phishing emails
+- Malicious attachments
+- USB drops
+- Watering hole attacks
+
+#### Example:
+A phishing email with a malicious attachment disguised as an invoice.
+
+---
+
+### 4. Exploitation
+
+This is where the attack is executed.
+
+The attacker exploits:
+- Software vulnerabilities (CVEs)
+- Misconfigurations
+- Zero-day vulnerabilities
+
+#### Indicators of Exploitation:
+- New processes starting unexpectedly
+- Suspicious commands
+- Registry changes
+
+---
+
+### 5. Installation
+
+The attacker installs persistence mechanisms to maintain access.
+
+#### Common Techniques:
+- Backdoors
+- Web shells
+- Startup scripts
+- Registry modifications
+
+#### Example Tool:
+- Meterpreter (Metasploit payload):
+  [Metasploit Meterpreter Guide](https://www.offsec.com/metasploit-unleashed/meterpreter-backdoor/)
+
+This allows attackers to regain access even after reboot or patching.
+
+---
+
+### 6. Command & Control (C2)
+
+The attacker establishes communication with the compromised system.
+
+#### Common C2 Channels:
+- HTTP / HTTPS (blends with normal traffic)
+- DNS tunneling
+- Encrypted channels
+
+The infected system continuously communicates with the attacker's server (beaconing).
+
+---
+
+### 7. Actions on Objectives
+
+This is the final goal of the attack.
+
+#### Common Objectives:
+- Data exfiltration
+- Credential theft
+- Lateral movement
+- Privilege escalation
+- System destruction
+
+At this stage, the attacker has achieved their mission.
+
+---
+
+## Breaking the Kill Chain (Defense Strategy)
+
+The key idea is simple:
+
+**You don’t need to stop every phase — just one.**
+
+### Defensive Examples:
+
+| Phase | Defense |
+|------|--------|
+| Reconnaissance | Limit public exposure (OSINT) |
+| Delivery | Email filtering, user awareness |
+| Exploitation | Patch management |
+| Installation | Endpoint protection (EDR) |
+| C2 | Network monitoring, IDS |
+| Actions | Data loss prevention (DLP) |
+
+---
+
+## Common Tools Used Across the Kill Chain
+
+### Reconnaissance
+- OSINT Framework
+- theHarvester
+
+### Exploitation & Post-Exploitation
+- Metasploit
+- Meterpreter
+
+### Detection & Defense
+- SIEM (log correlation)
+- EDR (endpoint monitoring)
+- IDS (network detection)
+
+---
+
+## Real-World Relevance
+
+The Cyber Kill Chain is especially useful for:
+
+- SOC Analysts
+- Threat Hunters
+- Incident Responders
+- Security Engineers
+
+It helps translate alerts into **attack stages**, making investigations more structured.
+
+---
+
+## Limitations of the Cyber Kill Chain
+
+While useful, the framework has limitations:
+
+- Focuses mainly on perimeter-based attacks
+- Less effective for modern cloud-native threats
+- Does not fully represent insider threats
+
+Modern frameworks like MITRE ATT&CK complement the Kill Chain.
+
+---
+
+## Conclusion
+
+The Cyber Kill Chain provides a powerful way to understand how cyber attacks happen.
+
+**Key Takeaways:**
+- Attacks follow structured phases
+- Each phase can be detected or stopped
+- Understanding attacker behavior improves defense
+- Breaking just one phase can stop the entire attack
+
+By combining this knowledge with tools like OSINT Framework, theHarvester, and Metasploit, security professionals can both simulate and defend against real-world attacks.
+
+---
+
+## Sources and Further Reading
+
+- [Cyber Kill Chain Overview](https://www.microsoft.com/en-us/security/business/security-101/what-is-cyber-kill-chain) - Microsoft Security 101
+- [OSINT Framework](https://osintframework.com) - Open Source Intelligence Tools
+- [theHarvester](https://github.com/laramies/theHarvester) - GitHub Repository
+- [Metasploit Meterpreter Guide](https://www.offsec.com/metasploit-unleashed/meterpreter-backdoor/) - OffSec Training
+- [MITRE ATT&CK Framework](https://attack.mitre.org) - Known Adversary Tactics & Techniques
+
+`,
+  category: 'Threat Detection',
+  tags: ['Cyber Kill Chain', 'Threat Detection', 'Blue Team', 'SOC', 'Security Frameworks'],
+  date: '2026-03-25',
+  readTime: '9 min read',
+  author: 'Christoffer'
 }]
