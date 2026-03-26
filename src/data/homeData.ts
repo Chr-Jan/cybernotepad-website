@@ -3012,4 +3012,247 @@ By combining this knowledge with tools like OSINT Framework, theHarvester, and M
   date: '2026-03-25',
   readTime: '9 min read',
   author: 'Christoffer'
-}]
+},{
+  id: '19',
+  slug: 'unified-kill-chain-advanced-attack-framework',
+  title: 'Unified Kill Chain: A Modern Approach to Understanding Cyber Attacks',
+  excerpt: 'Learn how the Unified Kill Chain expands traditional models with 18 phases and provides a more realistic view of modern cyber attacks.',
+  content: `# Unified Kill Chain: A Modern Approach to Understanding Cyber Attacks
+
+The Unified Kill Chain (UKC) is an advanced cybersecurity framework that expands traditional models like the Cyber Kill Chain. It provides a more detailed and realistic view of how modern cyber attacks unfold.
+
+Developed by Paul Pols in 2017, the UKC introduces **18 phases** and focuses on the full lifecycle of an attack, from initial reconnaissance to final objectives.
+
+---
+
+## Why the Unified Kill Chain Matters
+
+Modern attacks are no longer linear. Attackers:
+
+- Move back and forth between phases
+- Pivot between systems
+- Adapt to defenses in real time
+
+The Unified Kill Chain helps organizations:
+
+- Understand attacker behavior in depth
+- Improve threat detection and response
+- Strengthen overall security posture
+- Complement frameworks like MITRE ATT&CK
+
+---
+
+## What is a Kill Chain?
+
+Originally a military concept, a “kill chain” describes the stages of an attack.
+
+In cybersecurity, it represents:
+- The steps an attacker takes
+- The techniques used
+- The path to compromise a system
+
+Understanding this allows defenders to **interrupt attacks before success**.
+
+---
+
+## Threat Modelling and UKC
+
+The UKC supports **threat modelling**, which involves:
+
+1. Identifying critical systems (assets)
+2. Finding vulnerabilities
+3. Assessing risks
+4. Implementing defenses
+
+### Common Threat Modelling Frameworks:
+- STRIDE
+- DREAD
+- CVSS
+
+---
+
+## The Three Main Goals of the Unified Kill Chain
+
+The 18 phases are grouped into three major attack goals:
+
+---
+
+## 1. Goal: IN (Initial Foothold)
+
+This stage focuses on gaining initial access to a system.
+
+### Key Phases:
+
+#### Reconnaissance
+- Gathering information about the target
+- Includes OSINT, scanning, and enumeration
+
+#### Weaponization
+- Preparing attack infrastructure
+- Setting up payloads and C2 servers
+
+#### Social Engineering
+- Manipulating users (phishing, impersonation)
+
+#### Exploitation
+- Using vulnerabilities to execute code
+
+#### Persistence
+- Maintaining access (backdoors, services)
+
+#### Defense Evasion
+- Avoiding detection by:
+  - Firewalls
+  - Antivirus
+  - IDS systems
+
+#### Command & Control (C2)
+- Establishing communication with attacker systems
+
+#### Pivoting
+- Moving to other internal systems
+
+---
+
+## 2. Goal: THROUGH (Network Propagation)
+
+After gaining access, attackers expand control inside the network.
+
+### Key Phases:
+
+#### Discovery
+- Mapping the internal network
+- Identifying systems, users, and services
+
+#### Privilege Escalation
+- Gaining higher access (admin/root)
+
+#### Execution
+- Running malicious code
+
+#### Credential Access
+- Stealing usernames and passwords
+- Tools like keyloggers or memory dumping
+
+#### Lateral Movement
+- Moving between systems using stolen credentials
+
+#### Pivoting (again)
+- Reusing compromised systems to reach new targets
+
+---
+
+## 3. Goal: OUT (Actions on Objectives)
+
+This is where attackers achieve their final goal.
+
+### Key Phases:
+
+#### Collection
+- Gathering sensitive data
+
+#### Exfiltration
+- Sending data out of the network
+- Often encrypted to avoid detection
+
+#### Impact
+- Damaging systems:
+  - Ransomware
+  - Data destruction
+  - Service disruption
+
+#### Objectives
+- Final attacker goal:
+  - Financial gain
+  - Espionage
+  - Reputation damage
+
+---
+
+## Key Difference from Traditional Kill Chain
+
+| Feature | Cyber Kill Chain | Unified Kill Chain |
+|--------|----------------|-------------------|
+| Number of phases | 7 | 18 |
+| Attack flow | Linear | Dynamic |
+| Coverage | Basic | Full lifecycle |
+| Realism | Moderate | High |
+
+The UKC reflects how attackers actually behave in real-world scenarios.
+
+---
+
+## Example Attack Flow Using UKC
+
+1. Recon → attacker gathers company emails  
+2. Social Engineering → phishing email sent  
+3. Exploitation → malicious attachment opened  
+4. Persistence → backdoor installed  
+5. Credential Access → passwords stolen  
+6. Lateral Movement → attacker spreads  
+7. Exfiltration → sensitive data stolen  
+
+This shows how phases **repeat and overlap**.
+
+---
+
+## Detection Opportunities (Blue Team Perspective)
+
+Each phase offers detection points:
+
+- Recon → unusual scanning activity
+- Exploitation → suspicious processes
+- Credential Access → abnormal login behavior
+- C2 → unusual outbound traffic
+- Exfiltration → data spikes
+
+Tools used:
+- SIEM
+- EDR
+- IDS
+
+---
+
+## How UKC Complements Other Frameworks
+
+The UKC is not a replacement — it works alongside:
+
+- Cyber Kill Chain (high-level overview)
+- MITRE ATT&CK (detailed techniques)
+
+Together they provide:
+- Strategy (Kill Chain)
+- Tactics (MITRE)
+- Full attack lifecycle (UKC)
+
+---
+
+## Conclusion
+
+The Unified Kill Chain provides a **realistic and detailed model of cyber attacks**.
+
+**Key Takeaways:**
+- Modern attacks are not linear
+- Attackers move between phases dynamically
+- UKC provides deeper insight than traditional models
+- Each phase is an opportunity for detection and defense
+
+Understanding the UKC helps security professionals **anticipate, detect, and stop attacks more effectively**.
+
+---
+
+## Sources and Further Reading
+
+- Unified Kill Chain (Paul Pols): https://www.unifiedkillchain.com
+- MITRE ATT&CK Framework: https://attack.mitre.org
+- Cyber Kill Chain Overview: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+- Threat Modelling Overview: https://owasp.org/www-community/Threat_Modeling
+
+`,
+  category: 'Threat Detection',
+  tags: ['Unified Kill Chain', 'Cyber Kill Chain', 'Threat Detection', 'Blue Team', 'MITRE ATT&CK'],
+  date: '2026-03-26',
+  readTime: '10 min read',
+  author: 'Christoffer'
+}
+]
