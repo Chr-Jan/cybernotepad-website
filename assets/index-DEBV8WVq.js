@@ -3257,7 +3257,114 @@ Understanding the UKC helps security professionals **anticipate, detect, and sto
 - Cyber Kill Chain Overview: https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
 - Threat Modelling Overview: https://owasp.org/www-community/Threat_Modeling
 
-`,category:"Threat Detection",tags:["Unified Kill Chain","Cyber Kill Chain","Threat Detection","Blue Team","MITRE ATT&CK"],date:"2026-03-26",readTime:"10 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
+`,category:"Threat Detection",tags:["Unified Kill Chain","Cyber Kill Chain","Threat Detection","Blue Team","MITRE ATT&CK"],date:"2026-03-26",readTime:"10 min read",author:"Christoffer"},{id:"20",slug:"phishing-analysis-tactics-and-tools",title:"Phishing Analysis: Tactics, Tools, and Real-World Examples",excerpt:"A comprehensive guide to identifying phishing tactics, extracting key email artifacts, and utilizing specialized tools to analyze suspicious links and attachments.",content:`# Phishing Analysis: Tactics, Tools, and Real-World Examples
+
+Phishing remains one of the most prevalent initial access vectors for cyber attacks. Understanding how to investigate email headers, analyze malicious bodies, and safely detonate attachments is a core skill for any SOC analyst.
+
+This guide breaks down the common tactics attackers use, the key artifacts you need to collect, and the tools that can help streamline your investigation.
+
+---
+
+## Common Phishing Tactics
+
+Modern phishing campaigns go far beyond simple typos. Attackers use sophisticated techniques to mirror legitimate communications and bypass email filters:
+
+- **Brand Impersonation & Spoofing:** Mimicking trusted services (like PayPal, Netflix, or DHL) using fake display names and HTML templates to gain immediate credibility.
+- **URL Shortening & Link Manipulation:** Masking the true, malicious destination of a link using redirection services or misleading hyperlinked text.
+- **Artificial Urgency:** Pressuring victims into acting hastily (e.g., "Your Account Is on Hold" or "Cancel Your Order").
+- **Pixel Tracking:** Embedding invisible, 1x1 pixel images in the email body to notify the attacker when the email is opened and to gather basic system info.
+- **Credential Harvesting:** Deploying fake login portals (like a fraudulent Microsoft or Adobe sign-in page) to capture and exfiltrate usernames and passwords.
+- **Malicious Attachments:** Hiding payloads in unusual formats like \`.dot\` (Word Template) or \`.xlsx\` files that execute code (e.g., \`regasms.exe\`) when opened.
+
+---
+
+## Identifying Key Artifacts
+
+When analyzing a suspicious email, your first goal is to extract key artifacts. These provide the foundation for deeper investigation.
+
+### Header Artifacts
+- **Sender/From Address:** Does the display name match the actual domain?
+- **Sender IP Address:** Where did the email originate?
+- **To / CC / BCC:** Who is the intended recipient? (e.g., using BCC to hide massive recipient lists).
+- **Reply-To:** Where are responses being directed?
+
+### Body Artifacts
+- **URLs and Hyperlinks:** Where do the buttons and links actually lead? 
+- **Attachments:** What are the file names and extensions?
+- **File Hashes:** What is the SHA256 hash of the attachment for threat intelligence lookups?
+
+---
+
+## The Analyst's Toolkit
+
+You don't need to do everything manually. A robust set of tools can automate artifact extraction and safely analyze malicious components.
+
+### 1. Email Header Analysis
+- **Messageheader (Google Admin Toolbox) / Message Header Analyzer:** Paste raw headers to quickly extract sender IPs, routing paths, and misconfigurations.
+
+### 2. IP & URL Reputation
+- **IPinfo:** Gathers geographic and organizational info about IP addresses.
+- **URLScan.io:** Safely simulates a browsing session, records page activity, and takes a screenshot without you having to visit the site.
+- **Talos Reputation Center:** Cisco's tool for assessing the reputation and threat classification of IPs and domains.
+- **VirusTotal:** Aggregates data from dozens of security vendors to check the reputation of files, URLs, and hashes.
+
+### 3. Attachment & Malware Sandboxing
+Never open suspicious attachments on your host machine. Use sandboxes to observe behavior in a controlled environment:
+- **ANY.RUN:** An interactive sandbox that lets you interact with the environment and monitor processes/network activity in real-time.
+- **Hybrid Analysis & JOESandbox:** Automated tools that generate comprehensive reports on file behavior and system changes.
+- **Local Linux Tools:** Use commands like \`sha256sum\` to manually generate file hashes before querying threat intel databases.
+
+### 4. Unified Investigation Platforms
+- **PhishTool:** Centralizes the workflow. It combines threat intelligence, OSINT, email metadata, and automated analysis workflows (including VirusTotal integration) to streamline the entire triage process.
+
+## Quick Tool Selection Guide
+
+Use this as a fast decision aid during triage:
+
+| If you need to investigate... | Use this tool first | Why |
+|---|---|---|
+| Raw email headers (Received, SPF, DKIM, Reply-To) | Message Header Analyzer or Google Messageheader | Quickly parses routing and authentication artifacts |
+| All URLs embedded in the email body | ConvertCSV URL Extractor | Extracts links fast for bulk review |
+| Redirect chains or shortened links | WhereGoes | Reveals the final destination safely |
+| Full page behavior and visual evidence | URLScan | Captures rendered content, requests, and screenshots |
+| Domain/IP reputation checks | Talos Reputation Center | Fast reputation context for infrastructure |
+| File, URL, or hash multi-engine verdicts | VirusTotal | Aggregates detections across many vendors |
+| Deep dynamic file behavior (processes, dropped files, network) | Hybrid Analysis or ANY.RUN | Sandboxed detonation and behavior-level evidence |
+| End-to-end analyst workflow and case enrichment | PhishTool | Consolidates artifacts and triage steps in one place |
+
+---
+
+## Real-World Scenarios
+
+When applying these tools to real cases, the red flags become obvious:
+
+1. **The Fake Receipt:** An email claiming an unauthorized PayPal purchase uses a URL shortener to hide the true destination. *Tool to use: WhereGoes or URLScan.*
+2. **The Shipping Notification:** A fake DHL email uses a tracking pixel that gets blocked by standard email providers, and an Excel attachment that attempts to run a malicious executable. *Tool to use: ANY.RUN to detonate the Excel file.*
+3. **The Urgent Invoice:** A blank email utilizing BCC and a \`.dot\` attachment to bypass text-based spam filters. *Tool to use: VirusTotal for the attachment hash.*
+
+---
+
+## Conclusion
+
+Effective phishing analysis is a structured process. By systematically extracting artifacts from headers and bodies, and leveraging specialized tools to investigate those artifacts safely, defenders can quickly identify malicious intent and create detection rules to protect their networks.
+
+---
+
+## Sources and Further Reading
+
+- CISA Phishing Guidance: [Avoiding Social Engineering and Phishing Attacks](https://www.cisa.gov/topics/cyber-threats-and-advisories/social-engineering-and-phishing)
+- Message Header Analyzer: [Message Header Analyzer](https://mha.azurewebsites.net)
+- Google Admin Toolbox: [Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
+- Microsoft Support: [View internet message headers in Outlook](https://support.microsoft.com/office/view-internet-message-headers-in-outlook-2b3420d3-6f88-4a6b-9e0a-9f5d3d4c5489)
+- URLScan: [URLScan](https://urlscan.io)
+- Talos Reputation Center: [Talos Reputation Center](https://talosintelligence.com/reputation_center/lookup?search=malware-test.com)
+- URL Extractor: [ConvertCSV URL Extractor](https://www.convertcsv.com/url-extractor.htm)
+- VirusTotal: [VirusTotal Upload](https://www.virustotal.com/gui/home/upload)
+- Hybrid Analysis: [Hybrid Analysis](https://hybrid-analysis.com)
+- WhereGoes: [WhereGoes](https://wheregoes.com)
+
+Use these references as a starting point for building a repeatable phishing triage workflow: header parsing, URL extraction, reputation checks, and safe detonation.
+`,category:"Threat Detection",tags:["Phishing","SOC","Threat Analysis","Email Security","Malware","Blue Team"],date:"2026-04-11",readTime:"8 min read",author:"Christoffer"}];function ly({post:e,featured:n=!1}){return n?m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-xl p-8 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-4px]",children:[m.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[m.jsx("span",{className:"px-3 py-1 bg-accent-primary/20 text-accent-primary rounded-md text-sm font-medium border border-accent-primary/30",children:"Featured"}),m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})]}),m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-4 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body-lg leading-relaxed mb-6",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-6 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(ei,{className:"w-4 h-4"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(wu,{className:"w-4 h-4"}),m.jsx("span",{children:e.readTime})]}),m.jsxs("div",{className:"flex items-center gap-2",children:[m.jsx(CE,{className:"w-4 h-4"}),m.jsx("span",{children:e.tags[0]})]})]})]})}):m.jsx(yn,{to:`/post/${e.slug}`,className:"block group",children:m.jsxs("div",{className:"bg-background-surface-1 rounded-lg p-6 border border-white/10 hover:border-accent-primary/50 transition-all duration-250 shadow-card hover:shadow-card-hover hover:translate-y-[-2px] h-full",children:[m.jsx("div",{className:"mb-3",children:m.jsx("span",{className:"px-3 py-1 bg-background-surface-2 text-accent-secondary rounded-md text-sm font-medium border border-white/10",children:e.category})}),m.jsx("h3",{className:"font-display text-h3 font-semibold text-text-primary mb-3 group-hover:text-accent-primary transition-colors duration-250",children:e.title}),m.jsx("p",{className:"text-text-secondary text-body leading-relaxed mb-4 line-clamp-3",children:e.excerpt}),m.jsxs("div",{className:"flex items-center gap-4 text-text-tertiary text-sm",children:[m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(ei,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:new Date(e.date).toLocaleDateString("en-US",{month:"short",day:"numeric"})})]}),m.jsxs("div",{className:"flex items-center gap-1.5",children:[m.jsx(wu,{className:"w-3.5 h-3.5"}),m.jsx("span",{children:e.readTime})]})]})]})})}function Nk(){const[e,n]=ae.useState(""),r=e.trim().toLowerCase(),i=ae.useMemo(()=>[...DE].sort((p,f)=>new Date(f.date).getTime()-new Date(p.date).getTime()),[]),s=ae.useMemo(()=>r?i.filter(p=>p.title.toLowerCase().includes(r)||p.excerpt.toLowerCase().includes(r)||p.content.toLowerCase().includes(r)||p.tags.some(f=>f.toLowerCase().includes(r))):i,[i,r]),l=r.length>0,u=l?null:s[0],d=l?s:s.slice(1);return m.jsxs("div",{className:"min-h-screen pt-16",children:[m.jsxs("section",{className:"relative py-24 px-6 overflow-hidden",children:[m.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-accent-primary/10 to-transparent"}),m.jsx("div",{className:"container mx-auto relative",children:m.jsxs("div",{className:"max-w-4xl mx-auto text-center",children:[m.jsx("div",{className:"flex justify-center mb-6",children:m.jsx("div",{className:"p-4 bg-background-surface-1 rounded-xl border border-accent-primary/30 shadow-glow-md",children:m.jsx(OE,{className:"w-12 h-12 text-accent-primary"})})}),m.jsxs("h1",{className:"font-display text-hero font-bold text-text-primary mb-6 leading-tight",children:["Security Through",m.jsx("span",{className:"text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary",children:" Knowledge"})]}),m.jsx("p",{className:"text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto",children:"Explore in-depth articles on web security, cryptography, network protocols, and modern hacking techniques. Learn to build secure, resilient systems."}),m.jsx("div",{className:"max-w-2xl mx-auto",children:m.jsxs("div",{className:"relative",children:[m.jsx(Bo,{className:"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-tertiary"}),m.jsx("input",{type:"text",placeholder:"Search articles...",value:e,onChange:p=>n(p.target.value),className:"w-full pl-12 pr-4 py-4 bg-background-surface-1 border border-white/10 rounded-lg text-text-primary placeholder-text-tertiary focus:outline-none focus:border-accent-primary focus:shadow-glow-sm transition-all duration-250"})]})})]})})]}),!l&&u&&m.jsx("section",{className:"px-6 mb-16",children:m.jsx("div",{className:"container mx-auto max-w-5xl",children:m.jsx(ly,{post:u,featured:!0})})}),m.jsx("section",{className:"px-6 pb-24",children:m.jsxs("div",{className:"container mx-auto",children:[m.jsx("h2",{className:"font-display text-h2 font-semibold text-text-primary mb-8",children:l?`Search Results for "${e}"`:"More Articles"}),d.length>0?m.jsx("div",{className:"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",children:d.map(p=>m.jsx(ly,{post:p},p.id))}):l?m.jsxs("div",{className:"text-center py-12",children:[m.jsx(Bo,{className:"w-16 h-16 text-text-tertiary mx-auto mb-4"}),m.jsx("h3",{className:"text-xl font-semibold text-text-primary mb-2",children:"No articles found"}),m.jsx("p",{className:"text-text-secondary",children:'Try searching for terms like "kali", "nmap", "metasploit", "ssh", "security"'})]}):null]})})]})}const ME=[{id:"1",slug:"my-v2-security-aarhus-experience-2026",title:"My Experience at V2 Security Aarhus: Networking and New Threats",excerpt:"I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.",content:`# My Experience at V2 Security Aarhus: Networking and New Threats
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
