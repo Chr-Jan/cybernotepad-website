@@ -3355,7 +3355,6 @@ Effective phishing analysis is a structured process. By systematically extractin
 - CISA Phishing Guidance: [Avoiding Social Engineering and Phishing Attacks](https://www.cisa.gov/topics/cyber-threats-and-advisories/social-engineering-and-phishing)
 - Message Header Analyzer: [Message Header Analyzer](https://mha.azurewebsites.net)
 - Google Admin Toolbox: [Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
-- Microsoft Support: [View internet message headers in Outlook](https://support.microsoft.com/office/view-internet-message-headers-in-outlook-2b3420d3-6f88-4a6b-9e0a-9f5d3d4c5489)
 - URLScan: [URLScan](https://urlscan.io)
 - Talos Reputation Center: [Talos Reputation Center](https://talosintelligence.com/reputation_center/lookup?search=malware-test.com)
 - URL Extractor: [ConvertCSV URL Extractor](https://www.convertcsv.com/url-extractor.htm)
