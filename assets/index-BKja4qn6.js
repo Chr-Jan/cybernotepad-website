@@ -3359,6 +3359,7 @@ Effective phishing analysis is a structured process. By systematically extractin
 - Talos Reputation Center: [Talos Reputation Center](https://talosintelligence.com/reputation_center/lookup?search=malware-test.com)
 - URL Extractor: [ConvertCSV URL Extractor](https://www.convertcsv.com/url-extractor.htm)
 - VirusTotal: [VirusTotal Upload](https://www.virustotal.com/gui/home/upload)
+- PhishTool: [PhishTool](https://www.phishtool.com)
 - Hybrid Analysis: [Hybrid Analysis](https://hybrid-analysis.com)
 - WhereGoes: [WhereGoes](https://wheregoes.com)
 
