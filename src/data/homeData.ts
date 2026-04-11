@@ -3254,5 +3254,124 @@ Understanding the UKC helps security professionals **anticipate, detect, and sto
   date: '2026-03-26',
   readTime: '10 min read',
   author: 'Christoffer'
+},
+{
+  id: '20',
+  slug: 'phishing-analysis-tactics-and-tools',
+  title: 'Phishing Analysis: Tactics, Tools, and Real-World Examples',
+  excerpt: 'A comprehensive guide to identifying phishing tactics, extracting key email artifacts, and utilizing specialized tools to analyze suspicious links and attachments.',
+  content: `# Phishing Analysis: Tactics, Tools, and Real-World Examples
+
+Phishing remains one of the most prevalent initial access vectors for cyber attacks. Understanding how to investigate email headers, analyze malicious bodies, and safely detonate attachments is a core skill for any SOC analyst.
+
+This guide breaks down the common tactics attackers use, the key artifacts you need to collect, and the tools that can help streamline your investigation.
+
+---
+
+## Common Phishing Tactics
+
+Modern phishing campaigns go far beyond simple typos. Attackers use sophisticated techniques to mirror legitimate communications and bypass email filters:
+
+- **Brand Impersonation & Spoofing:** Mimicking trusted services (like PayPal, Netflix, or DHL) using fake display names and HTML templates to gain immediate credibility.
+- **URL Shortening & Link Manipulation:** Masking the true, malicious destination of a link using redirection services or misleading hyperlinked text.
+- **Artificial Urgency:** Pressuring victims into acting hastily (e.g., "Your Account Is on Hold" or "Cancel Your Order").
+- **Pixel Tracking:** Embedding invisible, 1x1 pixel images in the email body to notify the attacker when the email is opened and to gather basic system info.
+- **Credential Harvesting:** Deploying fake login portals (like a fraudulent Microsoft or Adobe sign-in page) to capture and exfiltrate usernames and passwords.
+- **Malicious Attachments:** Hiding payloads in unusual formats like \`.dot\` (Word Template) or \`.xlsx\` files that execute code (e.g., \`regasms.exe\`) when opened.
+
+---
+
+## Identifying Key Artifacts
+
+When analyzing a suspicious email, your first goal is to extract key artifacts. These provide the foundation for deeper investigation.
+
+### Header Artifacts
+- **Sender/From Address:** Does the display name match the actual domain?
+- **Sender IP Address:** Where did the email originate?
+- **To / CC / BCC:** Who is the intended recipient? (e.g., using BCC to hide massive recipient lists).
+- **Reply-To:** Where are responses being directed?
+
+### Body Artifacts
+- **URLs and Hyperlinks:** Where do the buttons and links actually lead? 
+- **Attachments:** What are the file names and extensions?
+- **File Hashes:** What is the SHA256 hash of the attachment for threat intelligence lookups?
+
+---
+
+## The Analyst's Toolkit
+
+You don't need to do everything manually. A robust set of tools can automate artifact extraction and safely analyze malicious components.
+
+### 1. Email Header Analysis
+- **Messageheader (Google Admin Toolbox) / Message Header Analyzer:** Paste raw headers to quickly extract sender IPs, routing paths, and misconfigurations.
+
+### 2. IP & URL Reputation
+- **IPinfo:** Gathers geographic and organizational info about IP addresses.
+- **URLScan.io:** Safely simulates a browsing session, records page activity, and takes a screenshot without you having to visit the site.
+- **Talos Reputation Center:** Cisco's tool for assessing the reputation and threat classification of IPs and domains.
+- **VirusTotal:** Aggregates data from dozens of security vendors to check the reputation of files, URLs, and hashes.
+
+### 3. Attachment & Malware Sandboxing
+Never open suspicious attachments on your host machine. Use sandboxes to observe behavior in a controlled environment:
+- **ANY.RUN:** An interactive sandbox that lets you interact with the environment and monitor processes/network activity in real-time.
+- **Hybrid Analysis & JOESandbox:** Automated tools that generate comprehensive reports on file behavior and system changes.
+- **Local Linux Tools:** Use commands like \`sha256sum\` to manually generate file hashes before querying threat intel databases.
+
+### 4. Unified Investigation Platforms
+- **PhishTool:** Centralizes the workflow. It combines threat intelligence, OSINT, email metadata, and automated analysis workflows (including VirusTotal integration) to streamline the entire triage process.
+
+## Quick Tool Selection Guide
+
+Use this as a fast decision aid during triage:
+
+| If you need to investigate... | Use this tool first | Why |
+|---|---|---|
+| Raw email headers (Received, SPF, DKIM, Reply-To) | Message Header Analyzer or Google Messageheader | Quickly parses routing and authentication artifacts |
+| All URLs embedded in the email body | ConvertCSV URL Extractor | Extracts links fast for bulk review |
+| Redirect chains or shortened links | WhereGoes | Reveals the final destination safely |
+| Full page behavior and visual evidence | URLScan | Captures rendered content, requests, and screenshots |
+| Domain/IP reputation checks | Talos Reputation Center | Fast reputation context for infrastructure |
+| File, URL, or hash multi-engine verdicts | VirusTotal | Aggregates detections across many vendors |
+| Deep dynamic file behavior (processes, dropped files, network) | Hybrid Analysis or ANY.RUN | Sandboxed detonation and behavior-level evidence |
+| End-to-end analyst workflow and case enrichment | PhishTool | Consolidates artifacts and triage steps in one place |
+
+---
+
+## Real-World Scenarios
+
+When applying these tools to real cases, the red flags become obvious:
+
+1. **The Fake Receipt:** An email claiming an unauthorized PayPal purchase uses a URL shortener to hide the true destination. *Tool to use: WhereGoes or URLScan.*
+2. **The Shipping Notification:** A fake DHL email uses a tracking pixel that gets blocked by standard email providers, and an Excel attachment that attempts to run a malicious executable. *Tool to use: ANY.RUN to detonate the Excel file.*
+3. **The Urgent Invoice:** A blank email utilizing BCC and a \`.dot\` attachment to bypass text-based spam filters. *Tool to use: VirusTotal for the attachment hash.*
+
+---
+
+## Conclusion
+
+Effective phishing analysis is a structured process. By systematically extracting artifacts from headers and bodies, and leveraging specialized tools to investigate those artifacts safely, defenders can quickly identify malicious intent and create detection rules to protect their networks.
+
+---
+
+## Sources and Further Reading
+
+- CISA Phishing Guidance: [Avoiding Social Engineering and Phishing Attacks](https://www.cisa.gov/topics/cyber-threats-and-advisories/social-engineering-and-phishing)
+- Message Header Analyzer: [Message Header Analyzer](https://mha.azurewebsites.net)
+- Google Admin Toolbox: [Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
+- Microsoft Support: [View internet message headers in Outlook](https://support.microsoft.com/office/view-internet-message-headers-in-outlook-2b3420d3-6f88-4a6b-9e0a-9f5d3d4c5489)
+- URLScan: [URLScan](https://urlscan.io)
+- Talos Reputation Center: [Talos Reputation Center](https://talosintelligence.com/reputation_center/lookup?search=malware-test.com)
+- URL Extractor: [ConvertCSV URL Extractor](https://www.convertcsv.com/url-extractor.htm)
+- VirusTotal: [VirusTotal Upload](https://www.virustotal.com/gui/home/upload)
+- Hybrid Analysis: [Hybrid Analysis](https://hybrid-analysis.com)
+- WhereGoes: [WhereGoes](https://wheregoes.com)
+
+Use these references as a starting point for building a repeatable phishing triage workflow: header parsing, URL extraction, reputation checks, and safe detonation.
+`,
+  category: 'Threat Detection',
+  tags: ['Phishing', 'SOC', 'Threat Analysis', 'Email Security', 'Malware', 'Blue Team'],
+  date: '2026-04-11',
+  readTime: '8 min read',
+  author: 'Christoffer'
 }
 ]
