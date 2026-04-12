@@ -13,7 +13,6 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     /* Tailwind stuff */
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"

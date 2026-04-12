@@ -82,20 +82,24 @@ Going to V2 Security in Aarhus was a fantastic experience that gave me a bunch o
     readTime: '10 min read',
     author: 'Christoffer'
   },
- {
-  id: '2',
-  slug: 'it-day-odense-2026-is-this-career-fair-worth-your-time',
-  title: 'IT-DAY Odense 2026: Is This Career Fair Worth Your Time?',
-  excerpt: 'I spent a day at IT-DAY Odense with 500 other attendees. While it lacked the technical depth of events like V2 Security, it was a solid networking hub for job hunting and company pitches.',
-  content: `#IT-DAY Odense 2026: Is This Career Fair Worth Your Time?
+{
+  id: '3',
+  slug: 'my-it-day-odense-experience-2026-revisited',
+  title: 'My Experience at IT-DAY Odense 2026: A Detailed Journey Through Career Paths',
+  excerpt: 'A follow-up on my IT-DAY 2026 recap with added visuals, focusing on the event\'s purely career-driven nature, the difference between skill-building and job hunting, and a review of the company pitches.',
+  content: `# My Experience at IT-DAY Odense 2026: A Detailed Journey Through Career Paths
 
 This April, I attended IT-DAY 2026 at Videnbyen og Forskerparken (Cortex Park) in Odense. With around 500 attendees and 20-30 IT companies present, the event was heavily geared toward one specific goal: recruitment.
+
+![A view of the interior with ITDAY banners](/images/itDay-2026/floor.jpg)
 
 Here is my honest recap of the day and what you should expect if you plan on attending next year.
 
 ## Job Hunting vs. Skill Building
 
-If you go to IT-DAY expecting to learn new technical skills or dive deep into the latest tech trends—like you would at a conference like V2 Security—you will likely be disappointed. IT-DAY is essentially a large-scale job market. 
+If you go to IT-DAY expecting to learn new technical skills or dive deep into the latest tech trends—like you would at a conference like V2 Security—you will likely be disappointed. IT-DAY is essentially a large-scale job market.
+
+![Networking at the company booths](/images/itDay-2026/kodex.jpg)
 
 The primary value here lies in direct access to the hiring companies. I spent my time visiting booths and talking to IT professionals about what their companies do, their workplace culture, and what kind of candidates they are looking for. It is a highly practical event if you are actively hunting for a student job, an internship, or a full-time position, but it is not the place for professional upskilling.
 
@@ -104,24 +108,27 @@ The primary value here lies in direct access to the hiring companies. I spent my
 The difference between a learning conference and a career fair was especially apparent during the keynotes. Instead of educational deep dives, the presentations functioned more like extended company pitches aimed at attracting talent.
 
 ### Bankdata and Energinet
-We heard from Bankdata regarding Denmark's financial IT infrastructure and Energinet regarding Operational Technology (OT). Rather than exploring the technical nuts and bolts of how they secure or build these systems, the talks were highly job-oriented. They focused on explaining what the companies produce, their core values, their societal responsibilities, and, most importantly, the specific skills and roles they are currently missing in their teams.
+We heard from Bankdata regarding Denmark's financial IT infrastructure and Energinet regarding Operational Technology (OT). Rather than exploring the technical nuts and bolts of how they secure or build these systems, the talks were highly job-oriented.
+
+![Bankdata keynote presentation](/images/itDay-2026/danskeBank.jpg)
+
+They focused on explaining what the companies produce, their core values, their societal responsibilities, and, most importantly, the specific skills and roles they are currently missing in their teams.
 
 ## Final Thoughts: A Solid 3-Star Experience
 
-I am giving the event 3 out of 5 stars. It does exactly what it says on the tin—it connects students and graduates with IT companies. Because it is largely run by fellow IT students and recent graduates, the vibe is relatable and down-to-earth. 
+I am giving the event 3 out of 5 stars. It does exactly what you'd expect, connecting students and graduates with IT companies. Because it is largely run by fellow IT students and recent graduates, the vibe is relatable and down-to-earth.
 
-However, because the focus is strictly on recruitment rather than knowledge sharing, its value depends entirely on where you are in your career journey. I walked away with a better understanding of the local job market and some new connections, but not necessarily new technical insights. 
+However, because the focus is strictly on recruitment rather than knowledge sharing, its value depends entirely on where you are in your career journey. I walked away with a better understanding of the local job market and some new connections, but not necessarily new technical insights.
 
-*Learn more about the event and current job openings at [itday.dk](https://www.itday.dk).*`,
-
-  category: 'career-fairs',
-  date: '2026-04-09',
+*Learn more about the event and current job openings at [itday.dk/odense](https://www.itday.dk/odense).*`,
+  category: 'conferences',
+  date: '2026-04-12',
   location: 'Odense, Denmark',
   attendees: 500,
   rating: 3,
   type: 'career fair',
-  tags: ['IT-DAY', 'Career Fair', 'Networking', 'Odense', 'Job Hunting'],
-  readTime: '5 min read',
+  tags: ['IT-DAY', 'Career Fair', 'Networking', 'Odense', 'Job Hunting', 'Career Paths', 'Recruitment', 'Bankdata', 'Energinet', 'Operational Technology'],
+  readTime: '6 min read',
   author: 'Christoffer'
 }
 ]
