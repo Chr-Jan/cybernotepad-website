@@ -72,22 +72,22 @@ Going to V2 Security in Aarhus was a fantastic experience that gave me a bunch o
 
 *Learn more about the event at [v2security.dk](https://www.v2security.dk).*`,
 
-    category: 'conferences',
+    category: 'industry-events',
     date: '2026-02-27',
     location: 'Århus, Denmark',
     attendees: 1000,
     rating: 5,
-    type: 'conference',
-    tags: ['V2 Security', 'Conference', 'Networking'],
+    type: 'industry conference',
+    tags: ['V2 Security', 'NIS2', 'OT Security', 'Zero Trust', 'Networking'],
     readTime: '10 min read',
     author: 'Christoffer'
   },
 {
   id: '3',
-  slug: 'my-it-day-odense-experience-2026-revisited',
-  title: 'My Experience at IT-DAY Odense 2026: A Detailed Journey Through Career Paths',
+  slug: 'it-day-odense-2026-recruitment-networking-and-company-pitches',
+  title: 'IT-DAY Odense 2026: Recruitment, Networking, and Company Pitches',
   excerpt: 'A follow-up on my IT-DAY 2026 recap with added visuals, focusing on the event\'s purely career-driven nature, the difference between skill-building and job hunting, and a review of the company pitches.',
-  content: `# My Experience at IT-DAY Odense 2026: A Detailed Journey Through Career Paths
+  content: `# IT-DAY Odense 2026: Recruitment, Networking, and Company Pitches
 
 This April, I attended IT-DAY 2026 at Videnbyen og Forskerparken (Cortex Park) in Odense. With around 500 attendees and 20-30 IT companies present, the event was heavily geared toward one specific goal: recruitment.
 
@@ -121,13 +121,13 @@ I am giving the event 3 out of 5 stars. It does exactly what you'd expect, conne
 However, because the focus is strictly on recruitment rather than knowledge sharing, its value depends entirely on where you are in your career journey. I walked away with a better understanding of the local job market and some new connections, but not necessarily new technical insights.
 
 *Learn more about the event and current job openings at [itday.dk/odense](https://www.itday.dk/odense).*`,
-  category: 'conferences',
+  category: 'career-fairs',
   date: '2026-04-12',
   location: 'Odense, Denmark',
   attendees: 500,
   rating: 3,
   type: 'career fair',
-  tags: ['IT-DAY', 'Career Fair', 'Networking', 'Odense', 'Job Hunting', 'Career Paths', 'Recruitment', 'Bankdata', 'Energinet', 'Operational Technology'],
+  tags: ['IT-DAY', 'Career Fair', 'Recruitment', 'Job Hunting', 'Networking'],
   readTime: '6 min read',
   author: 'Christoffer'
 }

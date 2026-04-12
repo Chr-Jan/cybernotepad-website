@@ -2,7 +2,7 @@
  * BlogPage Component
  * 
  * A comprehensive blog page that displays cybersecurity-related content including
- * conference experiences, meetup stories, and personal journeys. Features category-based
+ * industry event experiences, meetup stories, and personal journeys. Features category-based
  * filtering and a responsive card-based layout.
  */
 import { useState } from 'react';
@@ -17,7 +17,7 @@ export function BlogPage() {
 
   const categories = [
     { id: 'all', label: 'All Posts', count: posts.length },
-    { id: 'conferences', label: 'Conferences', count: posts.filter(p => p.category === 'conferences').length },
+    { id: 'industry-events', label: 'Industry Events', count: posts.filter(p => p.category === 'industry-events').length },
     { id: 'career-fairs', label: 'Career Fairs', count: posts.filter(p => p.category === 'career-fairs').length },
   //  { id: 'meetups', label: 'Meetups', count: posts.filter(p => p.category === 'meetups').length },
   //  { id: 'personal', label: 'Personal', count: posts.filter(p => p.category === 'personal').length }
@@ -27,23 +27,34 @@ export function BlogPage() {
     ? posts 
     : posts.filter(post => post.category === selectedCategory);
 
+  const formatTypeLabel = (type: string) =>
+    type
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
   const getTypeIcon = (type) => {
+    const normalizedType = type.toLowerCase();
     const icons = {
       conference: MessageSquare,
+      'industry conference': MessageSquare,
       meetup: Users,
       personal: Calendar
     };
-    return icons[type] || MessageSquare;
+    return icons[normalizedType] || MessageSquare;
   };
 
   const getTypeColor = (type) => {
+    const normalizedType = type.toLowerCase();
     const colors = {
       conference: 'bg-blue-500/20 border-blue-500/30 text-blue-400',
+      'industry conference': 'bg-blue-500/20 border-blue-500/30 text-blue-400',
       'career fair': 'bg-green-500/20 border-green-500/30 text-green-400',
+      'career fairs': 'bg-green-500/20 border-green-500/30 text-green-400',
       meetup: 'bg-orange-500/20 border-orange-500/30 text-orange-400',
       personal: 'bg-purple-500/20 border-purple-500/30 text-purple-400'
     };
-    return colors[type] || 'bg-gray-500/20 border-gray-500/30 text-gray-400';
+    return colors[normalizedType] || 'bg-gray-500/20 border-gray-500/30 text-gray-400';
   };
 
   return (
@@ -62,7 +73,7 @@ export function BlogPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary"> Blog</span>
             </h1>
             <p className="text-body-lg text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
-              Real experiences from cybersecurity meetups, conferences, and personal journeys. Connect with the community and learn from others' security adventures.
+              Real experiences from cybersecurity meetups, industry events, and personal journeys. Connect with the community and learn from others' security adventures.
             </p>
           </div>
         </div>
@@ -112,7 +123,7 @@ export function BlogPage() {
                           <IconComponent className="w-4 h-4" />
                         </div>
                         <span className={`px-3 py-1 rounded-md text-sm font-medium border ${getTypeColor(post.type)}`}>
-                          {post.type.charAt(0).toUpperCase() + post.type.slice(1)}
+                          {formatTypeLabel(post.type)}
                         </span>
                       </div>
 

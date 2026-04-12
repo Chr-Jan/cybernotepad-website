@@ -25,6 +25,13 @@ export function BlogPostPage() {
   const allPosts = [...homePosts, ...blogPosts];
   const post = allPosts.find(p => p.slug === slug);
 
+  const formatCategoryLabel = (category: string) =>
+    category
+      .replace(/-/g, ' ')
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
   const resolveImageSrc = (src?: string) => {
     if (!src) return '';
     if (src.startsWith('/images/')) {
@@ -202,7 +209,7 @@ export function BlogPostPage() {
       <section className="py-16 px-6 bg-background-near-black border-t border-white/10">
         <div className="container mx-auto max-w-8xl">
           <h2 className="font-display text-h2 font-semibold text-text-primary mb-8">
-            More from {post.category}
+            More from {formatCategoryLabel(post.category)}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {allPosts
