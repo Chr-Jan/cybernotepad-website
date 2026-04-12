@@ -91,7 +91,7 @@ Going to V2 Security in Aarhus was a fantastic experience that gave me a bunch o
 
 This April, I attended IT-DAY 2026 at Videnbyen og Forskerparken (Cortex Park) in Odense. With around 500 attendees and 20-30 IT companies present, the event was heavily geared toward one specific goal: recruitment.
 
-![A view of the interior with ITDAY banners](/images/itDay-2026/floor.jpg)
+![A view of the interior with ITDAY banner](/images/itDay-2026/floor.jpg)
 
 Here is my honest recap of the day and what you should expect if you plan on attending next year.
 
