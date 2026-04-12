@@ -18,10 +18,10 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
-    slug: 'my-v2-security-aarhus-experience-2026',
-    title: 'My Experience at V2 Security Aarhus: Networking and New Threats',
+    slug: 'v2-security-aarhus-2026-industry-insights',
+    title: 'V2 Security Aarhus 2026: Industry Insights from the Frontlines',
     excerpt: 'I spent two days at V2 Security Aarhus surrounded by security professionals from across the industry. Here is my personal recap of the keynotes, the atmosphere, and my biggest takeaways.',
-    content: `# My Experience at V2 Security Aarhus: Networking and New Threats
+    content: `#V2 Security Aarhus 2026: Industry Insights from the Frontlines
 
 This year I got the chance to go to the V2 Security event in Aarhus. Having over 1,000 people and 40 top cybersecurity companies in one place made for an amazing vibe. We spent two whole days sharing ideas, learning from each other, and making new friends in the industry.
 
@@ -81,5 +81,47 @@ Going to V2 Security in Aarhus was a fantastic experience that gave me a bunch o
     tags: ['V2 Security', 'Conference', 'Networking'],
     readTime: '10 min read',
     author: 'Christoffer'
-  }
+  },
+ {
+  id: '2',
+  slug: 'it-day-odense-2026-is-this-career-fair-worth-your-time',
+  title: 'IT-DAY Odense 2026: Is This Career Fair Worth Your Time?',
+  excerpt: 'I spent a day at IT-DAY Odense with 500 other attendees. While it lacked the technical depth of events like V2 Security, it was a solid networking hub for job hunting and company pitches.',
+  content: `#IT-DAY Odense 2026: Is This Career Fair Worth Your Time?
+
+This April, I attended IT-DAY 2026 at Videnbyen og Forskerparken (Cortex Park) in Odense. With around 500 attendees and 20-30 IT companies present, the event was heavily geared toward one specific goal: recruitment.
+
+Here is my honest recap of the day and what you should expect if you plan on attending next year.
+
+## Job Hunting vs. Skill Building
+
+If you go to IT-DAY expecting to learn new technical skills or dive deep into the latest tech trends—like you would at a conference like V2 Security—you will likely be disappointed. IT-DAY is essentially a large-scale job market. 
+
+The primary value here lies in direct access to the hiring companies. I spent my time visiting booths and talking to IT professionals about what their companies do, their workplace culture, and what kind of candidates they are looking for. It is a highly practical event if you are actively hunting for a student job, an internship, or a full-time position, but it is not the place for professional upskilling.
+
+## Keynotes: Company Pitches Rather Than Tech Deep Dives
+
+The difference between a learning conference and a career fair was especially apparent during the keynotes. Instead of educational deep dives, the presentations functioned more like extended company pitches aimed at attracting talent.
+
+### Bankdata and Energinet
+We heard from Bankdata regarding Denmark's financial IT infrastructure and Energinet regarding Operational Technology (OT). Rather than exploring the technical nuts and bolts of how they secure or build these systems, the talks were highly job-oriented. They focused on explaining what the companies produce, their core values, their societal responsibilities, and, most importantly, the specific skills and roles they are currently missing in their teams.
+
+## Final Thoughts: A Solid 3-Star Experience
+
+I am giving the event 3 out of 5 stars. It does exactly what it says on the tin—it connects students and graduates with IT companies. Because it is largely run by fellow IT students and recent graduates, the vibe is relatable and down-to-earth. 
+
+However, because the focus is strictly on recruitment rather than knowledge sharing, its value depends entirely on where you are in your career journey. I walked away with a better understanding of the local job market and some new connections, but not necessarily new technical insights. 
+
+*Learn more about the event and current job openings at [itday.dk](https://www.itday.dk).*`,
+
+  category: 'career-fairs',
+  date: '2026-04-09',
+  location: 'Odense, Denmark',
+  attendees: 500,
+  rating: 3,
+  type: 'career fair',
+  tags: ['IT-DAY', 'Career Fair', 'Networking', 'Odense', 'Job Hunting'],
+  readTime: '5 min read',
+  author: 'Christoffer'
+}
 ]

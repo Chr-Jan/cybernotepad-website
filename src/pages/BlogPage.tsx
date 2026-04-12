@@ -18,8 +18,9 @@ export function BlogPage() {
   const categories = [
     { id: 'all', label: 'All Posts', count: posts.length },
     { id: 'conferences', label: 'Conferences', count: posts.filter(p => p.category === 'conferences').length },
-    { id: 'meetups', label: 'Meetups', count: posts.filter(p => p.category === 'meetups').length },
-    { id: 'personal', label: 'Personal', count: posts.filter(p => p.category === 'personal').length }
+    { id: 'career-fairs', label: 'Career Fairs', count: posts.filter(p => p.category === 'career-fairs').length },
+  //  { id: 'meetups', label: 'Meetups', count: posts.filter(p => p.category === 'meetups').length },
+  //  { id: 'personal', label: 'Personal', count: posts.filter(p => p.category === 'personal').length }
   ];
 
   const filteredPosts = selectedCategory === 'all' 
@@ -38,7 +39,8 @@ export function BlogPage() {
   const getTypeColor = (type) => {
     const colors = {
       conference: 'bg-blue-500/20 border-blue-500/30 text-blue-400',
-      meetup: 'bg-green-500/20 border-green-500/30 text-green-400',
+      'career fair': 'bg-green-500/20 border-green-500/30 text-green-400',
+      meetup: 'bg-orange-500/20 border-orange-500/30 text-orange-400',
       personal: 'bg-purple-500/20 border-purple-500/30 text-purple-400'
     };
     return colors[type] || 'bg-gray-500/20 border-gray-500/30 text-gray-400';
