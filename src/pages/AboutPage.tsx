@@ -9,13 +9,13 @@
  * - Hero section: Main title and blog description
  * - Mission section: Detailed explanation of the blog's educational purpose
  * - Legal disclaimer: Comprehensive legal warnings and educational use policy
+ * - Support: Buy Me a Coffee button
  * 
  * @returns JSX.Element - The complete About page layout
  */
-import { Shield } from 'lucide-react';
+import { Coffee } from 'lucide-react';
 
 export function AboutPage() {
-
   return (
     <div className="min-h-screen pt-16">
       <section className="relative py-20 px-6 overflow-hidden">
@@ -36,8 +36,12 @@ export function AboutPage() {
 
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-background-surface-1 rounded-xl p-8 border border-white/10">
-            <h2 className="font-display text-h2 font-semibold text-text-primary mb-6">My Mission</h2>
+          <div className="bg-background-surface-1 rounded-xl p-8 border border-white/10 shadow-xl shadow-black/20">
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex items-center rounded-full border border-accent-primary/20 bg-accent-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-primary">
+                My Mission
+              </div>
+            </div>
             
             <p className="text-text-secondary text-body-lg leading-relaxed mb-4">
               CyberNotepad was created to bridge the gap between theoretical security concepts and practical implementation. We believe that security knowledge should be accessible to all developers, not just specialized security professionals.
@@ -54,8 +58,35 @@ export function AboutPage() {
 
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
+          <div className="rounded-xl border border-accent-primary/15 bg-gradient-to-br from-background-surface-1 via-background-pure-black/70 to-accent-primary/5 p-8 text-center shadow-xl shadow-black/20">
+            <div className="mb-6 flex justify-center">
+              <div className="inline-flex items-center rounded-full border border-yellow-400/20 bg-yellow-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-yellow-300">
+                Support the project
+              </div>
+            </div>
+
+            <p className="mx-auto mb-5 max-w-2xl text-text-secondary text-body-lg leading-relaxed">
+              If this site helps you, a coffee donation is always welcome. It keeps the notes flowing and the project moving forward.
+            </p>
+            <div className="flex justify-center">
+              <a
+                href="https://www.buymeacoffee.com/cybernotepad"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 rounded-full bg-[#FFDD00] px-6 py-3 text-base font-semibold text-black shadow-lg shadow-yellow-500/20 transition-transform duration-250 hover:scale-[1.02] hover:bg-[#ffe65c]"
+              >
+                <Coffee className="w-5 h-5" />
+                Buy me a coffee
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-4xl">
           <div className="bg-background-surface-1 rounded-xl p-8 border border-yellow-500/30 bg-yellow-500/5">
-            <h2 className="font-display text-h2 font-semibold text-yellow-400 mb-6">⚠️ Legal Disclaimer & Educational Purpose</h2>
+            <h2 className="font-display text-h2 font-semibold text-center text-yellow-400 mb-6">⚠️ Legal Disclaimer & Educational Purpose</h2>
             
             <div className="space-y-4 text-text-secondary text-body-lg leading-relaxed">
               <p className="text-yellow-300 font-medium">
@@ -85,7 +116,7 @@ export function AboutPage() {
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-background-surface-1 rounded-xl p-8 border border-blue-500/30 bg-blue-500/5">
-            <h2 className="font-display text-h2 font-semibold text-blue-400 mb-6">📧 Contact & Support</h2>
+            <h2 className="font-display text-h2 font-semibold text-center text-blue-400 mb-6">📧 Contact & Support</h2>
             
             <div className="space-y-4 text-text-secondary text-body-lg leading-relaxed">
               <p>
