@@ -7,7 +7,7 @@
  */
 
 import { Link } from 'react-router-dom';
-import { Terminal, Home, FileText, Shield, Target, Eye, BookOpen, GraduationCap, Info } from 'lucide-react';
+import { Terminal, Home, FileText, Shield, Target, Eye, BookOpen, GraduationCap, Info, ClipboardList } from 'lucide-react';
 import { useState } from 'react';
 
 export function Navigation() {
@@ -16,6 +16,7 @@ export function Navigation() {
   const navItems = [
     { to: '/', label: 'Home', icon: Home },
     { to: '/blog', label: 'Blog', icon: FileText },
+    { to: '/playbooks', label: 'Playbooks', icon: ClipboardList },
     { to: '/penetration-testing', label: 'Penetration Testing', icon: Shield },
     { to: '/threat-detection', label: 'Threat Detection', icon: Target },
     { to: '/threat-intelligence', label: 'Threat Intelligence', icon: Eye },

@@ -8,9 +8,10 @@
 // ============================================================================
 
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { homePosts } from '../data/homeData';
 import { BlogCard } from '../components/BlogCard';
-import { Search, Terminal } from 'lucide-react';
+import { Search, Terminal, ClipboardList, ArrowRight } from 'lucide-react';
 
 export function HomePage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -85,6 +86,37 @@ export function HomePage() {
           </div>
         </section>
       )}
+
+      {/* 
+      TODO: Uncomment Operational Playbooks section when ready for production
+      {!hasSearch && (
+        <section className="px-6 mb-16">
+          <div className="container mx-auto max-w-5xl">
+            <div className="bg-background-surface-1 rounded-xl border border-white/10 p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-accent-primary/10 rounded-xl border border-accent-primary/20">
+                  <ClipboardList className="w-8 h-8 text-accent-primary" />
+                </div>
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-text-primary mb-2">Operational Playbooks</h2>
+                  <p className="text-text-secondary max-w-2xl leading-relaxed">
+                    Step-by-step SOC and incident response procedures for phishing, containment, investigation, and recovery.
+                  </p>
+                </div>
+              </div>
+
+              <Link
+                to="/playbooks"
+                className="inline-flex items-center gap-2 self-start md:self-center px-5 py-3 rounded-lg bg-accent-primary text-text-inverse font-semibold hover:bg-accent-secondary transition-colors duration-250"
+              >
+                View Playbooks
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+      */}
 
       <section className="px-6 pb-24">
         <div className="container mx-auto">

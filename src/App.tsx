@@ -13,6 +13,8 @@ import { HomePage } from './pages/HomePage';                  // Landing page wi
 import { BlogPage } from './pages/BlogPage';                  // Blog listing page
 import { BlogPostPage } from './pages/BlogPostPage';          // Individual blog post display
 import { AboutPage } from './pages/AboutPage';                // About page
+import { PlaybooksPage } from './pages/PlaybooksPage';        // SOC and IR playbooks hub
+import { PlaybookPage } from './pages/PlaybookPage';          // Individual playbook detail page
 
 // Cybersecurity Content Pages - Specialized security topic pages
 import { PenetrationTestingPage } from './pages/PenetrationTestingPage';  // Pen testing techniques
@@ -103,6 +105,22 @@ function App() {
             Purpose: Information about the blog, author, and mission
           */}
           <Route path="/about" element={<AboutPage />} />
+
+          {/* 
+            PLAYBOOKS PAGE
+            Path: /playbooks
+            Component: PlaybooksPage
+            Purpose: Operational SOC and incident response playbooks hub
+          */}
+          <Route path="/playbooks" element={<PlaybooksPage />} />
+
+          {/* 
+            PLAYBOOK DETAIL PAGE
+            Path: /playbooks/:slug
+            Component: PlaybookPage
+            Purpose: Displays an individual operational playbook
+          */}
+          <Route path="/playbooks/:slug" element={<PlaybookPage />} />
           
           {/* 
             PENETRATION TESTING SECTION
