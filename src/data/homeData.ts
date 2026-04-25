@@ -3373,5 +3373,252 @@ Use these references as a starting point for building a repeatable phishing tria
   date: '2026-04-11',
   readTime: '8 min read',
   author: 'Christoffer'
+},
+{
+  id: '21',
+  slug: 'phishing-prevention-email-security-controls',
+  title: 'Phishing Prevention: Email Security Controls Every Blue Team Should Know',
+  excerpt: 'Learn how SPF, DKIM, DMARC, and modern security tools help organizations prevent, detect, and mitigate phishing attacks.',
+  content: `# Phishing Prevention: Email Security Controls Every Blue Team Should Know
+
+Phishing remains one of the most common and effective ways for attackers to gain initial access to systems.
+
+According to the [MITRE ATT&CK Framework](https://attack.mitre.org), phishing is used to trick users into revealing sensitive information such as credentials or executing malicious payloads.
+
+To defend against this, organizations implement multiple layers of email security controls.
+
+---
+
+## Why Phishing is So Effective
+
+Attackers exploit:
+- Human trust
+- Urgency and fear
+- Brand impersonation
+
+This makes phishing a **primary entry point** in most real-world attacks, often leading to:
+- Credential theft
+- Malware infections
+- Initial access for ransomware
+
+---
+
+## Core Email Security Controls
+
+Modern email security relies on four key technologies:
+
+---
+
+## 1. Sender Policy Framework (SPF)
+
+SPF verifies **which servers are allowed to send emails** on behalf of a domain.
+
+### How it Works:
+1. Email is sent
+2. Receiving server checks DNS for SPF record
+3. Compares sender IP with allowed list
+4. Takes action (allow, flag, reject)
+
+### Example SPF Record:
+\`\`\`
+v=spf1 ip4:203.0.113.25 include:_spf.google.com -all
+\`\`\`
+
+### Result Handling:
+
+| Result | Action |
+|------|--------|
+| Pass | Accept |
+| SoftFail | Flag as suspicious |
+| Fail | Reject |
+
+### Tools:
+- SPF Surveyor (free): https://dmarcian.com/spf-surveyor/  
+- Header Analyzer (free): https://toolbox.googleapps.com/apps/messageheader/  
+
+---
+
+## 2. DomainKeys Identified Mail (DKIM)
+
+DKIM ensures **email integrity and authenticity** using cryptographic signatures.
+
+### How it Works:
+- Sender signs email with a private key
+- Receiver verifies with public key (DNS)
+- If valid → message is trusted
+
+### Key Benefit:
+✔ Survives email forwarding (unlike SPF)
+
+### Example DKIM Record:
+\`\`\`
+v=DKIM1; k=rsa; p=PUBLIC_KEY_HERE
+\`\`\`
+
+The \`p=\` value is the public key published in DNS for the domain.
+
+### Common Failure:
+- \`dkim=permerror\` → invalid or missing key
+
+### Tools:
+- DKIM Checker (free): https://dmarcian.com/dkim-inspector/  
+
+---
+
+## 3. DMARC (Domain-Based Message Authentication)
+
+DMARC ties SPF + DKIM together and **defines what to do if checks fail**.
+
+### Example Record:
+\`\`\`
+v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@example.com; adkim=s; aspf=s
+\`\`\`
+
+### Policies:
+
+| Policy | Action |
+|--------|--------|
+| none | Monitor only |
+| quarantine | Send to spam |
+| reject | Block email |
+
+✔ **Best protection = p=reject**
+
+### Tools:
+- DMARC Checker (free): https://dmarcian.com/domain-checker/  
+
+---
+
+## 4. S/MIME (Secure Email Encryption)
+
+S/MIME provides **encryption and digital signatures**.
+
+### Security Benefits:
+- Authentication (who sent it)
+- Integrity (not modified)
+- Confidentiality (only recipient can read)
+
+### How it Works:
+- Sender signs with private key
+- Recipient verifies with public key
+- Message is encrypted using recipient's public key
+
+✔ Used in high-security environments (finance, healthcare, gov)
+
+---
+
+## SMTP Analysis (SOC Perspective)
+
+SOC analysts often analyze **SMTP traffic** to detect phishing and spam behavior.
+
+### Useful Indicators:
+- SMTP response codes (e.g., 550, 553)
+- Suspicious sending servers
+- Attachments and encoding (base64)
+
+### Example Wireshark Filter:
+\`\`\`
+tcp.port == 25 || tcp.port == 587 || tcp.port == 465
+\`\`\`
+
+---
+
+## Phishing Detection Techniques
+
+Even with SPF/DKIM/DMARC, phishing can still bypass controls.
+
+### Common Indicators:
+- Spoofed sender addresses
+- Urgent subject lines
+- Suspicious attachments
+- URL redirection chains
+- Credential harvesting pages
+
+---
+
+## Modern Anti-Phishing Defenses
+
+### Technical Controls
+
+#### Email Filtering
+- Blocks known malicious domains/IPs
+
+#### Secure Email Gateways (SEG)
+- Detect spoofing and impersonation
+
+#### Link Rewriting
+- Rewrites URLs for scanning
+
+#### Sandboxing (IMPORTANT)
+- Runs attachments in safe environment
+
+✔ **Answer to your task:** Sandboxing
+
+---
+
+## Useful Security Tools (Free & Paid)
+
+### Email & Header Analysis
+- Google Messageheader (free): https://toolbox.googleapps.com/apps/messageheader/  
+- Microsoft Header Analyzer (free): https://mha.azurewebsites.net/  
+
+### URL & Threat Intelligence
+- VirusTotal (free): https://www.virustotal.com  
+- URLScan (free): https://urlscan.io  
+- Talos Intelligence (free): https://talosintelligence.com  
+
+### Malware Sandboxes
+- ANY.RUN (free tier): https://any.run  
+- Hybrid Analysis (free): https://www.hybrid-analysis.com  
+- Joe Sandbox (limited free): https://www.joesecurity.org  
+
+---
+
+## Human Layer: The Weakest (and Strongest) Link
+
+Technology alone is not enough.
+
+Organizations must also invest in:
+
+- Security awareness training
+- Phishing simulations
+- Easy reporting tools
+- Warning banners ("External sender")
+
+---
+
+## Conclusion
+
+Phishing is still one of the **biggest threats in cybersecurity**.
+
+**Key Takeaways:**
+- SPF, DKIM, and DMARC protect email authenticity
+- S/MIME protects confidentiality and integrity
+- Sandboxing helps detect hidden malware
+- Users remain a critical defense layer
+
+A strong defense combines:
+➡ Technical controls  
+➡ Monitoring (SOC)  
+➡ User awareness  
+
+---
+
+## Sources and Further Reading
+
+- [MITRE ATT&CK](https://attack.mitre.org)  
+- [RFC 7208: Sender Policy Framework (SPF)](https://www.rfc-editor.org/rfc/rfc7208)  
+- [RFC 6376: DomainKeys Identified Mail (DKIM)](https://www.rfc-editor.org/rfc/rfc6376)  
+- [RFC 7489: Domain-based Message Authentication, Reporting, and Conformance (DMARC)](https://www.rfc-editor.org/rfc/rfc7489)  
+- [DMARC Guide](https://dmarcian.com)  
+- [SPF Overview](https://www.cloudflare.com/learning/dns/dns-records/dns-spf-record/)  
+- [DKIM Explained](https://www.cloudflare.com/learning/dns/dns-records/dns-dkim-record/)  
+
+`,
+  category: 'Blue Team',
+  tags: ['Phishing', 'Email Security', 'SPF', 'DKIM', 'DMARC', 'SOC'],
+  date: '2026-04-25',
+  readTime: '9 min read',
+  author: 'Christoffer'
 }
 ]
