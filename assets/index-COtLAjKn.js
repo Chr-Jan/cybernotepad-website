@@ -4077,7 +4077,7 @@ A structured approach ensures:
 - Better detection
 - Reduced risk
 
-Phishing is not just about emails — it is often the **first step in a larger attack chain**.
+Phishing is not just about emails, it is often the **first step in a larger attack chain**.
 
 ---
 
