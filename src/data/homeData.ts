@@ -3946,6 +3946,7 @@ https://github.com/BatchDrake/SigDigger
 
 ## Useful Resources
 
+- SigDigger Creator: BatchDrake
 - SigDigger Official Site: https://batchdrake.github.io/SigDigger/
 - SigDigger GitHub: https://github.com/BatchDrake/SigDigger
 - GNU Radio: https://www.gnuradio.org/
@@ -3970,7 +3971,7 @@ Combined with SDR hardware and complementary analysis tools, SigDigger provides 
 `,
   category: 'RF Security',
   tags: ['SigDigger', 'SDR', 'RF Security', 'Signal Analysis', 'Threat Hunting', 'Wireless Security'],
-  date: '2026-04-25',
+  date: '2026-05-17',
   readTime: '11 min read',
   author: 'Christoffer'
 }
