@@ -153,7 +153,7 @@ function App() {
             Purpose: Industry standards and security framework documentation
           */}
           <Route path="/frameworks" element={<FrameworksPage />} />
-          
+
           {/* 
             LEARNING RESOURCES SECTION
             Path: /learning

@@ -1,4 +1,4 @@
-import { Globe, Search, Shield, Eye, Database, Map } from 'lucide-react';
+import { Globe, Search, Shield, Eye, Database, Map, Wrench } from 'lucide-react';
 import { threatIntelligenceTools } from '../data/threatIntelligenceData';
 
 const iconMap = {
@@ -8,6 +8,7 @@ const iconMap = {
   Search,
   Map,
   Database,
+  Wrench,
 } as const;
 
 const categoryToId = (category: string) =>
