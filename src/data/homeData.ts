@@ -3628,345 +3628,39 @@ A strong defense combines:
   excerpt: 'Learn how SigDigger enables realtime SDR spectrum analysis, wireless signal investigation, and RF threat hunting for security researchers and SOC analysts.',
   content: `# SigDigger: SDR Signal Analysis for RF Security and Threat Hunting
 
-SigDigger is a modern digital signal analyzer built for Software Defined Radio (SDR) research and realtime radio frequency (RF) signal investigation.
-
-Unlike many SDR tools that rely heavily on GNU Radio, SigDigger uses its own DSP libraries to provide lightweight, high-performance signal analysis across Linux, Windows, and macOS.
-
-It is commonly used for:
-- RF spectrum analysis
-- Wireless protocol research
-- SDR experimentation
-- Signal intelligence (SIGINT)
-- Reverse engineering radio communications
-- RF threat hunting
-
----
-
-## What Makes SigDigger Different?
-
-SigDigger is:
-- Open-source
-- Cross-platform
-- Lightweight
-- Realtime-focused
-- SDR hardware compatible through SoapySDR
-
-The application uses:
-- sigutils (DSP library)
-- Suscan (realtime signal analysis framework)
-
-This allows SigDigger to efficiently distribute DSP workloads across multicore CPUs.
-
----
-
-## SDR Devices Supported
-
-Through SoapySDR, SigDigger supports many SDR devices:
-
-- RTL-SDR
-- HackRF
-- LimeSDR
-- Airspy
-- USRP
-- SDRplay
-
-This makes it suitable for:
-- Hobbyists
-- RF engineers
-- Security researchers
-- SOC analysts
-- HAM radio operators
-
----
-
-## Core Features
-
-### Spectrum & Waterfall Analysis
-
-SigDigger includes:
-- FFT spectrum visualization
-- Waterfall display
-- Dynamic spectrum browsing
-- Panoramic spectrum view
-
-These tools help analysts:
-- Detect unknown transmissions
-- Monitor RF activity
-- Identify interference
-- Analyze modulation patterns
-
----
-
-## Modulation Analysis
-
-Supported modulation types include:
-
-- ASK
-- FSK
-- PSK
-- AM
-- FM
-- LSB
-- USB
-
-This is useful when investigating:
-- IoT protocols
-- Wireless telemetry
-- Unknown radio signals
-- RF malware communication
-
----
-
-## Signal Investigation Features
-
-SigDigger provides advanced DSP capabilities such as:
-
-- Symbol recording
-- Symbol visualization
-- Transition analysis
-- Autocorrelation analysis
-- Blind parameter estimation
-- Doppler analysis
-- Signal decimation
-
-These features are especially valuable during:
-- Protocol reverse engineering
-- Signal fingerprinting
-- Wireless threat analysis
-
----
-
-## Recording & Replay Analysis
-
-Analysts can:
-- Record IQ/baseband data
-- Replay captured signals
-- Analyze signals offline
-- Export captured RF data
-
-This helps preserve evidence during investigations.
-
----
-
-## RF Security Use Cases
-
-SigDigger can support RF-focused security operations such as:
-
-### Rogue Device Detection
-Identify unauthorized wireless transmitters inside secure environments.
-
-### RF Threat Hunting
-Detect suspicious:
-- Beacon signals
-- Telemetry devices
-- Jamming attempts
-- Hidden wireless communications
-
-### Wireless Reconnaissance
-Map active frequencies and investigate unknown RF activity.
-
-### Signal Intelligence (SIGINT)
-Capture and analyze radio-based communications and protocols.
-
----
-
-## Example RF Investigation Scenario
-
-### Scenario
-
-A SOC analyst notices unusual RF interference near a restricted facility.
-
-### Investigation Flow
-
-1. SDR device connected to SigDigger
-2. Waterfall view reveals periodic signal bursts
-3. Spectrum analysis identifies FSK modulation
-4. Symbol visualization shows repeating packet structure
-5. IQ samples are recorded for offline analysis
-6. Analysts identify unauthorized telemetry hardware
-
-This workflow demonstrates how SigDigger can support real-world RF investigations.
-
----
-
-## SOC Investigation Workflow: RF Signal Investigation Using SigDigger
-
----
-
-### Phase 1 — Detection
-
-### Indicators
-- Unknown frequency spikes
-- Suspicious wireless interference
-- Repeating RF bursts
-- Unauthorized transmitters
-
-### Tools
-- SDR hardware
-- SigDigger waterfall
-- Spectrum analyzer
-
----
-
-### Phase 2 — Identification
-
-### Analyst Actions
-- Identify active frequency range
-- Determine modulation type
-- Measure signal strength
-- Observe timing intervals
-
-### SigDigger Features Used
-- FFT spectrum
-- Waterfall analysis
-- ASK/FSK/PSK inspection
-
----
-
-### Phase 3 — Collection
-
-### Evidence Collection
-- Record IQ samples
-- Capture screenshots
-- Export waveform data
-- Log timestamps
-
-### Recommended Evidence
-- IQ recordings
-- Frequency details
-- Device information
-- Investigation notes
-
----
-
-### Phase 4 — Analysis
-
-### Investigation Tasks
-- Replay captured signals
-- Analyze symbol timing
-- Identify packet structure
-- Investigate repeating payloads
-
-### Additional Tools
-- Universal Radio Hacker (URH)
-- Inspectrum
-- GNU Radio
-
----
-
-### Phase 5 — Containment
-
-### Actions
-- Locate transmitter source
-- Remove rogue devices
-- Block unauthorized equipment
-- Escalate to physical security
-
----
-
-### Phase 6 — Reporting
-
-This workflow mirrors the way analysts typically move from discovery to documentation, which keeps the article closer to the structure used in the rest of the site.
-
-### SOC Report Should Include
-- Frequency observed
-- Modulation identified
-- SDR hardware used
-- Captured IQ sample hashes
-- Timeline of activity
-- Screenshots from SigDigger
-
----
-
-## Example Incident Summary
-
-> Unauthorized FSK transmission detected at 433.92 MHz near restricted facility perimeter. Signal repeated every 12 seconds and originated from an unapproved telemetry device. IQ samples captured and analyzed using SigDigger and URH. Device isolated and removed.
-
----
-
-## Installation & Downloads
-
-### Official Website
-https://batchdrake.github.io/SigDigger/
-
-### GitHub Repository
-https://github.com/BatchDrake/SigDigger
-
-### Available Builds
-- Windows ZIP
-- Linux AppImage
-- macOS DMG
-
----
-
-## System Requirements
-
-- x86-64 CPU
-- OpenGL-capable GPU recommended
-- Compatible SDR hardware
-- SoapySDR installed
-
----
-
-## Free or Paid?
-
-| Feature | Availability |
-|---|---|
-| SigDigger | Free |
-| Open Source | Yes |
-| License | GPLv3 |
-| Commercial Use | Allowed under GPL |
-
----
-
-## Useful Companion Tools
-
-| Tool | Purpose | Free |
-|---|---|---|
-| GNU Radio | SDR signal processing | Yes |
-| SoapySDR | SDR hardware abstraction | Yes |
-| Inspectrum | Offline IQ analysis | Yes |
-| Universal Radio Hacker (URH) | Wireless protocol reversing | Yes |
-| Wireshark | Packet analysis | Yes |
-
----
-
-## Advantages of SigDigger
-
-| Advantage | Benefit |
-|---|---|
-| Lightweight DSP engine | High performance |
-| Realtime analysis | Faster investigations |
-| Open-source | Free and customizable |
-| SDR compatibility | Broad hardware support |
-| Advanced modulation tools | Deep RF analysis |
-
-
----
-
-## Useful Resources
-
-- SigDigger Creator: BatchDrake
-- SigDigger Official Site: https://batchdrake.github.io/SigDigger/
-- SigDigger GitHub: https://github.com/BatchDrake/SigDigger
-- GNU Radio: https://www.gnuradio.org/
-- SoapySDR: https://github.com/pothosware/SoapySDR
-- RTL-SDR Blog: https://www.rtl-sdr.com/
-- Universal Radio Hacker: https://github.com/jopohl/urh
-
----
-
-## Conclusion
-
-SigDigger is a powerful SDR analysis platform for RF research, wireless investigations, and signal intelligence operations.
-
-Its realtime spectrum analysis, modulation inspection, and advanced DSP capabilities make it highly valuable for:
-- RF security research
-- Wireless threat hunting
-- SDR experimentation
-- Signal intelligence workflows
-
-Combined with SDR hardware and complementary analysis tools, SigDigger provides a strong foundation for modern RF investigations.
+SigDigger is a compact, open-source signal analyzer for Software Defined Radio (SDR). It provides fast, realtime spectrum and modulation tools that help security teams and researchers inspect RF activity without the overhead of larger frameworks.
+
+Key capabilities
+- Realtime spectrum and waterfall views for quick discovery
+- Modulation inspection (ASK, FSK, PSK, AM/FM, LSB/USB)
+- Symbol recording, visualization, and basic parameter estimation
+- IQ recording and replay for forensic analysis
+
+Supported hardware
+- Works with many SDR frontends via SoapySDR (RTL‑SDR, HackRF, LimeSDR, Airspy, USRP, SDRplay).
+
+When to use SigDigger
+- Fast triage of unknown transmissions
+- Rogue device detection and RF threat hunting
+- Protocol reverse engineering and signal fingerprinting
+- Capturing IQ samples for later analysis with tools like URH or Inspectrum
+
+Typical workflow (short)
+1. Detect: scan for unusual peaks or repeating bursts
+2. Identify: inspect modulation and timing patterns
+3. Collect: record IQ samples and take screenshots
+4. Analyze: replay and extract symbols or packet structure
+5. Report: document frequency, modulation, hardware, and evidence hashes
+
+Installation & links
+- Official site: https://batchdrake.github.io/SigDigger/
+- GitHub: https://github.com/BatchDrake/SigDigger
+
+Notes
+SigDigger is lightweight and focused on interactive analysis rather than full-scale signal processing pipelines. It pairs well with GNU Radio, URH, or offline tools when deeper DSP or scripting is required.
+
+Credits
+- Creator: BatchDrake — original author and maintainer (https://github.com/BatchDrake)
 
 `,
   category: 'RF Security',
