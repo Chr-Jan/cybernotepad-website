@@ -148,4 +148,4 @@ Enter Foundation
 Gewerbestrasse 4  
 4552 Derendingen
 
-*Learn more about the exhibition at [enter.ch/en/visit-the-exhibition](https://enter.ch/en/visit-the-exhibition/).*`,category:"industry-events",date:"2026-07-25",location:"Derendingen, Switzerland",attendees:1,rating:5,type:"personal",tags:["ENTER Technikwelt","Museum Visit","Technology History","Enigma","Switzerland"],readTime:"7 min read",author:"Christoffer"}];export{e as b};
+*Learn more about the exhibition at [enter.ch/en/visit-the-exhibition](https://enter.ch/en/visit-the-exhibition/).*`,category:"personal-experiences",date:"2026-07-25",location:"Derendingen, Switzerland",attendees:1,rating:5,type:"personal",tags:["ENTER Technikwelt","Museum Visit","Technology History","Enigma","Switzerland"],readTime:"7 min read",author:"Christoffer"}];export{e as b};
