@@ -19,8 +19,8 @@ export function BlogPage() {
     { id: 'all', label: 'All Posts', count: posts.length },
     { id: 'industry-events', label: 'Industry Events', count: posts.filter(p => p.category === 'industry-events').length },
     { id: 'career-fairs', label: 'Career Fairs', count: posts.filter(p => p.category === 'career-fairs').length },
+    { id: 'personal-experiences', label: 'Personal', count: posts.filter(p => p.category === 'personal-experiences').length },
   //  { id: 'meetups', label: 'Meetups', count: posts.filter(p => p.category === 'meetups').length },
-  //  { id: 'personal', label: 'Personal', count: posts.filter(p => p.category === 'personal').length }
   ];
 
   const filteredPosts = selectedCategory === 'all' 

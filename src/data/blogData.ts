@@ -205,7 +205,7 @@ Gewerbestrasse 4
 4552 Derendingen
 
 *Learn more about the exhibition at [enter.ch/en/visit-the-exhibition](https://enter.ch/en/visit-the-exhibition/).*`,
-  category: 'industry-events',
+  category: 'personal-experiences',
   date: '2026-07-25',
   location: 'Derendingen, Switzerland',
   attendees: 1,
