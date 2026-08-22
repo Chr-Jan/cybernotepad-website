@@ -2,6 +2,7 @@
 // APPLICATION IMPORTS SECTION
 // ========================================
 
+import { Suspense, lazy } from 'react';
 // React Router - Core routing library for client-side navigation
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -9,19 +10,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 
 // Page Components - Main application pages
-import { HomePage } from './pages/HomePage';                  // Landing page with hero section
-import { BlogPage } from './pages/BlogPage';                  // Blog listing page
-import { BlogPostPage } from './pages/BlogPostPage';          // Individual blog post display
-import { AboutPage } from './pages/AboutPage';                // About page
-import { PlaybooksPage } from './pages/PlaybooksPage';        // SOC and IR playbooks hub
-import { PlaybookPage } from './pages/PlaybookPage';          // Individual playbook detail page
+const HomePage = lazy(() => import('./pages/HomePage').then((module) => ({ default: module.HomePage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then((module) => ({ default: module.BlogPage })));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage').then((module) => ({ default: module.BlogPostPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((module) => ({ default: module.AboutPage })));
+const PlaybooksPage = lazy(() => import('./pages/PlaybooksPage').then((module) => ({ default: module.PlaybooksPage })));
+const PlaybookPage = lazy(() => import('./pages/PlaybookPage').then((module) => ({ default: module.PlaybookPage })));
 
 // Cybersecurity Content Pages - Specialized security topic pages
-import { PenetrationTestingPage } from './pages/PenetrationTestingPage';  // Pen testing techniques
-import { ThreatDetectionPage } from './pages/ThreatDetectionPage';        // Security monitoring & detection
-import { ThreatIntelligencePage } from './pages/ThreatIntelligencePage';  // Intel gathering & analysis
-import { FrameworksPage } from './pages/FrameworksPage';                  // Security frameworks & standards
-import { LearningPage } from './pages/LearningPage';                      // Educational resources & guides
+const PenetrationTestingPage = lazy(() => import('./pages/PenetrationTestingPage').then((module) => ({ default: module.PenetrationTestingPage })));
+const ThreatDetectionPage = lazy(() => import('./pages/ThreatDetectionPage').then((module) => ({ default: module.ThreatDetectionPage })));
+const ThreatIntelligencePage = lazy(() => import('./pages/ThreatIntelligencePage').then((module) => ({ default: module.ThreatIntelligencePage })));
+const FrameworksPage = lazy(() => import('./pages/FrameworksPage').then((module) => ({ default: module.FrameworksPage })));
+const LearningPage = lazy(() => import('./pages/LearningPage').then((module) => ({ default: module.LearningPage })));
 
 // ========================================
 // MAIN APPLICATION COMPONENT
@@ -71,98 +72,100 @@ function App() {
           - Uses React Router v6 Routes/Route pattern
           - Handles both static and dynamic routes
         */}
-        <Routes>
-          
-          {/* 
-            HOME ROUTE - Landing Page
-            Path: /
-            Component: HomePage
-            Purpose: Main entry point with hero section and featured content
-          */}
-          <Route path="/" element={<HomePage />} />
-          
-          {/* 
-            INDIVIDUAL BLOG POST - Dynamic Route
-            Path: /post/:slug
-            Component: BlogPostPage
-            Purpose: Displays individual blog posts based on URL slug parameter
-            Dynamic: :slug parameter allows any blog post identifier
-          */}
-          <Route path="/post/:slug" element={<BlogPostPage />} />
-          
-          {/* 
-            BLOG LISTING PAGE
-            Path: /blog
-            Component: BlogPage
-            Purpose: Displays all blog posts in a list or grid format
-          */}
-          <Route path="/blog" element={<BlogPage />} />
-          
-          {/* 
-            ABOUT PAGE
-            Path: /about
-            Component: AboutPage
-            Purpose: Information about the blog, author, and mission
-          */}
-          <Route path="/about" element={<AboutPage />} />
+        <Suspense fallback={<div className="flex min-h-[50vh] items-center justify-center text-slate-300">Loading page...</div>}>
+          <Routes>
+            
+            {/* 
+              HOME ROUTE - Landing Page
+              Path: /
+              Component: HomePage
+              Purpose: Main entry point with hero section and featured content
+            */}
+            <Route path="/" element={<HomePage />} />
+            
+            {/* 
+              INDIVIDUAL BLOG POST - Dynamic Route
+              Path: /post/:slug
+              Component: BlogPostPage
+              Purpose: Displays individual blog posts based on URL slug parameter
+              Dynamic: :slug parameter allows any blog post identifier
+            */}
+            <Route path="/post/:slug" element={<BlogPostPage />} />
+            
+            {/* 
+              BLOG LISTING PAGE
+              Path: /blog
+              Component: BlogPage
+              Purpose: Displays all blog posts in a list or grid format
+            */}
+            <Route path="/blog" element={<BlogPage />} />
+            
+            {/* 
+              ABOUT PAGE
+              Path: /about
+              Component: AboutPage
+              Purpose: Information about the blog, author, and mission
+            */}
+            <Route path="/about" element={<AboutPage />} />
 
-          {/* 
-            PLAYBOOKS PAGE
-            Path: /playbooks
-            Component: PlaybooksPage
-            Purpose: Operational SOC and incident response playbooks hub
-          */}
-          <Route path="/playbooks" element={<PlaybooksPage />} />
+            {/* 
+              PLAYBOOKS PAGE
+              Path: /playbooks
+              Component: PlaybooksPage
+              Purpose: Operational SOC and incident response playbooks hub
+            */}
+            <Route path="/playbooks" element={<PlaybooksPage />} />
 
-          {/* 
-            PLAYBOOK DETAIL PAGE
-            Path: /playbooks/:slug
-            Component: PlaybookPage
-            Purpose: Displays an individual operational playbook
-          */}
-          <Route path="/playbooks/:slug" element={<PlaybookPage />} />
-          
-          {/* 
-            PENETRATION TESTING SECTION
-            Path: /penetration-testing
-            Component: PenetrationTestingPage
-            Purpose: Dedicated content for ethical hacking and pen testing
-          */}
-          <Route path="/penetration-testing" element={<PenetrationTestingPage />} />
-          
-          {/* 
-            THREAT DETECTION SECTION
-            Path: /threat-detection
-            Component: ThreatDetectionPage
-            Purpose: Content on security monitoring and incident detection
-          */}
-          <Route path="/threat-detection" element={<ThreatDetectionPage />} />
-          
-          {/* 
-            THREAT INTELLIGENCE SECTION
-            Path: /threat-intelligence
-            Component: ThreatIntelligencePage
-            Purpose: Intelligence gathering and threat analysis content
-          */}
-          <Route path="/threat-intelligence" element={<ThreatIntelligencePage />} />
-          
-          {/* 
-            SECURITY FRAMEWORKS SECTION
-            Path: /frameworks
-            Component: FrameworksPage
-            Purpose: Industry standards and security framework documentation
-          */}
-          <Route path="/frameworks" element={<FrameworksPage />} />
+            {/* 
+              PLAYBOOK DETAIL PAGE
+              Path: /playbooks/:slug
+              Component: PlaybookPage
+              Purpose: Displays an individual operational playbook
+            */}
+            <Route path="/playbooks/:slug" element={<PlaybookPage />} />
+            
+            {/* 
+              PENETRATION TESTING SECTION
+              Path: /penetration-testing
+              Component: PenetrationTestingPage
+              Purpose: Dedicated content for ethical hacking and pen testing
+            */}
+            <Route path="/penetration-testing" element={<PenetrationTestingPage />} />
+            
+            {/* 
+              THREAT DETECTION SECTION
+              Path: /threat-detection
+              Component: ThreatDetectionPage
+              Purpose: Content on security monitoring and incident detection
+            */}
+            <Route path="/threat-detection" element={<ThreatDetectionPage />} />
+            
+            {/* 
+              THREAT INTELLIGENCE SECTION
+              Path: /threat-intelligence
+              Component: ThreatIntelligencePage
+              Purpose: Intelligence gathering and threat analysis content
+            */}
+            <Route path="/threat-intelligence" element={<ThreatIntelligencePage />} />
+            
+            {/* 
+              SECURITY FRAMEWORKS SECTION
+              Path: /frameworks
+              Component: FrameworksPage
+              Purpose: Industry standards and security framework documentation
+            */}
+            <Route path="/frameworks" element={<FrameworksPage />} />
 
-          {/* 
-            LEARNING RESOURCES SECTION
-            Path: /learning
-            Component: LearningPage
-            Purpose: Educational materials and learning paths for cybersecurity
-          */}
-          <Route path="/learning" element={<LearningPage />} />
-          
-        </Routes>
+            {/* 
+              LEARNING RESOURCES SECTION
+              Path: /learning
+              Component: LearningPage
+              Purpose: Educational materials and learning paths for cybersecurity
+            */}
+            <Route path="/learning" element={<LearningPage />} />
+            
+          </Routes>
+        </Suspense>
         
       </div>
     </BrowserRouter>
